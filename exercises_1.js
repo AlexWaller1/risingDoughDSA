@@ -51,6 +51,7 @@ console.log("-----------------------------------------");
 console.log("------------------------------------------------");
 
 // function that pushes even numbers to one array and odd numbers to another
+// uses ternary operator and switch statements
 
 let nums1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -81,3 +82,54 @@ oddEvenArrayPush(nums1);
 
 console.log("-------------------------------------------------------");
 console.log("------------------------------------------------------");
+
+// function returns the parameter number to the power of 2
+
+let powerOf2 = (num1 = 7) => Math.pow(num1, 2);
+
+console.log(powerOf2());
+// 49
+console.log(powerOf2(10));
+// 100
+
+console.log("-----------------------------------------------------------");
+console.log("--------------------------------------------------------");
+
+// function returns a string that interpolates the square root
+// of the number parameter
+
+function squareRoot(num = 9) {
+  let sq1 = Math.sqrt(num);
+  console.log(`The square root of ${num} is ${sq1}`);
+}
+
+squareRoot();
+// The square root of 9 is 3
+squareRoot(81);
+// The square root of 81 is 9
+squareRoot(27);
+// The square root of 27 is 5.2
+
+console.log("----------------------------------------------------------");
+console.log("----------------------------------------------------------");
+
+// function finds the product of 2 numbers
+
+let productOf = (num1 = 9, num2 = 6) => console.log(num1 * num2);
+
+productOf();
+// 54
+productOf(5);
+// 30
+productOf(24, 65);
+// 1560
+
+console.log("------------------------------------------------------------");
+console.log("-------------------------------------------------------");
+
+// anonymous function returns a value with no parameters
+
+let javaScript = () => "JavaScript is Awesome!";
+
+console.log(javaScript());
+// JavaScript is Awesome!
