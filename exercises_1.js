@@ -49,3 +49,35 @@ hiFriend("Chipper");
 
 console.log("-----------------------------------------");
 console.log("------------------------------------------------");
+
+// function that pushes even numbers to one array and odd numbers to another
+
+let nums1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function oddEvenArrayPush(array) {
+  let i = 0;
+  let oddNumbers = [];
+  let evenNumbers = [];
+
+  for (; i < array.length; i++) {
+    let num2 = array[i] % 2 == 0 ? true : false;
+
+    switch (num2) {
+      case true:
+        evenNumbers.push(array[i]);
+        break;
+      case false:
+        oddNumbers.push(array[i]);
+        break;
+    }
+  }
+  console.log(oddNumbers);
+  console.log(evenNumbers);
+}
+
+oddEvenArrayPush(nums1);
+// [1, 3, 5, 7, 9]
+// [2, 4, 6, 8, 10]
+
+console.log("-------------------------------------------------------");
+console.log("------------------------------------------------------");
