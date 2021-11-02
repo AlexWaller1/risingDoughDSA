@@ -133,3 +133,17 @@ let javaScript = () => "JavaScript is Awesome!";
 
 console.log(javaScript());
 // JavaScript is Awesome!
+
+console.log("-----------------------------------------------------------");
+console.log("-----------------------------------------------------");
+
+// function returns the cubed number of the number parameter
+
+let numCubed = (num1 = 4) => Math.pow(num1, 3);
+
+console.log(numCubed());
+// 64
+console.log(numCubed(3));
+// 27
+console.log(numCubed(10));
+// 1000
