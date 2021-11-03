@@ -216,3 +216,68 @@ longestCommonPrefix(empty);
 // Not Enough Elements
 longestCommonPrefix(one1);
 // Not Enough Elements, Playstation
+
+console.log("-------------------------------------------------");
+console.log("--------------------------------------------------");
+
+function isPalindrome(string) {
+  let index1 = 0;
+  // first index of string
+  let index2 = string.length - 1;
+  // last index of string
+  let rString = "";
+
+  for (; index1 < index2; index1++, index2--) {
+    if (string.charAt(index1++) != string.charAt(index2--)) {
+      rString = `${string} is not a palindrome`;
+    } else rString = `${string} is a palindrome`;
+  }
+  console.log(rString);
+}
+
+isPalindrome("kayak");
+// kayak is palindrome
+isPalindrome("controller");
+// controller is a palindrome
+// will have to look into this
+isPalindrome("ribbon");
+// ribbon is not palindrome
+isPalindrome("webex");
+// webex is not a palindrome
+isPalindrome("racecar");
+// racecar is a palindrome
+
+console.log("--------------------------------------------------");
+console.log("--------------------------------------------------");
+
+// a second function to evaluate for a palindrome in JavaScript
+
+function isPalindrome2(string) {
+  let rString = "";
+  let string2 = "";
+  string2 = string.split("");
+  string2 = string2.reverse();
+  string2 = string2.join("");
+
+  if (string == string2) {
+    rString = `${string} is a palindrome`;
+  } else {
+    rString = `${string} is not a palindrome`;
+  }
+  console.log(rString);
+}
+
+isPalindrome2("kayak");
+// kayak is a palindrome
+isPalindrome2("dog");
+// dog is not a palindrome
+isPalindrome2("copper");
+// copper is not a palindrome
+isPalindrome2("webbex");
+// webbex is not a palindrome
+isPalindrome2("racecar");
+
+// as long as we can use JavaScript this is definitely a better way
+
+console.log("----------------------------------------------------");
+console.log("-------------------------------------------------");
