@@ -438,11 +438,15 @@ minMax(array3);
 // didn't give the right answer
 
 // keep this in mind that this is unreliable
+// we could always convert array elements to strings and then
+// back to integers if we really have to use sort()
 
 console.log("------------------------------------------");
 console.log("---------------------------------------------------");
 
 function minMax2(array) {
+  if (array.length == 0) console.log("array is empty");
+
   let i = 0;
   let min = array[0];
   let max = array[0];
@@ -463,6 +467,27 @@ minMax2(array2);
 // 98 is the max and 2 is the min
 minMax2(array3);
 // 76 is the max and 4 is the min
+minMax2(empty);
+// array is empty
 
 console.log("2" < "3");
 // true
+
+console.log("-----------------------------------------");
+console.log("-------------------------------------------");
+
+// function to return difference in upvotes and downvotes
+
+let votes1 = { upVotes: 12, downVotes: 9 };
+
+let votes2 = { upVotes: 44, downVotes: 37 };
+
+let voteCount = votes => votes.upVotes - votes.downVotes;
+
+console.log(voteCount(votes1));
+// 3
+console.log(voteCount(votes2));
+// 7
+
+console.log("-------------------------------------------");
+console.log("-----------------------------------------");
