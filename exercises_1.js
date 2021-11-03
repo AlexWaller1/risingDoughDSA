@@ -404,3 +404,16 @@ factorial(2);
 
 console.log("------------------------------------------------------");
 console.log("-----------------------------------------------------");
+
+// function will return the current date and time
+
+function dateAndTime() {
+  let date2 = new Date();
+  console.log(date2);
+}
+
+dateAndTime();
+// Tue Nov 02 2021 23:07:06 GMT-0400 (Eastern Daylight Time)
+
+console.log("--------------------------------------------------");
+console.log("---------------------------------------------------");
