@@ -417,3 +417,52 @@ dateAndTime();
 
 console.log("--------------------------------------------------");
 console.log("---------------------------------------------------");
+
+// function to find minimum and maximum values of an array
+
+let array2 = [37, 6, 4, 98, 56, 34, 2, 5];
+
+let array3 = [45, 76, 23, 34, 22, 21, 4, 45];
+
+function minMax(array) {
+  array.sort();
+  let max = array[array.length - 1];
+  let min = array[0];
+  let rString = `${max} is the max and ${min} is the min`;
+  console.log(rString);
+}
+
+minMax(array2);
+// 98 is the max and 2 is the min
+minMax(array3);
+// didn't give the right answer
+
+// keep this in mind that this is unreliable
+
+console.log("------------------------------------------");
+console.log("---------------------------------------------------");
+
+function minMax2(array) {
+  let i = 0;
+  let min = array[0];
+  let max = array[0];
+  let rString = 0;
+
+  for (; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i];
+    } else if (array[i] < min) {
+      min = array[i];
+    }
+  }
+  rString = `${max} is the max and ${min} is the min`;
+  console.log(rString);
+}
+
+minMax2(array2);
+// 98 is the max and 2 is the min
+minMax2(array3);
+// 76 is the max and 4 is the min
+
+console.log("2" < "3");
+// true
