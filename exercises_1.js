@@ -147,3 +147,72 @@ console.log(numCubed(3));
 // 27
 console.log(numCubed(10));
 // 1000
+
+console.log("--------------------------------------------------");
+console.log("----------------------------------------------");
+
+// function returns the bigger of two number
+
+let maxNumber = (num1 = 9, num2 = 14) => Math.max(num1, num2);
+
+console.log(maxNumber());
+// 14
+console.log(maxNumber(94, 105));
+// 105
+console.log(maxNumber(307, 672));
+// 673
+
+console.log("--------------------------------------------");
+console.log("---------------------------------------------------");
+
+// function evaluates whether a number is even or not
+
+function evenNumberTest(num1 = 10) {
+  if (num1 % 2 == 0) {
+    console.log(`${num1} is an even number`);
+  } else console.log(`${num1} is an odd number`);
+}
+
+evenNumberTest();
+// 10 is an even number
+evenNumberTest(9);
+// 9 is an odd number
+evenNumberTest(37);
+// 37 is an odd number
+evenNumberTest(37.4);
+// 37.4 is an odd number
+
+console.log("---------------------------------");
+console.log("-------------------------------");
+
+// function finds the longest common prefix
+// for an array of strings
+
+const timberTron = ["Timber-Tron", "Timber_Io"];
+const ps4 = ["Nintendo", "Playstation"];
+let empty = [];
+let one1 = ["Playstation"];
+
+function longestCommonPrefix(array) {
+  if (array.length < 2) console.log("Not Enough Elements");
+
+  let prefix = array[0];
+  let i = 1;
+
+  for (; i < array.length; i++) {
+    while (array[i].indexOf(prefix) != 0) {
+      prefix = prefix.substring(0, prefix.length - 1);
+      if (prefix.length == 0) console.log("no common prefix");
+    }
+  }
+  console.log(prefix);
+}
+
+longestCommonPrefix(timberTron);
+// Timber
+longestCommonPrefix(ps4);
+// no common prefix
+longestCommonPrefix(empty);
+// Not Enough Elements
+longestCommonPrefix(one1);
+// Not Enough Elements, Playstation
