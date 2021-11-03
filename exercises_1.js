@@ -350,3 +350,57 @@ console.log(powerOfN(2, 5));
 
 console.log("----------------------------------------------------");
 console.log("---------------------------------------------------");
+
+// function returns how many numbers between the two parameters
+// are divisible by 3
+
+function divisibleBy3(num1 = 1, num2 = 100) {
+  let i = num1 + 1;
+  let count = 0;
+  let rString = "";
+
+  for (; i < num2; i++) {
+    if (i % 3 == 0) {
+      count = count + 1;
+    }
+  }
+  rString = `There are ${count} numbers between ${num1} and ${num2}
+  divisible by 3`;
+  console.log(rString);
+}
+
+divisibleBy3();
+// There are 33 numbers between 1 and 100 divisible by 3
+divisibleBy3(3, 9);
+// There is one number between 3 and 9 divisible by 3
+divisibleBy3(27, 54);
+// There are 8 numbers between 27 and 54 divisible by 3
+
+console.log("----------------------------------------------------");
+console.log("--------------------------------------------------");
+
+// function will return a factorial of a number
+
+function factorial(num1 = 5) {
+  let i = num1;
+  let count = 1;
+  let rString = "";
+
+  for (; i > 0; i--) {
+    count = count * i;
+  }
+  rString = `${num1}! = ${count}`;
+  console.log(rString);
+}
+
+factorial();
+// 5! = 120
+factorial(4);
+// 4! = 24
+factorial(9);
+// 9! = 362880
+factorial(2);
+// 2! = 2
+
+console.log("------------------------------------------------------");
+console.log("-----------------------------------------------------");
