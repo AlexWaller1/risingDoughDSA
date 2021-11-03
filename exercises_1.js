@@ -338,3 +338,15 @@ console.log("---------------------------------------------------");
 
 // function returns a number parameter to the xth power of the
 // second number parameter
+
+let powerOfN = (num1 = 2, num2 = 6) => Math.pow(num1, num2);
+
+console.log(powerOfN());
+// 64
+console.log(powerOfN(7, 9));
+// 40353607
+console.log(powerOfN(2, 5));
+// 32
+
+console.log("----------------------------------------------------");
+console.log("---------------------------------------------------");
