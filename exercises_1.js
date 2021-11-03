@@ -281,3 +281,60 @@ isPalindrome2("racecar");
 
 console.log("----------------------------------------------------");
 console.log("-------------------------------------------------");
+
+// find a substring that is a palindrome
+
+let rocket = "rocket";
+rocket = rocket.substring(1, rocket.length - 1);
+console.log(rocket);
+// ocke
+
+function palindromeSubstring(string) {
+  let string2 = "";
+  let count = 0;
+  let count2 = 0;
+  string2 = string.split("");
+  string2 = string2.reverse();
+  string2 = string2.join("");
+  console.log(string2);
+
+  //   while (string != string2) {
+  //     string = string.substring(string.charAt((count++, string.length - 1)));
+  //     string2 = string2.substring(string.charAt((count2++, string2.length - 1)));
+  //   }
+  //   console.log(string);
+}
+
+palindromeSubstring("corarod");
+// This is not quite working but we are on the right track
+// will come back to this
+
+console.log("------------------------------------------------");
+console.log("-----------------------------------------------");
+
+// This function is to reverse a number
+let num22 = 22;
+console.log(num22.toString());
+// 22 as a string
+
+function reverseNumber(num = 37) {
+  let numString = num.toString();
+  numString = numString.split("");
+  numString = numString.reverse();
+  numString = numString.join("");
+  let reverseNum = parseInt(numString);
+  console.log(reverseNum);
+}
+
+reverseNumber();
+// 73
+reverseNumber(109);
+// 901
+reverseNumber(-95);
+// 59
+
+console.log("----------------------------------------------------");
+console.log("---------------------------------------------------");
+
+// function returns a number parameter to the xth power of the
+// second number parameter
