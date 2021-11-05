@@ -562,3 +562,37 @@ console.log(getRandom(robots));
 
 console.log("------------------------------------------");
 console.log("------------------------------------------");
+
+// function that returns two words in camelCase
+
+let twoWords = [
+  { firstWord: "pencil", lastWord: "sharpener" },
+  { firstWord: "dodge", lastWord: "camry" },
+  { firstWord: "chevy", lastWord: "camaro" },
+  { firstWord: "volkswagen", lastWord: "gti" },
+  { firstWord: "sony", lastWord: "playstation" },
+  { firstWord: "tony", lastWord: "soprano" }
+];
+
+function camelCase(array) {
+  let i = 0;
+  let first = "";
+  let last = "";
+  let rString = "";
+
+  for (; i < array.length; i++) {
+    first = array[i].firstWord;
+    last = array[i].lastWord;
+    last = last.replace(last.charAt(0), last.charAt(0).toUpperCase());
+    rString = first.concat(last);
+    console.log(rString);
+  }
+}
+
+camelCase(twoWords);
+// pencilSharpener
+// dodgeCamry
+// chevyCamaro
+// volkswagenGti
+// sonyPlaystation
+// tonySoprano
