@@ -494,8 +494,8 @@ console.log("-----------------------------------------");
 
 // fizzBuzz function
 
-function fizzBuzz(num = 15) {
-  let i = 1;
+function fizzBuzz(num2 = 1, num = 15) {
+  let i = num2;
 
   for (; i <= num; i++) {
     if (i % 5 == 0 && i % 3 == 0) {
@@ -529,3 +529,36 @@ Buzz
 FizzBuzz
 
 */
+
+fizzBuzz(15, 20);
+/* 
+
+FizzBuzz
+16
+17
+Buzz
+19
+Fizz
+
+*/
+
+console.log("-------------------------------------------");
+console.log("----------------------------------------");
+
+// function to get random element from array parameter
+
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+
+let getRandom = array => array[Math.floor(Math.random() * array.length)];
+
+console.log(getRandom(robots));
+// Hank-44
+// Warren-21
+// Eggplant-Head
+// Warren-21
+// Mellon-Tech
+// Hank-44
+// Hank-44
+
+console.log("------------------------------------------");
+console.log("------------------------------------------");
