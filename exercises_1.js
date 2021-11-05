@@ -665,3 +665,35 @@ console.log(Object.values(crash37)[0]);
 
 console.log("----------------------------------------");
 console.log("-------------------------------------------");
+
+// function to determine whether an array element is
+// a number
+
+let scattered = ["3", "a4", 37, true, undefined, null, 54];
+
+function notNumber(array) {
+  let i = 0;
+  let rString = "";
+
+  for (; i < array.length; i++) {
+    if (isNaN(array[i]) === true) {
+      rString = `${array[i]} is not a number`;
+      console.log(rString);
+    } else {
+      rString = `${array[i]} is a number`;
+      console.log(rString);
+    }
+  }
+}
+
+notNumber(scattered);
+// 3 is a number
+// a4 is not a number
+// 37 is a number
+// true is a number
+// undefined is not a number
+// null is a number       ... interesting
+// 54 is a number
+
+console.log("---------------------------------------");
+console.log("------------------------------------");
