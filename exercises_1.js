@@ -616,3 +616,52 @@ reverseString("dasani");
 
 console.log("----------------------------------------");
 console.log("-------------------------------------");
+
+// function that rounds a number
+
+let roundNumber = num => console.log(Math.round(num));
+
+roundNumber(9.4);
+// 9
+roundNumber(9.5);
+// 10
+roundNumber(37.45867);
+// 37
+
+console.log("------------------------------------------");
+console.log("-------------------------------------");
+
+// function to determine whether a data type is a number
+
+let isNotANumber = param => console.log(isNaN(param));
+
+isNotANumber(37);
+// false
+isNotANumber("A");
+// true
+isNotANumber("==");
+// true
+isNotANumber("37");
+// false
+isNotANumber("3a");
+// true
+
+console.log("---------------------------------------");
+console.log("-------------------------------------------");
+
+// Object practice
+
+const crash37 = {
+  name: "Crash Bandicoot",
+  species: "Bandicoot"
+};
+
+console.log(Object.keys(crash37));
+// ['name', 'species]
+console.log(Object.values(crash37));
+// ['Crash Bandicoot', 'Bandicoot']
+console.log(Object.values(crash37)[0]);
+// Crash Bandicoot
+
+console.log("----------------------------------------");
+console.log("-------------------------------------------");
