@@ -596,3 +596,23 @@ camelCase(twoWords);
 // volkswagenGti
 // sonyPlaystation
 // tonySoprano
+
+console.log("-------------------------------------------");
+console.log("---------------------------------------------");
+
+// function to reverse a string
+
+function reverseString(string) {
+  string = string.split("");
+  string = string.reverse();
+  string = string.join("");
+  console.log(string);
+}
+
+reverseString(robots[2]);
+// hceT-nolleM
+reverseString("dasani");
+// inasad
+
+console.log("----------------------------------------");
+console.log("-------------------------------------");
