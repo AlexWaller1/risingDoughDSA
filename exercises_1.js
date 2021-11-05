@@ -695,5 +695,55 @@ notNumber(scattered);
 // null is a number       ... interesting
 // 54 is a number
 
+console.log(isNaN(null));
+// false
+
 console.log("---------------------------------------");
 console.log("------------------------------------");
+
+// function that will return whether a number
+// is an armstrong number
+// an armstrong number is one where the cubed value of
+// each digit equals the number itself
+// 371
+// 3 * 3 * 3 = 27
+// 7 * 7 * 7 = 343
+console.log(Math.pow(7, 3));
+// 343
+// 1 * 1 * 1
+// 27 + 343 + 1 = 371, so 371 is an armstrong number
+
+function armStrongNumber(num) {
+  let i = 0;
+  let rString = "";
+  let numString = num.toString();
+  numString = numString.split("");
+  let newNum = 0;
+  let count = 0;
+
+  for (; i < numString.length; i++) {
+    newNum = parseInt(numString[i]);
+    count = count + Math.pow(newNum, 3);
+  }
+  if (count == num) {
+    rString = `${num} is an Armstrong Number`;
+    console.log(rString);
+  } else {
+    rString = `${num} is not an Armstrong Number`;
+    console.log(rString);
+  }
+}
+
+armStrongNumber(371);
+// 371 is an Armstrong Number
+armStrongNumber(29);
+// 29 is not an Armstrong Number
+armStrongNumber(153);
+// 153 is an Armstring Number
+armStrongNumber(407);
+// 407 is an ArmStrong Number
+armStrongNumber(512);
+// 512 is not an Armstrong Number
+
+console.log("-------------------------------------------");
+console.log("-----------------------------------------");
