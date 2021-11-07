@@ -862,3 +862,66 @@ circumference(4);
 
 console.log("----------------------------------------");
 console.log("-------------------------------------------");
+
+// function to return a perfect number
+// a perfect number is one that equals the sum
+// of its multiples
+// Multiples of 28 are 1, 2, 4, 7, 14
+// sum of those multiples is 28
+
+function perfectNumber(num = 28) {
+  let i = 0;
+  let sum = 0;
+  let rString = 0;
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      sum = sum + i;
+    }
+  }
+  if (sum == num) {
+    rString = `${num} is a perfect number`;
+  } else {
+    rString = `${num} is not a perfect number`;
+  }
+  console.log(rString);
+}
+
+perfectNumber();
+// 28 is perfect number
+perfectNumber(34);
+// 34 is not a perfect number
+perfectNumber(496);
+// 496 is a perfect number
+perfectNumber(74);
+// 74 is not a perfect number
+
+console.log("-------------------------------------------");
+console.log("----------------------------------------");
+
+// function to see if a number has a whole number
+// for a square root
+
+function wholeNumberSqrt(num = 4) {
+  let rString = 0;
+  if (num % Math.sqrt(num) == 0) {
+    rString = `${num} has a whole number for a square root`;
+  } else {
+    rString = `${num} does not have a whole number for 
+      a square root`;
+  }
+  console.log(rString);
+}
+
+wholeNumberSqrt();
+// 4 has a whole number for a square root
+wholeNumberSqrt(9);
+// 9 has a whole number for a square root
+wholeNumberSqrt(11);
+// 11 does not have a whole number for a square root
+wholeNumberSqrt(20);
+// 20 does not have a whole number for a square root
+wholeNumberSqrt(121);
+// 121 has a whole number for a square root
+
+console.log("-----------------------------------------");
+console.log("-----------------------------------");
