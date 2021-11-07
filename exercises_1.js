@@ -811,3 +811,37 @@ primeNumber2(17);
 
 console.log("-----------------------------------------");
 console.log("-------------------------------------------");
+
+// function to add the digits of a given number
+
+function addDigits(num = 15) {
+  let numString = num.toString();
+  numString = numString.split("");
+  console.log(numString);
+  let i = 0;
+  let sum = 0;
+
+  for (; i < numString.length; i++) {
+    let num1 = numString[i];
+    if (isNaN(num1) == true) {
+      let rString = "";
+    } else {
+      num1 = parseInt(num1);
+      sum = sum + num1;
+    }
+  }
+  console.log(sum);
+}
+
+addDigits();
+// 6
+addDigits(37);
+// 10
+addDigits(-37);
+// 10
+addDigits(97);
+// 16
+addDigits(65);
+// 11
+addDigits(-65);
+// 11
