@@ -777,3 +777,37 @@ console.log(primeNumber(1));
 // please enter a number greater than one
 console.log(primeNumber(37));
 // 37 is a prime number
+
+console.log("-----------------------------------------");
+console.log("---------------------------------------");
+
+// function to return whether a parameter is a prime number
+
+function primeNumber2(num = 3) {
+  if (num < 2) console.log("Out of Range");
+  if (num == 2) console.log(`${num} is a prime number`);
+  let i = 2;
+  let rString = 0;
+
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      rString = `${num} is not a prime number`;
+      break;
+    } else {
+      rString = `${num} is a prime number`;
+    }
+  }
+  console.log(rString);
+}
+
+primeNumber2();
+// 3 is prime number
+primeNumber2(12);
+// 12 is not a prime number
+primeNumber2(15);
+// 15 is not a prime number
+primeNumber2(17);
+// 17 is prime number
+
+console.log("-----------------------------------------");
+console.log("-------------------------------------------");
