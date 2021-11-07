@@ -951,3 +951,29 @@ evenOrOdd(24);
 
 console.log("----------------------------------------");
 console.log("--------------------------------------");
+
+// function to find the longest common suffix
+const tion = ["function", "junction", "fiction", "friction"];
+
+let crash39 = "crash";
+console.log(!crash39.includes("l"));
+// true
+
+function longestCommonSuffix(array) {
+  if (array.length == 0) console.log("Array is Empty");
+  let suffix = array[0];
+  let count = 0,
+    i = 1;
+
+  for (; i < array.length; i++) {
+    let comp = array[i];
+
+    while (!comp.includes(suffix)) {
+      suffix = suffix.substring(count++, suffix.length);
+    }
+  }
+
+  return suffix;
+}
+
+console.log(longestCommonSuffix(tion));
