@@ -745,5 +745,35 @@ armStrongNumber(407);
 armStrongNumber(512);
 // 512 is not an Armstrong Number
 
-console.log("-------------------------------------------");
 console.log("-----------------------------------------");
+console.log("------------------------------------");
+
+// function to evaluate whether a number is a prime number
+
+function primeNumber(num = 5) {
+  if (num < 2) return "please enter a number greater than 1";
+  if (num == 2) return `${num} is a prime number.`;
+  let i = 2;
+  let rString = "";
+
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      return `${num} is not a prime number`;
+    }
+    return `${num} is a prime number`;
+  }
+}
+
+primeNumber();
+// 5 is a prime number
+primeNumber(3);
+// 3 is a prime number
+
+console.log(primeNumber(12));
+// 12 is not a prime number
+console.log(primeNumber(3));
+// 3 is a prime number
+console.log(primeNumber(1));
+// please enter a number greater than one
+console.log(primeNumber(37));
+// 37 is a prime number
