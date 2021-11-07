@@ -925,3 +925,29 @@ wholeNumberSqrt(121);
 
 console.log("-----------------------------------------");
 console.log("-----------------------------------");
+
+// function that returns whether a number is even or odd
+
+function evenOrOdd(num = 3) {
+  let rString = 0;
+  if (num % 2 == 0) {
+    rString = `${num} is an even number`;
+  } else {
+    rString = `${num} is an odd number`;
+  }
+  console.log(rString);
+}
+
+evenOrOdd();
+// 3 is an odd number
+evenOrOdd(4);
+// 4 is an even number
+evenOrOdd(5);
+// 5 is an odd number
+evenOrOdd(6);
+// 6 is an even number
+evenOrOdd(24);
+// 24 is an even number
+
+console.log("----------------------------------------");
+console.log("--------------------------------------");
