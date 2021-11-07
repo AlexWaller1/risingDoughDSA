@@ -953,27 +953,44 @@ console.log("----------------------------------------");
 console.log("--------------------------------------");
 
 // function to find the longest common suffix
-const tion = ["function", "junction", "fiction", "friction"];
 
-let crash39 = "crash";
-console.log(!crash39.includes("l"));
-// true
+function reverseString2(string) {
+  string = string.split("");
+  string = string.reverse();
+  string = string.join("");
+  return string;
+}
+
+console.log(reverseString2("tree"));
+// eert
+
+const ction = ["function", "junction", "fiction", "friction"];
+
+const ian = ["canadian", "kardashian", "ian", "albanian"];
+
+const ter = ["water", "disaster", "matter", "printer"];
 
 function longestCommonSuffix(array) {
   if (array.length == 0) console.log("Array is Empty");
   let suffix = array[0];
-  let count = 0,
-    i = 1;
-
+  suffix = reverseString2(suffix);
+  console.log(suffix);
+  let i = 0;
+  let string1 = "";
   for (; i < array.length; i++) {
-    let comp = array[i];
-
-    while (!comp.includes(suffix)) {
-      suffix = suffix.substring(count++, suffix.length);
+    string1 = reverseString2(array[i]);
+    while (string1.indexOf(suffix) != 0) {
+      suffix = suffix.substring(0, suffix.length - 1);
+      if (suffix.length == 0) return "No Common Suffix";
     }
   }
-
+  suffix = reverseString2(suffix);
   return suffix;
 }
 
-console.log(longestCommonSuffix(tion));
+console.log(longestCommonSuffix(ter));
+// ter
+console.log(longestCommonSuffix(ian));
+// ian
+console.log(longestCommonSuffix(ction));
+// ction
