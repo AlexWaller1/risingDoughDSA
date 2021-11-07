@@ -974,7 +974,7 @@ function longestCommonSuffix(array) {
   if (array.length == 0) console.log("Array is Empty");
   let suffix = array[0];
   suffix = reverseString2(suffix);
-  console.log(suffix);
+
   let i = 0;
   let string1 = "";
   for (; i < array.length; i++) {
@@ -994,3 +994,29 @@ console.log(longestCommonSuffix(ian));
 // ian
 console.log(longestCommonSuffix(ction));
 // ction
+
+console.log("------------------------------------------");
+console.log("------------------------------------");
+
+// find the longest common suffix
+
+function longestCommonSuffix3(array) {
+  if (array.length == 0) return "Array is Empty";
+  let suffix = array[0];
+  let i = 1;
+  let count = 1;
+  let string1 = "";
+  for (; i < array.length; i++) {
+    string1 = array[i];
+    while (!string1.includes(suffix)) {
+      if (string1.includes(suffix)) break;
+      suffix = suffix.substring(count++, suffix.length);
+      console.log(suffix);
+    }
+  }
+  return suffix;
+}
+
+console.log(longestCommonSuffix3(ter));
+
+console.log(Math.max("Max", "Maxx"));
