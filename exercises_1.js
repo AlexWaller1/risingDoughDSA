@@ -845,3 +845,20 @@ addDigits(65);
 // 11
 addDigits(-65);
 // 11
+
+console.log("------------------------------------------");
+console.log("-----------------------------------------");
+
+// function to return the circumference of a circle
+console.log(Math.PI);
+// 3.141592653589793
+
+let circumference = (r = 2) => console.log(2 * Math.PI * r);
+
+circumference();
+// 12.57
+circumference(4);
+// 25.13
+
+console.log("----------------------------------------");
+console.log("-------------------------------------------");
