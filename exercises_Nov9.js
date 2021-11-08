@@ -73,14 +73,13 @@ const bankAccounts3 = [
 ];
 
 function accountSum(array) {
-  let j = 0;
   let sumArray = [];
-  let inner = "";
 
   array.forEach(function (inner) {
     let sum = 0;
+    let i = 0;
 
-    for (let i = 0; i < inner.length; i++) {
+    for (; i < inner.length; i++) {
       sum = sum + inner[i];
       if (i == inner.length - 1) {
         sumArray.push(sum);
@@ -100,3 +99,32 @@ accountSum(bankAccounts);
 
 console.log("----------------------------");
 console.log("-------------------------------");
+
+// another function to determine
+// highest acount number
+
+function accountSum2(array) {
+  let sumArray = [];
+  let i = 0;
+
+  for (; i < array.length; i++) {
+    let inner = array[i];
+    let sum = 0;
+    for (let j = 0; j < inner.length; j++) {
+      sum = sum + inner[j];
+      if (j == inner.length - 1) {
+        sumArray.push(sum);
+      }
+    }
+  }
+  console.log(sumArray);
+  let sortedSum2 = sortNumber(sumArray);
+  console.log(sortedSum2[sortedSum2.length - 1]);
+}
+
+accountSum2(bankAccounts2);
+// 101
+accountSum2(bankAccounts3);
+// 75
+accountSum2(bankAccounts);
+// 18
