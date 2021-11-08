@@ -127,3 +127,34 @@ capitalizeFirstLetter("rocky and bullwinkle");
 
 console.log("------------------------------------------");
 console.log("------------------------------------------");
+
+// Write a function that converts an object into an array,
+// where each element represents a key-value pair in the
+// form of an array
+// toArray({shrimp: 15, tots: 12}) -> [["shrimp", 15], ["tots", 12]]
+
+const crash44 = {
+  name: "Crash Bandicoot",
+  name2: "Cortex",
+  name3: "Dingodile",
+  name4: "Tiny Tiger"
+};
+
+console.log(Object.values(crash44)[2]);
+// Dingodile
+
+function objectToArray(object) {
+  let i = 0;
+  let innerArray = [];
+  let outerArray = [];
+
+  for (; i < Object.keys(object).length; i++) {
+    let key = Object.keys(object)[i];
+    let value = Object.values(object)[i];
+    innerArray = [key, value];
+    outerArray.push(innerArray);
+  }
+  console.log(outerArray);
+}
+
+objectToArray(crash44);
