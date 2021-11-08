@@ -1020,3 +1020,5 @@ function longestCommonSuffix3(array) {
 console.log(longestCommonSuffix3(ter));
 
 console.log(Math.max("Max", "Maxx"));
+
+// Not quite working but let's come back to this later
