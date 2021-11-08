@@ -182,3 +182,34 @@ stringToKeyValue(rTrooper, "trooper2", "Bagman");
 
 console.log("-----------------------------------------");
 console.log("--------------------------------------");
+
+// function to return unique element from array with
+// multiple duplicates
+// so if array is [1, 1, 2, 3, 3]
+// function should return 2
+
+let duplicates1 = [1, 2, 9, 12, 2, 1, 9, 12, 4];
+
+let duplicates2 = [10, 4, 5, 2, 37, 44, 4, 5, 2, 10, 44];
+
+function uniqueElement(array) {
+  array = numberSort(array);
+  console.log(array);
+  let i = 0;
+  let r1 = 0;
+  let r2 = 0;
+
+  for (; i < array.length; i++) {
+    if (array[i] == array[i + 1] || array[i] == array[i - 1]) {
+      r1 = array[i];
+    } else r2 = array[i];
+  }
+  console.log(r2);
+}
+
+uniqueElement(duplicates2);
+// 37
+uniqueElement(duplicates1);
+
+console.log("----------------------------------------");
+console.log("----------------------------------------");
