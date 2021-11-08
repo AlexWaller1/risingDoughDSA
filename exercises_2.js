@@ -101,3 +101,29 @@ minMax(nums5);
 
 console.log("------------------------------------------");
 console.log("------------------------------------------");
+
+// function to capitalize the first letter in each word
+// of a sentence;
+// input: Bodhi is awesome!
+// output: Bodhi Is Awesome!
+
+function capitalizeFirstLetter(string) {
+  string = string.split(" ");
+  let i = 0;
+  let str2 = "";
+  let concat = "";
+  for (; i < string.length; i++) {
+    str2 = string[i];
+    str2 = str2.replace(str2.charAt(0), str2.charAt(0).toUpperCase());
+    concat = concat + `${str2} `;
+  }
+  console.log(concat);
+}
+
+capitalizeFirstLetter("martian manhumter");
+// Martian Manhunter
+capitalizeFirstLetter("rocky and bullwinkle");
+// Rocky And Bullwinkle
+
+console.log("------------------------------------------");
+console.log("------------------------------------------");
