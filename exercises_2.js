@@ -210,6 +210,28 @@ function uniqueElement(array) {
 uniqueElement(duplicates2);
 // 37
 uniqueElement(duplicates1);
+// 4
 
 console.log("----------------------------------------");
 console.log("----------------------------------------");
+
+// function to remove duplicates from an array
+
+function removeDuplicates(array) {
+  array = numberSort(array);
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == array[i + 1]) {
+      array.splice(i, 1);
+    }
+  }
+  console.log(array);
+}
+
+removeDuplicates(duplicates1);
+// [1, 2, 4, 9, 12]
+removeDuplicates(duplicates2);
+// [2, 4, 5, 10, 37, 44]
+
+console.log("-----------------------------------------");
+console.log("---------------------------------------");
