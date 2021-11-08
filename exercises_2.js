@@ -142,6 +142,9 @@ const crash44 = {
 
 console.log(Object.values(crash44)[2]);
 // Dingodile
+Object.assign(crash44, { name5: "Spyro" });
+console.log(crash44);
+// adds key value pair to the object
 
 function objectToArray(object) {
   let i = 0;
@@ -158,3 +161,24 @@ function objectToArray(object) {
 }
 
 objectToArray(crash44);
+
+console.log("------------------------------------------");
+console.log("---------------------------------------");
+
+// function to assign two string parameters as a key-value
+// pair into a preexisting object
+const rTrooper = {
+  trooper1: "Rogue Trooper"
+};
+
+function stringToKeyValue(object, key, value) {
+  let keyValue = { [key]: value };
+  Object.assign(object, keyValue);
+  console.log(object);
+}
+
+stringToKeyValue(rTrooper, "trooper2", "Bagman");
+// {trooper1: 'Rogue Trooper', trooper2: 'Bagman'}
+
+console.log("-----------------------------------------");
+console.log("--------------------------------------");
