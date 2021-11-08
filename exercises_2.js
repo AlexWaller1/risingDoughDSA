@@ -78,3 +78,26 @@ console.log(descendingOrder(nums4));
 // [34, 32, 24, 23, 12]
 console.log(descendingOrder(nums5));
 // [63, 54, 50, 46, 45, 30, 21]
+
+console.log("---------------------------------------");
+console.log("--------------------------------------");
+
+// function that delivers the maximum and minimum number
+// of an array
+
+function minMax(num) {
+  let sorter = num1 => num1.sort((a, b) => a - b);
+  num = sorter(num);
+  console.log(`The max is ${num[num.length - 1]}`);
+  console.log(`The min is ${num[0]}`);
+}
+
+minMax(nums4);
+// The max is 34
+// The min is 12
+minMax(nums5);
+// The max is 63
+// The min is 21
+
+console.log("------------------------------------------");
+console.log("------------------------------------------");
