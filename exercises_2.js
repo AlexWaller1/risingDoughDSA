@@ -51,3 +51,30 @@ threeDigitCombos(763);
 
 console.log("------------------------------------------");
 console.log("---------------------------------------");
+
+// function to sort an array of numbers
+// in ascending order
+
+let nums4 = [34, 23, 12, 32, 24];
+
+let nums5 = [63, 54, 45, 46, 50, 21, 30];
+
+let numberSort = array => array.sort((a, b) => a - b);
+
+console.log(numberSort(nums4));
+// [12, 23, 24, 32, 34]
+console.log(numberSort(nums5));
+// [21, 30, 45, 46, 50, 54, 63]
+
+console.log("--------------------------------------");
+console.log("------------------------------------------");
+
+// function that returns an ordered number array
+// in descending order
+
+let descendingOrder = array => array.sort((a, b) => b - a);
+
+console.log(descendingOrder(nums4));
+// [34, 32, 24, 23, 12]
+console.log(descendingOrder(nums5));
+// [63, 54, 50, 46, 45, 30, 21]
