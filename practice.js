@@ -155,3 +155,25 @@ console.log(robots[3]);
 // Eggplant-Head
 console.log(robots[0]);
 // Hank-44
+
+console.log(hammerHead2[5].name);
+// The Cosmic Trout
+console.log(hammerHead2[1].hasPickerelCola);
+// true
+console.log(hammerHead2[0].homePlanet);
+// Venice Sands 5
+
+let descendingOrder2 = array => array.sort((a, b) => b - a);
+
+console.log(descendingOrder2(hammerHead));
+// doesn't do anything for strings.
+
+const nums1 = [2, 1, 44, 34, 23, 96, 7, 100];
+
+console.log(descendingOrder2(nums1));
+// [100, 96, 44, 34, 23, 7, 2, 1]
+
+let hammerHeadBackWards = hammerHead.sort();
+hammerHeadBackWards = hammerHeadBackWards.reverse();
+console.log(hammerHeadBackWards);
+// ['Wibaux', 'The Cosmic Trout', 'Taylor', 'Harvey', 'Hammerhead', 'Geometry Man']

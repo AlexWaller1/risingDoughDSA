@@ -235,3 +235,20 @@ removeDuplicates(duplicates2);
 
 console.log("-----------------------------------------");
 console.log("---------------------------------------");
+
+// function to reverse an array with reverse function
+let testArray = [3, 2, 37, 4];
+
+function reverseArray(array) {
+  let i = array.length - 1;
+  let array2 = [];
+  for (; i >= 0; i--) {
+    let string1 = array[i];
+    array.pop(i);
+    array2.push(string1);
+  }
+  console.log(array2);
+}
+
+reverseArray(testArray);
+// [4, 37, 2, 3]
