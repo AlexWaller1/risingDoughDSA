@@ -1,4 +1,7 @@
 console.log("Hello Oa");
+
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+
 console.log("------------------------------------------");
 
 console.log("a" + "b");
@@ -238,6 +241,7 @@ console.log("---------------------------------------");
 
 // function to reverse an array with reverse function
 let testArray = [3, 2, 37, 4];
+const robots2 = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
 
 function reverseArray(array) {
   let i = array.length - 1;
@@ -252,3 +256,22 @@ function reverseArray(array) {
 
 reverseArray(testArray);
 // [4, 37, 2, 3]
+reverseArray(robots);
+// ['Eggplant-head', 'Mellon-Tech', 'Warren-21', 'Hank-44']
+reverseArray(robots2);
+// ['Eggplant-Head', 'Mellon-Tech', 'Warren-21', 'Hank-44']
+reverseArray(robots2);
+// array is empy since it was previous emptied out
+
+function reverseArray2(array) {
+  let i = array.length - 1;
+  let count = 0;
+  for (; i > 0; i) {
+    let string = array[i];
+    array.pop(i);
+    array.splice(count++, 0, string);
+  }
+  console.log(array);
+}
+
+reverseArray2(robots2);
