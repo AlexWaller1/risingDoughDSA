@@ -263,15 +263,27 @@ reverseArray(robots2);
 reverseArray(robots2);
 // array is empy since it was previous emptied out
 
+console.log("-------------------------------");
+console.log("-----------------------------");
+
+const robots3 = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+const robots4 = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-head"];
+let practiceArray = [1, 2, 3, 4];
+
 function reverseArray2(array) {
   let i = array.length - 1;
   let count = 0;
-  for (; i > 0; i) {
-    let string = array[i];
-    array.pop(i);
+  for (; i >= 0; i--) {
+    let string = array[array.length - 1];
+    array.pop();
     array.splice(count++, 0, string);
   }
   console.log(array);
 }
+reverseArray2(robots4);
+// ['Eggplant-Head', 'Mellon-Tech', 'Warren-21', 'Hank-44']
+reverseArray2(practiceArray);
+// [4, 3, 2, 1]
 
-reverseArray2(robots2);
+console.log("------------------------------");
+console.log("-----------------------------");
