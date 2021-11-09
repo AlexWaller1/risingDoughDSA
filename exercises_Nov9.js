@@ -128,3 +128,6 @@ accountSum2(bankAccounts3);
 // 75
 accountSum2(bankAccounts);
 // 18
+
+console.log("-------------------------------");
+console.log("----------------------------");

@@ -23,6 +23,54 @@ const robots2 = [
   }
 ];
 
+const hammerHead = [
+  "Hammerhead",
+  "Taylor",
+  "Geometry Man",
+  "Harvey",
+  "Wibaux",
+  "The Cosmic Trout"
+];
+
+const hammerHead2 = [
+  {
+    name: "Hammerhead",
+    hasPickerelCola: true,
+    career: "Pickerel Cola Truck Driver",
+    homePlanet: "Venice Sands 5"
+  },
+  {
+    name: "Taylor",
+    hasPickerelCola: true,
+    career: "Pickerel Cola Truck Driver",
+    homePlanet: "Mariner Mist"
+  },
+  {
+    name: "Harvey",
+    hasPickerelCola: false,
+    career: "Soldier/Fishing Guide",
+    homePlanet: "Hardin-37"
+  },
+  {
+    name: "Wibaux",
+    hasPickerelCola: false,
+    career: "Soldier/Minimart Manager",
+    homePlanet: "Hardin-37"
+  },
+  {
+    name: "Geometry Man",
+    hasPickerelCola: undefined,
+    career: undefined,
+    homePlanet: "Geometry-Verse"
+  },
+  {
+    name: "The Cosmic Trout",
+    hasPickerelCola: undefined,
+    career: undefined,
+    homePlanet: undefined
+  }
+];
+
 if (robots[2] == "Mellon-Tech") {
   let i = 0;
   for (; i < robots.length; i++) {
@@ -100,3 +148,10 @@ if (robots[1] == "Warren-21") {
   console.log(nouvelleMilwaukee);
   // ['Hank-44', 'Warren-21']
 }
+
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[3]);
+// Eggplant-Head
+console.log(robots[0]);
+// Hank-44
