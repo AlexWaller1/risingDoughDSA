@@ -205,3 +205,60 @@ if (hammerHead[1] === "The Cosmic Trout") {
   console.log(shark1);
   // ['Venice Sands 5', 'Mariner Mist', 'Hardin-37', 'Hardin-37', 'Geometry-Verse', undefined]
 }
+
+let count1 = [1, 2, 3, 4, 5];
+
+if (1 != 2) {
+  let i = 0;
+  for (; i < count1.length; i++) {
+    let count = 0;
+    count = count + count1[i];
+    console.log(count);
+    // 1
+    // 2
+    // 3
+    // 4
+    // 5
+  }
+}
+
+let counters = [1, 1, 1, 2, 2];
+
+if (2 == "2") {
+  let i = 0;
+  let count = 1;
+  for (; i < counters.length - 1; i++) {
+    if (counters[i] == counters[i + 1]) {
+      count++;
+    } else count = 1;
+  }
+  console.log(count);
+}
+
+console.log("-------------------------------");
+console.log("----------------------------");
+
+let counters2 = [3, 3, 3, 4, 4, 4, 4];
+let counters3 = [4, 4, 5, 5, 5, 5, 5];
+let counters4 = [2, 2, 3, 3, 3];
+let counters5 = [1, 2, 2];
+
+function countNums(array) {
+  let i = 0;
+  let count = 1;
+  for (; i < array.length - 1; i++) {
+    if (array[i] == array[i + 1]) {
+      count++;
+    } else count = 1;
+  }
+  console.log(count);
+}
+
+countNums(counters2);
+// 4
+countNums(counters3);
+// 5
+countNums(counters4);
+// 3
+countNums(counters5);
+// 2

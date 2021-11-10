@@ -384,3 +384,13 @@ medianValue(median5);
 
 console.log("---------------------------------");
 console.log("------------------------------");
+
+// function to find the mode number
+// sort the array first
+// then iterate through each array element
+// let's try a brute force approach first
+// we'll want to push different elements into
+// their own arrays, and then evaluate
+// the arrays against each other to get
+// the one with the most elements
+// out of that
