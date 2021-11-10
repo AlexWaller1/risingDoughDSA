@@ -287,3 +287,30 @@ reverseArray2(practiceArray);
 
 console.log("------------------------------");
 console.log("-----------------------------");
+
+// another function to find the max value of an
+// array
+
+let max2 = [98, 2, 37, 23, 31, 44, 76, 22];
+let max3 = [65, 34, 5, 43, 24, 51, 3, 34, 79];
+
+function maxNum(array) {
+  let i = 1;
+  let max = array[0];
+  let min = array[0];
+  for (; i < array.length - 1; i++) {
+    max = Math.max(max, array[i]);
+    min = Math.min(min, array[i]);
+  }
+  console.log(max, min);
+}
+
+maxNum(max2);
+// 98 2
+console.log(Math.min(null, 1));
+// 0
+maxNum(max3);
+// 65 3
+
+console.log("---------------------------------");
+console.log("-------------------------------");

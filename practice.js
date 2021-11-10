@@ -177,3 +177,31 @@ let hammerHeadBackWards = hammerHead.sort();
 hammerHeadBackWards = hammerHeadBackWards.reverse();
 console.log(hammerHeadBackWards);
 // ['Wibaux', 'The Cosmic Trout', 'Taylor', 'Harvey', 'Hammerhead', 'Geometry Man']
+
+console.log(hammerHead[0]);
+// Wibaux
+console.log(hammerHead[0] == "Wibaux");
+// true
+
+if (hammerHead[0] === "Wibaux") {
+  let shark1 = hammerHead2
+    .filter(function (shark2) {
+      return shark2.name == "Hammerhead";
+    })
+    .map(function (shark3) {
+      return shark3.homePlanet;
+    });
+  console.log(shark1);
+  // ['Venice Sands 5']
+}
+
+console.log(hammerHead[1]);
+// The Cosmic Trout
+
+if (hammerHead[1] === "The Cosmic Trout") {
+  let shark1 = hammerHead2.map(function (shark2) {
+    return shark2.homePlanet;
+  });
+  console.log(shark1);
+  // ['Venice Sands 5', 'Mariner Mist', 'Hardin-37', 'Hardin-37', 'Geometry-Verse', undefined]
+}
