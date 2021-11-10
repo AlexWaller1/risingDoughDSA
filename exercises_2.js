@@ -343,3 +343,44 @@ findAverage(avg2);
 
 console.log("-------------------------------");
 console.log("-------------------------------");
+
+let sortBot = array => array.sort((a, b) => a - b);
+// find the median value of an array
+let median1 = [1, 2, 3, 4, 5];
+let median2 = [1, 3, 5, 7, 9, 11, 13];
+let median3 = [1, 2, 3, 4];
+let median4 = [15, 30, 45, 60, 75, 90, 105];
+let median5 = [37, 44, 79, 14, 22];
+
+function medianValue(array) {
+  if (array.length % 2 == 0) console.log("No Median Value");
+  array = sortBot(array);
+  let i = 0;
+  let median = null;
+  let rString = "";
+  for (; i < array.length; i++) {
+    if (i < (array.length - 1) / 2) {
+      rString = "Hello";
+    } else if (i > (array.length - 1) / 2) {
+      rString = "Hello";
+    } else if (i == (array.length - 1) / 2) {
+      median = array[i];
+    }
+  }
+  console.log(median);
+}
+
+medianValue(median1);
+// 3
+medianValue(median2);
+// 7
+medianValue(median3);
+// No Median Value
+// null
+medianValue(median4);
+// 60
+medianValue(median5);
+// 37
+
+console.log("---------------------------------");
+console.log("------------------------------");
