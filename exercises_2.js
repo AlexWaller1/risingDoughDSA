@@ -314,3 +314,32 @@ maxNum(max3);
 
 console.log("---------------------------------");
 console.log("-------------------------------");
+
+// function to find the average number of all
+// array elements
+
+let avg1 = [10, 20, 30, 40];
+let avg2 = [30, 50, 30, 50];
+console.log((10 + 20 + 30 + 40) / 4);
+// 25
+
+function findAverage(array) {
+  let i = 0;
+  let divisible = array.length;
+  let sum = 0;
+  let avg;
+
+  for (; i < array.length; i++) {
+    sum = sum + array[i];
+  }
+  avg = sum / divisible;
+  console.log(avg);
+}
+
+findAverage(avg1);
+// 25
+findAverage(avg2);
+// 40
+
+console.log("-------------------------------");
+console.log("-------------------------------");
