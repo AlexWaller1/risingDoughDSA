@@ -394,3 +394,53 @@ console.log("------------------------------");
 // the arrays against each other to get
 // the one with the most elements
 // out of that
+
+function findMode(array) {
+  let i = 1;
+  let max = array[0].times;
+  let mode = array[0].num;
+  for (; i < array.length; i++) {
+    if (array[i].times > max) {
+      max = array[i].times;
+      mode = array[i].num;
+    }
+  }
+  return mode;
+}
+
+let counters2 = [3, 3, 3, 4, 4, 4, 4];
+let counters3 = [4, 4, 5, 5, 5, 5, 5];
+let counters4 = [2, 2, 3, 3, 3];
+let counters5 = [1, 2, 2];
+
+function countNums(array) {
+  let i = 0;
+  let count = 1;
+  let keyValue = {};
+  let array2 = [];
+  for (; i < array.length - 1; i++) {
+    if (array[i] == array[i + 1]) {
+      count++;
+      keyValue = { times: count, num: array[i] };
+    } else {
+      array2.push(keyValue);
+      count = 1;
+    }
+  }
+  array2.push(keyValue);
+  console.log(findMode(array2));
+}
+
+//countNums(counters2);
+// 4
+
+countNums(counters3);
+// 5
+countNums(counters4);
+// 3
+countNums(counters2);
+// 4
+countNums(counters5);
+
+console.log("---------------------------------");
+console.log("-----------------------------");
