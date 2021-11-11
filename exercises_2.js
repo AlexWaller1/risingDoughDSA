@@ -412,6 +412,10 @@ let counters2 = [3, 3, 3, 4, 4, 4, 4];
 let counters3 = [4, 4, 5, 5, 5, 5, 5];
 let counters4 = [2, 2, 3, 3, 3];
 let counters5 = [1, 2, 2];
+let counters6 = [3, 4, 4, 5, 6, 6, 7, 7, 7];
+let counters7 = [2, 4, 4, 5, 5, 5, 5, 9, 9];
+let counters8 = [1, 3, 3, 9, 9, 9, 9, 12, 12];
+let counters9 = [20, 20, 21, 21, 21, 22, 22, 23];
 
 function countNums(array) {
   let i = 0;
@@ -425,14 +429,12 @@ function countNums(array) {
     } else {
       array2.push(keyValue);
       count = 1;
+      keyValue = { times: count, num: array[i] };
     }
   }
   array2.push(keyValue);
   console.log(findMode(array2));
 }
-
-//countNums(counters2);
-// 4
 
 countNums(counters3);
 // 5
@@ -442,6 +444,74 @@ countNums(counters2);
 // 4
 countNums(counters5);
 // 2, fixed it!!!
+countNums(counters6);
+// 7
+countNums(counters7);
+// 5
+countNums(counters8);
+// 9
+countNums(counters9);
+// 21
 
 console.log("---------------------------------");
 console.log("-----------------------------");
+
+// function to keep a count of each
+// array element
+
+const roboClones = [
+  "Mellon-Tech",
+  "Hank-44",
+  "Eggplant-Head",
+  "Warren-21",
+  "Warren-21",
+  "Mellon-Tech",
+  "Hank-44",
+  "Eggplant-head",
+  "Warren-21",
+  "Hank-44",
+  "Mellon-Tech",
+  "Hank-44",
+  "Eggplant-Head",
+  "Mellon-Tech",
+  "Warren-21"
+];
+
+const robots9 = [
+  "Hank-44",
+  "Warren-21",
+  "Mellon-tech",
+  "Mellon-Tech",
+  "Eggplant-Head"
+];
+
+function countElements(array) {
+  array.sort();
+  let i = 0;
+  let count = 1;
+  let newElement = { [array[0]]: count };
+  let array2 = [];
+
+  for (; i < array.length; i++) {
+    if (array[i] == array[i + 1]) {
+      count++;
+      newElement = { [array[i]]: count };
+    } else {
+      array.push(newElement);
+      count = 1;
+      newElement = { [array[i]]: count };
+    }
+  }
+  array2.push(newElement);
+  console.log(array2);
+}
+
+// countElements(robots9);
+
+// current crashes devtools/
+// not sure why yet
+
+console.log("Hello Oa");
+
+console.log("--------------------------------");
+console.log("--------------------------------");
