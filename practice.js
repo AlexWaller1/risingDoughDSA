@@ -238,6 +238,19 @@ if (2 == "2") {
 console.log("-------------------------------");
 console.log("----------------------------");
 
+function findMode(array) {
+  let i = 1;
+  let max = array[0].times;
+  let mode = array[0].num;
+  for (; i < array.length; i++) {
+    if (array[i].times > max) {
+      max = array[i].times;
+      mode = array[i].num;
+    }
+  }
+  return mode;
+}
+
 let counters2 = [3, 3, 3, 4, 4, 4, 4];
 let counters3 = [4, 4, 5, 5, 5, 5, 5];
 let counters4 = [2, 2, 3, 3, 3];
@@ -258,18 +271,66 @@ function countNums(array) {
     }
   }
   array2.push(keyValue);
-  console.log(array2);
+  console.log(findMode(array2));
 }
 
 //countNums(counters2);
 // 4
 
 countNums(counters3);
-// // 5
-// countNums(counters4);
-// // 3
-// countNums(counters5);
-// // 2
+// 5
+countNums(counters4);
+// 3
+countNums(counters2);
+// 4
+countNums(counters5);
+
+console.log("---------------------------------");
+console.log("-----------------------------");
 
 console.log(2 == undefined);
 // false
+
+const timesNum = [
+  {
+    times: 2,
+    num: 4
+  },
+  {
+    times: 5,
+    num: 5
+  },
+  {
+    times: 3,
+    num: 7
+  },
+  {
+    times: 4,
+    num: 3
+  }
+];
+
+console.log(timesNum[0].times);
+// 2
+
+console.log(timesNum);
+timesNum.sort();
+console.log(timesNum);
+
+console.log(hammerHead[5]);
+// Geometry Man
+
+if (hammerHead[5] == "Geometry Man") {
+  let i = 1;
+  let max = timesNum[0].times;
+  let mode = timesNum[0].num;
+  for (; i < timesNum.length; i++) {
+    if (timesNum[i].times > max) {
+      max = timesNum[i].times;
+      mode = timesNum[i].num;
+    }
+  }
+  console.log(mode);
+}
+
+console.log(findMode(timesNum));
