@@ -246,19 +246,30 @@ let counters5 = [1, 2, 2];
 function countNums(array) {
   let i = 0;
   let count = 1;
+  let keyValue = {};
+  let array2 = [];
   for (; i < array.length - 1; i++) {
     if (array[i] == array[i + 1]) {
       count++;
-    } else count = 1;
+      keyValue = { times: count, num: array[i] };
+    } else {
+      array2.push(keyValue);
+      count = 1;
+    }
   }
-  console.log(count);
+  array2.push(keyValue);
+  console.log(array2);
 }
 
-countNums(counters2);
+//countNums(counters2);
 // 4
+
 countNums(counters3);
-// 5
-countNums(counters4);
-// 3
-countNums(counters5);
-// 2
+// // 5
+// countNums(counters4);
+// // 3
+// countNums(counters5);
+// // 2
+
+console.log(2 == undefined);
+// false
