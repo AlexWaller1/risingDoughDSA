@@ -416,7 +416,7 @@ let counters5 = [1, 2, 2];
 function countNums(array) {
   let i = 0;
   let count = 1;
-  let keyValue = {};
+  let keyValue = { times: 1, num: array[0] };
   let array2 = [];
   for (; i < array.length - 1; i++) {
     if (array[i] == array[i + 1]) {
@@ -441,6 +441,7 @@ countNums(counters4);
 countNums(counters2);
 // 4
 countNums(counters5);
+// 2, fixed it!!!
 
 console.log("---------------------------------");
 console.log("-----------------------------");
