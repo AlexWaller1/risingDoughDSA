@@ -334,3 +334,67 @@ if (hammerHead[5] == "Geometry Man") {
 }
 
 console.log(findMode(timesNum));
+
+console.log(37 % 10);
+console.log(30);
+
+let a37 = 37;
+console.log("Rainbow Trout");
+// Rainbow Trout
+
+console.log(hammerHead2[0].homePlanet);
+// Venice Sands 5
+
+console.log(hammerHead2[1].homePlanet);
+// Mariner Mist
+
+console.log(undefined == null);
+// true
+console.log(null == 0);
+// false
+console.log(-1 == false);
+// false
+console.log(2 == true);
+// false
+console.log(true == true);
+// false
+console.log(false == false);
+// true
+console.log(typeof true);
+// boolean
+console.log(typeof hammerHead2);
+// object
+console.log(typeof hammerHead);
+// object
+console.log(typeof "37");
+// string
+console.log(typeof 37);
+// number
+console.log("34" + 56);
+// 3456
+console.log("54" + "35");
+// 5435
+console.log(undefined);
+// undefined
+console.log(null);
+// null
+console.log(" ");
+//
+console.log(undefined == false);
+// false
+console.log(undefined == true);
+// false
+console.log(0 == false);
+// true
+console.log(-0 == false);
+// true
+console.log(" " == false);
+// true
+console.log(2 === true);
+// false
+console.log(2 == "2");
+// true
+console.log(2 === "2");
+// false
+console.log("#" == false);
+// false
