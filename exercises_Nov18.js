@@ -24,3 +24,17 @@ arrayOfMultiples(4, 5);
 
 console.log("----------------------------------");
 console.log("-----------------------------------");
+
+let testObject = { number1: "1", number2: "2" };
+console.log(testObject);
+
+const { number1, number2 } = testObject;
+console.log(number1);
+// 1
+console.log(number2);
+
+//  console.log(number3);
+//  number3 is not defined
+
+console.log("-----------------------------------");
+console.log("----------------------------------");
