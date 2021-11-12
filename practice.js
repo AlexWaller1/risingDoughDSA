@@ -398,3 +398,9 @@ console.log(2 === "2");
 // false
 console.log("#" == false);
 // false
+let crash1 = 1 == 2 ? true : false;
+console.log(crash1);
+
+let crash2 = 3 > 2.6 ? "Bandicoot" : "Cortex";
+console.log(crash2);
+// Bandicoot

@@ -131,3 +131,29 @@ accountSum2(bankAccounts);
 
 console.log("-------------------------------");
 console.log("----------------------------");
+
+function accountSum10(outer) {
+  let i = 0;
+  let maxSum = -1;
+  let sum = 0;
+
+  for (; i < outer.length; i++) {
+    let inner = outer[i];
+    sum = 0;
+    for (let j = 0; j < inner.length; j++) {
+      sum = sum + inner[j];
+    }
+    if (sum > maxSum) {
+      maxSum = sum;
+    }
+  }
+
+  console.log(maxSum);
+}
+
+accountSum10(bankAccounts3);
+// 75
+accountSum10(bankAccounts);
+// 18
+accountSum10(bankAccounts2);
+// 101
