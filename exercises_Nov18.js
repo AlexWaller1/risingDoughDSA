@@ -180,3 +180,19 @@ console.log(brother1);
 // Rob Stark
 console.log(brother2);
 // Rickon Stark
+
+const characters = ["Ned Stark", "The Quiet Wolf", "House Stark"];
+
+let [name5, alias, house] = characters;
+
+console.log(name5, alias, house);
+// Ned Stark The Quiet Wolf House Stark
+
+let skills2 = "The Usurper, Baratheon, Cersei";
+
+skills2 = skills2.split(",");
+
+let [nickName, family, skills] = skills2;
+
+console.log(nickName, family, skills);
+// The Usurper Baratheon Cersei
