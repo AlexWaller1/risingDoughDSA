@@ -149,3 +149,34 @@ console.log(first);
 // Arya
 console.log(last);
 // Stark
+
+const jon = {
+  first2: "Jon",
+  last2: "Snow",
+  title: "Prince",
+  family: {
+    brothers: {
+      brother1: "Rob Stark",
+      brother2: "Rickon Stark"
+    },
+    sisters: {
+      sister1: "Arya Stark",
+      sister2: "Sansa Stark"
+    }
+  }
+};
+
+let {
+  first2,
+  last2,
+  title,
+  family: {
+    brothers: { brother1, brother2 },
+    sisters: { sister1, sister2 }
+  }
+} = jon;
+
+console.log(brother1);
+// Rob Stark
+console.log(brother2);
+// Rickon Stark
