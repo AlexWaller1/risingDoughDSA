@@ -133,3 +133,19 @@ sortData(sortASC3, crashBandicoot);
 
 console.log("-----------------------------------");
 console.log("-----------------------------------");
+
+// Game of Thrones Destructor
+
+const arya = {
+  first: "Arya",
+  last: "Stark",
+  origin: "Winterfell",
+  allegiance: "House Stark"
+};
+
+let { first, last, origin, allegiance } = arya;
+
+console.log(first);
+// Arya
+console.log(last);
+// Stark
