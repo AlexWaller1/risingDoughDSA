@@ -84,16 +84,52 @@ mostSongsInHour(nums4);
 console.log("-----------------------------------");
 console.log("------------------------------------");
 
-let testObj2 = [
-  { number: 1 },
-  { number: 24 },
-  { number: 12 },
-  { number: 10 },
-  { number: 9 },
-  { number: 76 },
-  { number: 52 }
+let crashBandicoot = [
+  { value: "Crash Bandicoot", cart: "blue" },
+  { value: "Tiny Tiger", cart: "green" },
+  { value: "N. Ginn", cart: "purple" },
+  { value: "Neo Cortex", cart: "red" },
+  { value: "Dingodile", cart: "yellow" }
 ];
 
-let sortASC2 = object => object.sort((a, b) => a.number - b.number);
+let testObj2 = [
+  { value: 1 },
+  { value: 24 },
+  { value: 12 },
+  { value: 10 },
+  { value: 9 },
+  { value: 76 },
+  { value: 52 }
+];
+
+let sortASC2 = object => object.sort((a, b) => a.value - b.value);
+
+let sortASC3 = array => array.sort((a, b) => (a.value > b.value ? 1 : -1));
 
 console.log(sortASC2(testObj2));
+
+console.log(Object.entries(testObj2));
+
+function sortData(funct, data) {
+  let newData = funct(data);
+  console.log(newData);
+}
+
+sortData(sortASC2, testObj2);
+// 0: {value: 1}
+// 1: {value: 9}
+// 2: {value: 10}
+// 3: {value: 12}
+// 4: {value: 24}
+// 5: {value: 52}
+// 6: {value: 76}
+
+sortData(sortASC3, crashBandicoot);
+// 0: {value: 'Crash Bandicoot', cart: 'blue'}
+// 1: {value: 'Dingodile', cart: 'yellow'}
+// 2: {value: 'N. Ginn', cart: 'purple'}
+// 3: {value: 'Neo Cortex', cart: 'red'}
+// 4: {value: 'Tiny Tiger', cart: 'green'}
+
+console.log("-----------------------------------");
+console.log("-----------------------------------");
