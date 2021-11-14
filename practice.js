@@ -404,3 +404,122 @@ console.log(crash1);
 let crash2 = 3 > 2.6 ? "Bandicoot" : "Cortex";
 console.log(crash2);
 // Bandicoot
+
+const hammerHead44 = {
+  name1: "Hammerhead",
+  career1: "Pickerel Cola Space Truck Driver",
+  homePlanet1: "Venice Sands 5",
+  hasPickerelCola1: true
+};
+
+let { name1, career1, homePlanet1, hasPickerelCola1 } = hammerHead44;
+
+console.log(name1);
+// Hammerhead
+console.log(career1);
+// Pickerel Cola Space Truck Driver
+console.log(homePlanet1);
+// Venice Sands 5
+console.log(hasPickerelCola1);
+// true
+
+const incubator = {
+  incubatorName: "Incubator",
+  hybrids: {
+    treeHybrids: {
+      treeHybrid1: {
+        treeName1: "Cornelius"
+      },
+      treeHybrid2: {
+        treeName2: "Owen"
+      },
+      treeHybrid3: {
+        treeName3: "Everett"
+      },
+      treeHybrid4: {
+        treeName4: "Jasper"
+      },
+      treeHybrid5: {
+        treeName5: "Magnus"
+      }
+    },
+    ramHybrids: {
+      ramHybrid1: {
+        ramName1: "Jay"
+      },
+      ramHybrid2: {
+        ramName2: "Tony"
+      },
+      ramHybrid3: {
+        ramName3: "Stacey"
+      },
+      ramHybrid4: {
+        ramName4: "Otto"
+      }
+    },
+    troutHybrids: {
+      troutHybrid1: {
+        troutName1: "Rainbow"
+      },
+      troutHybrid2: {
+        troutName2: "Brown"
+      }
+    }
+  },
+  alienSpecies: "Ovidians",
+  earthLab: "Randall Park Mall"
+};
+
+let {
+  incubatorName,
+  hybrids: {
+    treeHybrids: {
+      treeHybrid1: { treeName1 },
+      treeHybrid2: { treeName2 },
+      treeHybrid3: { treeName3 },
+      treeHybrid4: { treeName4 },
+      treeHybrid5: { treeName5 }
+    },
+    ramHybrids: {
+      ramHybrid1: { ramName1 },
+      ramHybrid2: { ramName2 },
+      ramHybrid3: { ramName3 },
+      ramHybrid4: { ramName4 }
+    },
+    troutHybrids: {
+      troutHybrid1: { troutName1 },
+      troutHybrid2: { troutName2 }
+    }
+  },
+  alienSpecies,
+  earthLab
+} = incubator;
+
+console.log(incubatorName);
+// Incubator
+console.log(treeName1);
+// Cornelius
+console.log(treeName2);
+// Owen
+console.log(treeName3);
+// Everett
+console.log(treeName4);
+// Jasper
+console.log(treeName5);
+// Magnus
+console.log(ramName1);
+// Jay
+console.log(ramName2);
+// Tony
+console.log(ramName3);
+// Stacey
+console.log(ramName4);
+// Otto
+console.log(troutName1);
+// Rainbow
+console.log(troutName2);
+// Brown
+console.log(alienSpecies);
+// Ovidians
+console.log(earthLab);
+// Randall Park Mall
