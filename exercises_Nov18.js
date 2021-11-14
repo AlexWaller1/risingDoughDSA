@@ -38,3 +38,10 @@ console.log(number2);
 
 console.log("-----------------------------------");
 console.log("----------------------------------");
+
+let sortNum = array => array.sort((a, b) => a - b);
+
+let nums1 = [3, 6, 44, 33, 21, 15, 17, 20];
+
+console.log(sortNum(nums1));
+// [3, 6, 15, 17, 20, 21, 33, 44]
