@@ -515,3 +515,33 @@ console.log("Hello Oa");
 
 console.log("--------------------------------");
 console.log("--------------------------------");
+
+let alpha1 = "abcdefg";
+let alpha2 = "abcefg";
+let alpha3 = "hijklmn";
+let alpha4 = "hiklmn";
+let alpha5 = "qrstuvwx";
+let alpha6 = "qrstuwx";
+
+function missingLetterInSequence(string1, string2) {
+  let i = 0;
+
+  for (; i < string1.length; i++) {
+    let s1 = string1.charAt(i);
+    let s2 = string2.charAt(i);
+    if (s1 != s2) {
+      console.log(s1);
+      break;
+    }
+  }
+}
+
+missingLetterInSequence(alpha1, alpha2);
+// d
+missingLetterInSequence(alpha3, alpha4);
+// j
+missingLetterInSequence(alpha5, alpha6);
+// v
+
+console.log("------------------------------------");
+console.log("----------------------------------");

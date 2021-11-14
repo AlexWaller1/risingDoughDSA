@@ -523,3 +523,40 @@ console.log(alienSpecies);
 // Ovidians
 console.log(earthLab);
 // Randall Park Mall
+
+const veniceSands5 = [
+  "Hammerhead",
+  "Venice Sands 5",
+  "Pickerel Cola Truck Driver",
+  true
+];
+
+let [vs5Name, vs5HomePlanet, vs5Career, vs5HasPickerelCola] = veniceSands5;
+
+console.log(vs5Name);
+// Hammerhead
+console.log(vs5HomePlanet);
+// Venice Sands 5
+console.log(vs5Career);
+// Pickerel Cola Truck Driver
+console.log(vs5HasPickerelCola);
+// true
+
+console.log(robots);
+
+let [hank44, warren21, mellonTech, eggplantHead] = robots;
+
+console.log(hank44);
+// Hank-44
+console.log(warren21);
+// Warren-21
+console.log(mellonTech);
+// Mellon-Tech
+console.log(eggplantHead);
+// Eggplant-Head
+
+console.log(`Nice Telecaster, ${mellonTech}!`);
+// Nice Telecaster, Mellon-Tech!
+
+console.log("a" + 1);
+// a1
