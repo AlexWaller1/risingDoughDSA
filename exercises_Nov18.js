@@ -45,3 +45,41 @@ let nums1 = [3, 6, 44, 33, 21, 15, 17, 20];
 
 console.log(sortNum(nums1));
 // [3, 6, 15, 17, 20, 21, 33, 44]
+
+console.log("-----------------------------------");
+console.log("-------------------------------");
+
+let nums2 = [
+  5, 4, 7, 9, 2, 2, 3, 9, 8, 6, 5, 4, 4, 2, 4, 8, 11, 2, 3, 4, 20, 24
+];
+
+let nums3 = [22, 23, 21];
+
+let nums4 = [57, 5];
+
+console.log(sortNum(nums2));
+
+function mostSongsInHour(array) {
+  let sorted = sortNum(array);
+  let i = 0;
+  let sum = 0;
+  let count = 0;
+
+  for (; i < sorted.length; i++) {
+    sum = sum + sorted[i];
+    if (sum <= 60) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+mostSongsInHour(nums2);
+// 15
+mostSongsInHour(nums3);
+// 2
+mostSongsInHour(nums4);
+// 1
+
+console.log("-----------------------------------");
+console.log("------------------------------------");
