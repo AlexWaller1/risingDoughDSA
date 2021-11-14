@@ -83,3 +83,17 @@ mostSongsInHour(nums4);
 
 console.log("-----------------------------------");
 console.log("------------------------------------");
+
+let testObj2 = [
+  { number: 1 },
+  { number: 24 },
+  { number: 12 },
+  { number: 10 },
+  { number: 9 },
+  { number: 76 },
+  { number: 52 }
+];
+
+let sortASC2 = object => object.sort((a, b) => a.number - b.number);
+
+console.log(sortASC2(testObj2));
