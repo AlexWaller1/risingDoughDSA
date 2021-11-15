@@ -742,3 +742,30 @@ console.log(unSort102);
 
 console.log("----------------------------------");
 console.log("---------------------------------");
+
+// needle in hayStack
+// find index of substring
+
+const catDog = "CatDog";
+const catDog2 = "Dog";
+let tech = "tech";
+const mellonTech = "Mellon-Tech";
+
+console.log(catDog.indexOf(catDog2));
+// 3
+
+function needleInHayStack(needle, haystack) {
+  needle = needle.toLowerCase();
+  haystack = haystack.toLowerCase();
+  let index = -1;
+  index = haystack.indexOf(needle);
+  console.log(index);
+}
+
+needleInHayStack(catDog2, catDog);
+// 3
+needleInHayStack(tech, mellonTech);
+// 7
+
+console.log("----------------------------------");
+console.log("------------------------------------");
