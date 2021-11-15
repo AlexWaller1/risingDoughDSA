@@ -661,3 +661,84 @@ removeArrayElement(nums103, 74);
 
 console.log("-----------------------------------");
 console.log("---------------------------------");
+
+// Given a sorted array of distinct integers and a target value,
+// return the index if the target is found. If not, return the
+// index where it would be if it were inserted in order.
+
+// You must write an algorithm with O(log n) runtime complexity.
+
+//  Example 1:
+
+// Input: nums = [1,3,5,6], target = 5
+// Output: 2
+// Example 2:
+
+// Input: nums = [1,3,5,6], target = 2
+// Output: 1
+
+let nums107 = [1, 3, 5, 6];
+console.log(nums107.indexOf(5));
+// 2
+
+function searchInsertPosition(array, target) {
+  let i = 0;
+  let returnIndex = -1;
+  for (; i < array.length; i++) {
+    if (array[i] == target) {
+      returnIndex = array.indexOf(target);
+    }
+  }
+  console.log(returnIndex);
+}
+
+searchInsertPosition(nums107, 6);
+// 3
+searchInsertPosition(nums107, 1);
+// 0
+searchInsertPosition(nums107, 3);
+// 1
+searchInsertPosition(nums107, 5);
+// 2
+searchInsertPosition(nums107, 9);
+// -1
+
+console.log("-----------------------------------");
+console.log("----------------------------------");
+
+let unSort101 = [3, 2, 4, 5];
+
+let sortNumber = array => array.sort((a, b) => a - b);
+
+console.log(sortNumber(unSort101));
+
+let unSort102 = [9, 4, 5, 2, 3, 12, 1];
+
+function searchInsertPosition2(array, target) {
+  let returnIndex = -1;
+
+  if (array.includes(target)) {
+    returnIndex = array.indexOf(target);
+  } else {
+    array.push(target);
+    array = sortNumber(array);
+    returnIndex = array.indexOf(target);
+  }
+  console.log(returnIndex);
+}
+
+searchInsertPosition2(unSort102, 9);
+// 0
+searchInsertPosition2(unSort102, 4);
+// 1
+searchInsertPosition2(unSort102, 5);
+// 2
+searchInsertPosition2(unSort102, 2);
+// 3
+searchInsertPosition2(unSort102, 11);
+// 6
+console.log(unSort102);
+// [1, 2, 3, 4, 5, 9, 11, 12]
+
+console.log("----------------------------------");
+console.log("---------------------------------");
