@@ -516,12 +516,18 @@ console.log("Hello Oa");
 console.log("--------------------------------");
 console.log("--------------------------------");
 
+// algorithm to find the missing letter
+// or number in a sequence
+
 let alpha1 = "abcdefg";
 let alpha2 = "abcefg";
 let alpha3 = "hijklmn";
 let alpha4 = "hiklmn";
 let alpha5 = "qrstuvwx";
 let alpha6 = "qrstuwx";
+
+let numSequence1 = "123456";
+let numSequence2 = "12356";
 
 function missingLetterInSequence(string1, string2) {
   let i = 0;
@@ -542,6 +548,116 @@ missingLetterInSequence(alpha3, alpha4);
 // j
 missingLetterInSequence(alpha5, alpha6);
 // v
+missingLetterInSequence(numSequence1, numSequence2);
+// 4
 
 console.log("------------------------------------");
 console.log("----------------------------------");
+
+// algorithm to convert words in Pig Latin
+
+let vowels = ["a", "e", "i", "o", "u"];
+let consonants = [
+  "b",
+  "c",
+  "d",
+  "f",
+  "g",
+  "h",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+];
+
+console.log(vowels.includes("a"));
+// true
+console.log(consonants.includes("c"));
+// true
+console.log(vowels.includes("b"));
+// false
+console.log(consonants.includes("e"));
+// false
+
+let box105 = "box";
+box105 = box105.replace(box105.charAt(0), "");
+console.log(box105);
+// ox
+
+function pigLatin(string) {
+  // box = oxbay
+  // oval = ovalway
+  let first = string.charAt(0);
+  if (vowels.includes(first)) {
+    string = string.concat("way");
+  } else {
+    string = string.replace(first, "");
+    string = string.concat(first);
+    string = string.concat("ay");
+  }
+  console.log(string);
+}
+
+pigLatin("box");
+// oxbay
+pigLatin("book");
+// ookbay
+pigLatin("oval");
+// ovalway
+pigLatin("ram");
+// amray
+
+console.log("----------------------------------");
+console.log("----------------------------------");
+
+// algorith to find lowest common multiple
+
+let oneFive = [1, 2, 3, 4, 5];
+
+function lowestCommonMultiple(array) {
+  let i = 0;
+}
+
+console.log("---------------------------------");
+console.log("----------------------------------");
+
+// Input: nums = [3,2,2,3], val = 3
+// Output: 2, nums = [2,2,_,_]
+// Explanation: Your function should return k = 2,
+// with the first two elements of nums being 2.
+// It does not matter what you leave beyond the
+// returned k (hence they are underscores).
+
+let nums102 = [44, 23, 44, 22, 34, 32, 44, 57];
+let nums103 = [65, 74, 74, 34, 22, 21, 74, 74];
+
+function removeArrayElement(array, val) {
+  let i = 0;
+  let count = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == val) {
+      array.splice(i, 1, "_");
+      count++;
+    }
+  }
+  console.log(count, array);
+}
+
+removeArrayElement(nums102, 44);
+// 3 ['_', 23, '_', 22, 34, 32, '_', 57]
+removeArrayElement(nums103, 74);
+// 4 [65, '_', '_', 34, 22, 21, '_', '_']
+
+console.log("-----------------------------------");
+console.log("---------------------------------");
