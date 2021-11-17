@@ -560,3 +560,36 @@ console.log(`Nice Telecaster, ${mellonTech}!`);
 
 console.log("a" + 1);
 // a1
+
+console.log("---------------------------------------------------------------");
+console.log("----------------------------------------------------------");
+
+console.log("Callback Function Practice");
+
+let roboGreeting = robot => console.log(`Hi, ${robot}!`);
+
+function roboCallBack(callBack, robot) {
+  callBack(robot);
+}
+
+roboCallBack(roboGreeting, "Mellon-Tech");
+// Hi, Mellon-Tech
+roboCallBack(roboGreeting, "Eggplant-Head");
+// Hi, Eggplant-Head
+
+let numSquared = num => console.log(Math.pow(num, 2));
+
+let numCubed = num => console.log(Math.pow(num, 3));
+
+function squareAndCubed(callBack1, callBack2, num) {
+  callBack1(num);
+  callBack2(num);
+}
+
+squareAndCubed(numSquared, numCubed, 3);
+// 9
+// 27
+
+squareAndCubed(numSquared, numCubed, 7);
+// 49
+// 343
