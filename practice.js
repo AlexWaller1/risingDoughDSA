@@ -654,3 +654,34 @@ hybridVideoGame(upperCase, "Bodhi");
 
 console.log("-------------------------------------------------");
 console.log("-------------------------------------------------");
+
+console.log(robots);
+
+let hank45 = robots[0] == "Mellon-Tech" ? true : false;
+
+console.log(hank45);
+// false
+
+if (robots[2] == "Mellon-Tech") {
+  let i = 0;
+  for (; i < robots.length; i++) {
+    let hank46 = robots[i] == "Mellon-Tech" ? true : false;
+    console.log(hank46);
+    // false
+    // false
+    // true
+    // false
+  }
+}
+
+if (robots[0] == "Hank-44") {
+  let robo1 = robots
+    .filter(function (robo2) {
+      return robo2 == "Mellon-Tech";
+    })
+    .map(function (robo3) {
+      return robo3;
+    });
+  console.log(robo1);
+  // ['Mellon-Tech']
+}
