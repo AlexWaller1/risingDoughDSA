@@ -593,3 +593,64 @@ squareAndCubed(numSquared, numCubed, 3);
 squareAndCubed(numSquared, numCubed, 7);
 // 49
 // 343
+
+console.log("----------------------------------------------");
+console.log("---------------------------------------------------");
+
+const treeHybrids = ["Cornelius", "Everett", "Magnus", "Owen", "Jasper"];
+
+const ramHybrids = ["Stacey", "Jay", "Tony", "Otto"];
+
+const troutHybrids = ["Rainbow", "Brown"];
+
+const incubator2 = ["Incubator"];
+
+let treeHybrid = tree =>
+  console.log(`Hi, ${tree}! Let's go to
+the Atrium!`);
+
+let ramHybrid = ram =>
+  console.log(`Hi, ${ram}! Let's get to
+skating!`);
+
+let troutHybrid = trout => console.log(`You're mysterious, ${trout}.`);
+
+let incubatorArrow = incubator =>
+  console.log(`Who are you, 
+${incubator}?`);
+
+let upperCase = string => console.log(string.toUpperCase());
+
+function hybridVideoGame(callBack, hybrid) {
+  if (treeHybrids.includes(hybrid)) {
+    treeHybrid(hybrid);
+    callBack(hybrid);
+  } else if (ramHybrids.includes(hybrid)) {
+    ramHybrid(hybrid);
+    callBack(hybrid);
+  } else if (troutHybrids.includes(hybrid)) {
+    troutHybrid(hybrid);
+    callBack(hybrid);
+  } else if (incubator2.includes(hybrid)) {
+    incubatorArrow(hybrid);
+    callBack(hybrid);
+  } else callBack(hybrid);
+}
+
+hybridVideoGame(upperCase, "Cornelius");
+// Hi, Cornelius! Let's go to the Atrium!
+// Cornelius
+hybridVideoGame(upperCase, "Stacey");
+// Hi, Stacey! Let's get to skating!
+// STACEY
+hybridVideoGame(upperCase, "Brown");
+// You're mysterious, Brown.
+// BROWN
+hybridVideoGame(upperCase, "Incubator");
+// Who are you, Incubator?
+// INCUBATOR
+hybridVideoGame(upperCase, "Bodhi");
+// BODHI
+
+console.log("-------------------------------------------------");
+console.log("-------------------------------------------------");
