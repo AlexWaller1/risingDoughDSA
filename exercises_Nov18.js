@@ -49,6 +49,12 @@ console.log(sortNum(nums1));
 console.log("-----------------------------------");
 console.log("-------------------------------");
 
+// four rules of O(n)
+// different terms for input, different O(n)
+// drop non-dominant
+// constant doesn't matter, can drop constant
+// always calculate the worst case
+
 let nums2 = [
   5, 4, 7, 9, 2, 2, 3, 9, 8, 6, 5, 4, 4, 2, 4, 8, 11, 2, 3, 4, 20, 24
 ];
@@ -69,7 +75,7 @@ function mostSongsInHour(array) {
     sum = sum + sorted[i];
     if (sum <= 60) {
       count++;
-    }
+    } else break;
   }
   console.log(count);
 }
@@ -105,6 +111,8 @@ let testObj2 = [
 let sortASC2 = object => object.sort((a, b) => a.value - b.value);
 
 let sortASC3 = array => array.sort((a, b) => (a.value > b.value ? 1 : -1));
+// toLowerCase()
+// replace with .label
 
 console.log(sortASC2(testObj2));
 

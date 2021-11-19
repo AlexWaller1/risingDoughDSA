@@ -685,3 +685,6 @@ if (robots[0] == "Hank-44") {
   console.log(robo1);
   // ['Mellon-Tech']
 }
+
+if (robots[3] == "Eggplant-Head") {
+}
