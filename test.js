@@ -58,3 +58,48 @@ console.log(roboInfo[1].skills[1]);
 // curling
 console.log(roboInfo[3].skills[0]);
 // Guitar Playing
+
+const mellonTech = {
+  name: "Mellon-Tech",
+  model: "Tech-O-Tron-3000",
+  paintColor: "Yellow and Green",
+  skills: {
+    skill1: "Guitar Playing",
+    skill2: "Guitar Repair"
+  },
+  workPlace: "Bridgewater Guitar Repair",
+  homeTown: "Somerville, New Jersey",
+  friends: {
+    friend1: "Eggplant-Head",
+    friend2: "Haley Jackson"
+  }
+};
+
+let {
+  name,
+  model,
+  paintColor,
+  skills: { skill1, skill2 },
+  workPlace,
+  homeTown,
+  friends: { friend1: eggPlantHead, friend2: haleyJackson }
+} = mellonTech;
+
+console.log(name);
+// Mellon-Tech
+console.log(model);
+// Tech-O-Tron-3000
+console.log(paintColor);
+// Yellow and Green
+console.log(skill1);
+// Guitar Playing
+console.log(skill2);
+// Guitar Repair
+console.log(workPlace);
+// Bridgewater Guitar Repair
+console.log(homeTown);
+// Somerville, New Jersey
+console.log(eggPlantHead);
+// Eggplant-Head
+console.log(haleyJackson);
+// Haley Jackson
