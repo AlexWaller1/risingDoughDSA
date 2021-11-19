@@ -224,3 +224,133 @@ console.log(clichySecurity[1]);
 // Laurent
 console.log(clichySecurity[2]);
 // Antoine
+console.log(clichySecurity[2].toLowerCase());
+// antoine
+
+function camelCaseArray(array) {
+  let i = 0;
+  let returnString = "";
+  for (; i < array.length; i++) {
+    if (i == 0) {
+      array[i] = array[i].toLowerCase();
+    }
+    returnString = returnString.concat(array[i]);
+  }
+
+  console.log(returnString);
+}
+
+camelCaseArray(clichySecurity);
+// thierryLaurentAntoine
+camelCaseArray(robots);
+// hank-44Warren-21Mellon-TechEggplantHead
+
+console.log("----------------------------------");
+console.log("---------------------------------");
+
+console.log(parseInt(2.3));
+// 2
+console.log(parseInt(3.7));
+// 3
+
+function sameLetters(string) {
+  string = string.split("");
+  let i = 0;
+  let newString = [];
+  for (; i < string.length; i++) {
+    if (string[i] == string[i + 1] || string[i] == string[i - 1]) {
+      newString.push(string[i]);
+    }
+  }
+  newString = newString.join("");
+  console.log(newString);
+}
+
+sameLetters(robots[2]);
+// ll
+sameLetters(robots[0]);
+// 44
+sameLetters(robots[1]);
+// rr
+sameLetters(robots[3]);
+// gg
+sameLetters(clichySecurity[0]);
+// rr
+
+console.log("---------------------------------");
+console.log("-----------------------------------");
+
+let test4 = [3, 4, 2, 5, 5, 9, 0, 3];
+
+console.log(clichySecurity[0]);
+// thierry
+console.log(robots[0]);
+// hank-44
+robots[0] = robots[0].replace(robots[0].charAt(0), "H");
+
+console.log(robots[0]);
+// Hank-44
+
+if (robots[0] == "Hank-44") {
+  let i = 0;
+  let j = test4.length - 1;
+  let newArray = [];
+  for (; i < j; i++, j--) {
+    if (test4[i] == test4[j]) {
+      newArray.push(test4[i], test4[j]);
+    } else newArray = [];
+  }
+  console.log(newArray);
+  // [5, 5]
+}
+
+console.log("-----------------------------------");
+console.log("---------------------------------");
+
+const dareDevil = [
+  "Daredevil",
+  "Elektra",
+  "Kingpin",
+  "Bullseye",
+  "Foggy Nelson",
+  "Karen Page"
+];
+
+console.log(dareDevil[0]);
+// Daredevil
+console.log(dareDevil[1]);
+// Elektra
+console.log(dareDevil[2]);
+// Kingpin
+console.log(dareDevil[3]);
+// Bullseye
+
+const dareDevilChars = [
+  {
+    name: "Daredevil",
+    secretIdentity: "Matt Murdock",
+    occupation: {
+      job1: "Vigilante",
+      job2: "Lawyer"
+    },
+    neighborHood: "Hell's Kitchen",
+    friends: {
+      friend1: "Foggy Nelson",
+      friend2: "Karen Page"
+    },
+    foes: {
+      foe1: "The Kingpin",
+      foe2: "Bullseye"
+    },
+    business: "Nelson and Murdock"
+  },
+  {
+    name: "Elektra",
+    secretIdentity: "Elektra Natchios",
+    occupation: "Assassin",
+    neighborHood: "International",
+    friends: undefined,
+    foes: undefined,
+    business: "freelance"
+  }
+];
