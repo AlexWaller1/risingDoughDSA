@@ -179,3 +179,48 @@ if (robots[2] == "Mellon-Tech") {
 
 console.log("-----------------------------------");
 console.log("-------------------------------------");
+
+function reverseString(string) {
+  string = string.split("");
+  string = string.reverse();
+  string = string.join("");
+  console.log(string);
+}
+reverseString(robots[0]);
+
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[3]);
+// Eggplant-Head
+
+if (robots[3] == "Eggplant-Head") {
+  let i = 0;
+  for (; i < robots.length; i++) {
+    revString = reverseString(robots[i]);
+    // 44-knaH
+    // 12-nerraW
+    // hceT-nolleM
+    // daeH-tnalpggE
+  }
+}
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+
+console.log("-----------------------------------");
+console.log("-----------------------------------");
+
+let clichySecurity = "Thierry, Laurent, Antoine";
+
+clichySecurity = clichySecurity.split(", ");
+
+console.log(clichySecurity);
+// ['Thierry', 'Laurent', 'Antoine']
+console.log(clichySecurity.length);
+// 3
+console.log(clichySecurity[0]);
+// Thierry
+console.log(clichySecurity[1]);
+// Laurent
+console.log(clichySecurity[2]);
+// Antoine
