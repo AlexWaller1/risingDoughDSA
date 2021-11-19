@@ -352,5 +352,40 @@ const dareDevilChars = [
     friends: undefined,
     foes: undefined,
     business: "freelance"
+  },
+  {
+    name: "The Kingpin",
+    realName: "Wilson Fisk",
+    occupation: "Crime Boss",
+    neighborHood: "Manhattan",
+    associates: {
+      associate1: "Wesley",
+      associate2: "The Rose"
+    },
+    foes: {
+      foe1: "Daredevil",
+      foe2: "Spiderman"
+    },
+    spouse: "Vanessa Fisk",
+    business: "Organized Crime"
   }
 ];
+
+let dareDevilObj = dareDevilChars[0];
+
+console.log(dareDevilObj);
+
+let {
+  name: dareDevilName,
+  secretIdentity: mattMurdock,
+  occupation: { job1, job2 },
+  neighborHood,
+  business,
+  foes: { foe1, foe2 },
+  friends: { friend1, friend2 }
+} = dareDevilObj;
+
+console.log(dareDevilName);
+// Daredevil
+console.log(mattMurdock);
+// Matt Murdock
