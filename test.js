@@ -10,8 +10,6 @@ let { first, last, alias: nickName } = person;
 
 console.log(nickName);
 
-const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
-
 const roboInfo = [
   {
     name: "Hank-44",
@@ -103,3 +101,27 @@ console.log(eggPlantHead);
 // Eggplant-Head
 console.log(haleyJackson);
 // Haley Jackson
+
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+
+let [robo1, robo2, robo3, robo4] = robots;
+
+console.log(robo1);
+// Hank-44
+console.log(robo2);
+// Warren-21
+console.log(robo3);
+// Mellon-Tech
+console.log(robo4);
+// Eggplant-Head
+
+console.log("----------------------------------");
+console.log("------------------------------------");
+
+let roboSort = robot => robot.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+console.log(roboSort(roboInfo));
+// { name: 'Eggplant-Head' }
+// { name: 'Hank-44' }
+// { name: 'Mellon-Tech' }
+// { name: 'Warren-21' }
