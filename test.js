@@ -125,3 +125,57 @@ console.log(roboSort(roboInfo));
 // { name: 'Hank-44' }
 // { name: 'Mellon-Tech' }
 // { name: 'Warren-21' }
+
+let nums = [34, 56, 22, 21, 14, 12];
+
+let sortNums = num => num.sort((a, b) => a - b);
+
+console.log(sortNums(nums));
+// [12, 14, 21, 22, 34, 56]
+console.log(nums);
+// [12, 14, 21, 22, 34, 56]
+
+console.log("----------------------------------");
+console.log("---------------------------------");
+
+console.log(robots);
+/* 
+
+[
+    'Hank-44',
+    'Warren-21',
+    'Mellon-Tech',
+    'Eggplant-Head'
+]
+
+*/
+
+console.log(robots[2]);
+// Mellon-Tech
+
+if (robots[2] == "Mellon-Tech") {
+  let i = 0;
+  for (; i < robots.length; i++) {
+    switch (robots[i]) {
+      case "Mellon-Tech":
+        console.log(`Nice guitar playing, ${robots[i]}!`);
+        break;
+      case "Hank-44":
+        console.log(`Nice curling, ${robots[i]}!`);
+        break;
+      case "Warren-21":
+        console.log(`Delicious brisket, ${robots[i]}!`);
+        break;
+      case "Eggplant-Head":
+        console.log(`Way to shred the Telecaster, ${robots[i]}!`);
+        break;
+    }
+  }
+}
+// Nice curling, Hank-44!
+// Delicious brisket, Warren-21!
+// Nice guitar playing, Mellon-Tech!
+// Way to shred the Telecaster, Eggplant-Head!
+
+console.log("-----------------------------------");
+console.log("-------------------------------------");
