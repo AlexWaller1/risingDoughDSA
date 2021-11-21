@@ -689,7 +689,77 @@ triangularNumber(15);
 triangularNumber(9);
 // 9 is not a triangular number
 triangularNumber(10);
-// 10 is not a triangular number
+// 10 is a triangular number
+triangularNumber(1);
+// 1 is a triangular number
 
 console.log("---------------------------------");
 console.log("---------------------------------");
+
+// pentagonal number
+
+// 5
+// 5 dots make pentagon border
+// 0 dots inside pentagon
+
+// 12
+// 10 dots make pentagon border
+// 2 dots inside pentagon
+
+// 22
+// 15 dots make pentagon border
+// 7 dots inside pentagon
+
+// 35
+// 20 dots make pentagon border
+// 15 dots inside pentagon
+
+// 1, 5, 12, 22, 35, 51, 70, 92
+
+// increments by 4, 7, 10, 13, 16, 19, 22
+
+let numArray = [];
+
+function pentagonalArray() {
+  let i = 0;
+  let num = 1;
+  let count = 1;
+
+  for (; num <= 1000; num = num + count) {
+    numArray.push(num);
+    count = count + 3;
+  }
+  console.log(numArray);
+}
+
+pentagonalArray();
+
+function pentagonalNumber(num) {
+  let rString = "";
+  if (numArray.includes(num)) {
+    rString = `${num} is a pentagonal number`;
+  } else if (num > 1000) {
+    rString = "out of scope";
+  } else {
+    rString = `${num} is not a pentagonal number`;
+  }
+  console.log(rString);
+}
+
+pentagonalNumber(5);
+// 5 is pentagonal number
+pentagonalNumber(9);
+// 9 is not a pentagonal number
+pentagonalNumber(12);
+// 12 is a pentagonal number
+pentagonalNumber(35);
+// 35 is a pentagonal number
+pentagonalNumber(2021);
+// out of scope
+pentagonalNumber(3044);
+// out of scope
+pentagonalNumber(956);
+// 956 is not a pentagonal number
+
+console.log("-----------------------------------");
+console.log("-------------------------------");
