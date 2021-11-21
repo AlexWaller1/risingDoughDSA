@@ -779,3 +779,25 @@ let testNums2 = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 function maximumSubArray(array) {}
 
 console.log("-----------------------------------------");
+console.log("----------------------------------------------");
+
+function squareNumber(num) {
+  let rString = "";
+  let num2 = num / Math.sqrt(num);
+  let num3 = Math.sqrt(num);
+  if (num2 == num3) {
+    rString = `${num} is a square number`;
+  } else {
+    rString = `${num} is not a square number`;
+  }
+  console.log(rString);
+}
+
+squareNumber(25);
+// 25 is a square number
+squareNumber(24);
+// 24 is not a square number
+squareNumber(36);
+// 36 is a square number
+squareNumber(37);
+// 37 is not a square number

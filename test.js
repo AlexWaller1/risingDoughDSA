@@ -608,3 +608,88 @@ console.log(sortDESC(dareDevil1));
 5: {id: 1, name: 'Daredevil', neighborHood: "Hell's Kitchen", secretIdentity: 'Matt Murdock'}
 
 */
+
+function primeNumber(num) {
+  if (num == 2) console.log(`${num} is a prime number`);
+  if (num < 2) console.log("input must be at least 2");
+  let i = 2;
+  let rString = "";
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      rString = `${num} is not a prime number`;
+      break;
+    } else rString = `${num} is a prime number`;
+  }
+  console.log(rString);
+}
+
+primeNumber(3);
+// 3 is prime number
+primeNumber(4);
+// 4 is not a prime number
+primeNumber(-20);
+// input must be at least 2
+primeNumber(7);
+// 7 is a prime number
+primeNumber(9);
+// 9 is not a prime number
+
+console.log("-----------------------------------");
+console.log("--------------------------------");
+
+function squareNumber(num) {
+  let rString = "";
+  let num2 = num / Math.sqrt(num);
+  let num3 = Math.sqrt(num);
+  if (num2 == num3) {
+    rString = `${num} is a square number`;
+  } else {
+    rString = `${num} is not a square number`;
+  }
+  console.log(rString);
+}
+
+squareNumber(25);
+// 25 is a square number
+squareNumber(24);
+// 24 is not a square number
+squareNumber(36);
+// 36 is a square number
+squareNumber(37);
+// 37 is not a square number
+
+console.log("------------------------------------");
+console.log("-----------------------------------");
+
+function triangularNumber(num) {
+  let i = 0;
+  let count = 1;
+  let sum = 0;
+  let rString = "";
+  for (; sum < num; count++) {
+    sum = sum + count;
+  }
+  if (sum == num) {
+    rString = `${num} is a triangular number`;
+  } else rString = `${num} is not a triangular number`;
+  console.log(rString);
+  console.log(sum);
+}
+
+triangularNumber(3);
+// 3 is a triangular number
+triangularNumber(4);
+// 4 is not a triangular number
+triangularNumber(6);
+// 6 is a triangular number
+triangularNumber(7);
+// 7 is not a triangular number
+triangularNumber(15);
+// 15 is a triangular number
+triangularNumber(9);
+// 9 is not a triangular number
+triangularNumber(10);
+// 10 is not a triangular number
+
+console.log("---------------------------------");
+console.log("---------------------------------");
