@@ -380,12 +380,129 @@ let {
   secretIdentity: mattMurdock,
   occupation: { job1, job2 },
   neighborHood,
-  business,
-  foes: { foe1, foe2 },
-  friends: { friend1, friend2 }
+  business: nelsonAndMurdock,
+  foes: { foe1: kingPin, foe2: bullsEye },
+  friends: { friend1: foggy, friend2: karen }
 } = dareDevilObj;
 
 console.log(dareDevilName);
 // Daredevil
 console.log(mattMurdock);
 // Matt Murdock
+console.log(job1);
+// Vigilante
+console.log(job2);
+// Lawyer
+console.log(neighborHood);
+// Hell's Kitchen
+console.log(nelsonAndMurdock);
+// Nelson and Murdock
+console.log(kingPin);
+// The Kingpin
+console.log(bullsEye);
+// Bullseye
+console.log(foggy);
+// Foggy Nelson
+console.log(karen);
+// Karen Page
+console.log(dareDevilChars[0].name);
+// Daredevil
+
+if (dareDevilChars[0].name == "Daredevil") {
+  let dareDevil1 = dareDevilChars
+    .filter(function (dareDevil2) {
+      return dareDevil2.name == "Daredevil";
+    })
+    .map(function (dareDevil3) {
+      return dareDevil3.name;
+    });
+  console.log(dareDevil1);
+  // ['Daredevil']
+}
+
+console.log(robots[2]);
+// Mellon-Tech
+
+if (robots[2] == "Mellon-Tech") {
+  let dareDevil1 = dareDevilChars.map(function (dareDevil2) {
+    return dareDevil2.name;
+  });
+  console.log(dareDevil1);
+  // ['Daredevil', 'Elektra', 'The Kingpin']
+}
+
+console.log(Math.random() * 37);
+
+console.log(Math.round(37.6));
+// 38
+console.log(Math.floor(37.6));
+// 37
+console.log(parseInt(37.6));
+// 37
+console.log(37 % 10);
+// 7
+
+console.log("-----------------------------------");
+console.log("----------------------------------");
+
+const loneWolfSamurai = {
+  name: "Lone Wolf Samurai",
+  occupation: {
+    job1: "Samurai",
+    job2: "Space Traveler",
+    job3: "Pinball Player",
+    job4: "Walking the Earth"
+  },
+  homeTown: "Yokohama",
+  homePlanet: "Earth",
+  friends: {
+    friend1: "Kenji",
+    friend2: "Glynis",
+    friend3: "Laramie",
+    friend4: "Zeno",
+    friend5: "Samos"
+  },
+  cosmicGuide: "The Wraith"
+};
+
+let {
+  name: samurai,
+  occupation: { job1: oc1, job2: oc2, job3: oc3, job4: oc4 },
+  homeTown: city,
+  homePlanet: planet,
+  friends: {
+    friend1: kenji,
+    friend2: glynis,
+    friend3: laramie,
+    friend4: zeno,
+    friend5: samos
+  },
+  cosmicGuide
+} = loneWolfSamurai;
+
+console.log(samurai);
+// Lone Wolf Samurai
+console.log(oc1);
+// Samurai
+console.log(oc2);
+// Space Traveler
+console.log(oc3);
+// Pinball Player
+console.log(oc4);
+// Walking the Earth
+console.log(city);
+// Yokohama
+console.log(planet);
+// Earth
+console.log(kenji);
+// Kenji
+console.log(glynis);
+// Glynis
+console.log(laramie);
+// Laramie
+console.log(zeno);
+// Zeno
+console.log(samos);
+// Samos
+console.log(cosmicGuide);
+// The Wraith
