@@ -520,7 +520,7 @@ const dareDevil1 = [
   {
     id: 2,
     name: "Elektra",
-    neighborHood: undefined,
+    neighborHood: "unknown",
     secretIdentity: "Elektra Natchios"
   },
   {
@@ -577,3 +577,34 @@ if (dareDevil1[0].name == "Bullseye") {
   console.log(dd1);
   // ['Daredevil', 'Foggy Nelson', 'Karen Page']
 }
+
+let sortByCity = array =>
+  array.sort((a, b) => (a.neighborHood > b.neighborHood ? 1 : -1));
+
+console.log(sortByCity(dareDevil1));
+/* 
+
+0: {id: 6, name: 'Karen Page', neighborHood: "Hell's Kitchen", secretIdentity: null}
+1: {id: 5, name: 'Foggy Nelson', neighborHood: "Hell's Kitchen", secretIdentity: null}
+2: {id: 1, name: 'Daredevil', neighborHood: "Hell's Kitchen", secretIdentity: 'Matt Murdock'}
+3: {id: 3, name: 'The Kingpin', neighborHood: 'Manhattan', secretIdentity: 'Wilson Fisk'}
+4: {id: 4, name: 'Bullseye', neighborHood: 'The Bronx', secretIdentity: 'Benjamin Poindexter'}
+5: {id: 2, name: 'Elektra', neighborHood: 'unknown', secretIdentity: 'Elektra Natchios'}
+
+
+*/
+
+let sortDESC = array => array.sort((a, b) => (b.id > a.id ? 1 : -1));
+
+console.log(sortDESC(dareDevil1));
+
+/* 
+
+0: {id: 6, name: 'Karen Page', neighborHood: "Hell's Kitchen", secretIdentity: null}
+1: {id: 5, name: 'Foggy Nelson', neighborHood: "Hell's Kitchen", secretIdentity: null}
+2: {id: 4, name: 'Bullseye', neighborHood: 'The Bronx', secretIdentity: 'Benjamin Poindexter'}
+3: {id: 3, name: 'The Kingpin', neighborHood: 'Manhattan', secretIdentity: 'Wilson Fisk'}
+4: {id: 2, name: 'Elektra', neighborHood: 'unknown', secretIdentity: 'Elektra Natchios'}
+5: {id: 1, name: 'Daredevil', neighborHood: "Hell's Kitchen", secretIdentity: 'Matt Murdock'}
+
+*/
