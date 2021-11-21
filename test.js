@@ -506,3 +506,74 @@ console.log(samos);
 // Samos
 console.log(cosmicGuide);
 // The Wraith
+
+console.log("-----------------------------------");
+console.log("----------------------------------");
+
+const dareDevil1 = [
+  {
+    id: 1,
+    name: "Daredevil",
+    neighborHood: "Hell's Kitchen",
+    secretIdentity: "Matt Murdock"
+  },
+  {
+    id: 2,
+    name: "Elektra",
+    neighborHood: undefined,
+    secretIdentity: "Elektra Natchios"
+  },
+  {
+    id: 3,
+    name: "The Kingpin",
+    neighborHood: "Manhattan",
+    secretIdentity: "Wilson Fisk"
+  },
+  {
+    id: 4,
+    name: "Bullseye",
+    neighborHood: "The Bronx",
+    secretIdentity: "Benjamin Poindexter"
+  },
+  {
+    id: 5,
+    name: "Foggy Nelson",
+    neighborHood: "Hell's Kitchen",
+    secretIdentity: null
+  },
+  {
+    id: 6,
+    name: "Karen Page",
+    neighborHood: "Hell's Kitchen",
+    secretIdentity: null
+  }
+];
+
+let sortByName = array => array.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+console.log(sortByName(dareDevil1));
+/* 
+
+0: {id: 4, name: 'Bullseye'}
+1: {id: 1, name: 'Daredevil'}
+2: {id: 2, name: 'Elektra'}
+3: {id: 5, name: 'Foggy Nelson'}
+4: {id: 6, name: 'Karen Page'}
+5: {id: 3, name: 'The Kingpin'}
+
+*/
+
+console.log(dareDevil1[0].name);
+// Bullseye
+
+if (dareDevil1[0].name == "Bullseye") {
+  let dd1 = dareDevil1
+    .filter(function (dd2) {
+      return dd2.neighborHood == "Hell's Kitchen";
+    })
+    .map(function (dd3) {
+      return dd3.name;
+    });
+  console.log(dd1);
+  // ['Daredevil', 'Foggy Nelson', 'Karen Page']
+}
