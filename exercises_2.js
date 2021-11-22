@@ -872,3 +872,70 @@ pentagonalNumber(956);
 
 console.log("-----------------------------------");
 console.log("-------------------------------");
+
+// abundant number
+// a number that is less than the sum of its divisors
+// for example: 12
+// 1 + 2 + 3 + 4 + 6 = 16
+
+function abundantNumber(num) {
+  let i = 1;
+  let sum = 0;
+  let rString = "";
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      sum = sum + i;
+    }
+  }
+  if (num < sum) {
+    rString = `${num} is an abundant number`;
+  } else {
+    rString = `${num} is not an abundant number`;
+  }
+  console.log(sum);
+  console.log(rString);
+}
+
+abundantNumber(12);
+// 16
+// 12 is an abundant number
+abundantNumber(20);
+// 22
+// 20 is an abundant number
+abundantNumber(33);
+// 15
+// 33 is not an abundant number
+abundantNumber(48);
+// 76
+// 48 is not an abundant number
+
+console.log("------------------------------------");
+console.log("-----------------------------------");
+
+function primeNumber(num) {
+  if (num == 2) console.log(`${num} is a prime number`);
+  if (num < 2) console.log("input must be at least 2");
+  let i = 2;
+  let rString = "";
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      rString = `${num} is not a prime number`;
+      break;
+    } else rString = `${num} is a prime number`;
+  }
+  console.log(rString);
+}
+
+primeNumber(3);
+// 3 is prime number
+primeNumber(4);
+// 4 is not a prime number
+primeNumber(-20);
+// input must be at least 2
+primeNumber(7);
+// 7 is a prime number
+primeNumber(9);
+// 9 is not a prime number
+
+console.log("----------------------------------");
+console.log("---------------------------------");

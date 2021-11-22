@@ -819,3 +819,46 @@ console.log(hanka);
 console.log(kuze);
 // Hideo Kuze
 console.log(tokyo);
+// Tokyo
+
+console.log("-----------------------------------");
+console.log("---------------------------------");
+
+// abundant number
+// a number that is less than the sum of its divisors
+// for example: 12
+// 1 + 2 + 3 + 4 + 6 = 16
+
+function abundantNumber(num) {
+  let i = 1;
+  let sum = 0;
+  let rString = "";
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      sum = sum + i;
+    }
+  }
+  if (num < sum) {
+    rString = `${num} is an abundant number`;
+  } else {
+    rString = `${num} is not an abundant number`;
+  }
+  console.log(sum);
+  console.log(rString);
+}
+
+abundantNumber(12);
+// 16
+// 12 is an abundant number
+abundantNumber(20);
+// 22
+// 20 is an abundant number
+abundantNumber(33);
+// 15
+// 33 is not an abundant number
+abundantNumber(48);
+// 76
+// 48 is not an abundant number
+
+console.log("------------------------------------");
+console.log("-----------------------------------");
