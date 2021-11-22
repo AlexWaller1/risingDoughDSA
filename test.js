@@ -896,14 +896,14 @@ const smashingPumpkins = [
     isLeadSinger: true,
     instrument: "Guitar",
     homeState: "Illinois",
-    orginalMember: true
+    originalMember: true
   },
   {
     name: "D'arcy Wretzky",
     isLeadSinger: false,
     instrument: "Bass",
     homeState: "Illinois",
-    orginalMember: true
+    originalMember: true
   },
   {
     name: "James Iha",
@@ -1034,4 +1034,19 @@ if (smashingPumpkins[2].name == "D'arcy Wretzky") {
   // ["D'arcy Wretzky", 'Ginger Reyes', 'Jack Bates',
   // 'Mark Stoermer', 'Melissa Auf Der Maur',
   // 'Nicole Fiorentino']
+}
+
+console.log(smashingPumpkins[6].name);
+
+if (smashingPumpkins[6].name == "James Iha") {
+  let sp1 = smashingPumpkins
+    .filter(function (sp2) {
+      return sp2.originalMember == true;
+    })
+    .map(function (sp3) {
+      return sp3.name;
+    });
+  console.log(sp1);
+  // ["Billy Corgan", "D'arcy Wretzky",
+  //   "James Iha", "Jimmy Chamberlin"]
 }
