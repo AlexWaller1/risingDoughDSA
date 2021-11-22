@@ -994,3 +994,49 @@ autoMorphicNumber(376);
 
 console.log("-------------------------------------");
 console.log("-----------------------------------");
+
+/* 
+
+Neon number:
+
+A number is said to be Neon Number if the sum of
+digits of the square of the number is equal to the
+number itself. 9 is a neon number. 9 * 9 = 81 and
+8 + 1 = 9. Hence it is a Neon Number.
+
+*/
+
+function neonNumber(num) {
+  let num2 = Math.pow(num, 2);
+  let num3 = 0;
+  let sum = 0;
+  num2 = num2.toString();
+  num2 = num2.split("");
+  let rString = "";
+  let i = 0;
+  for (; i < num2.length; i++) {
+    num3 = parseInt(num2[i]);
+    sum = sum + num3;
+  }
+  if (sum == num) {
+    rString = `${num} is a neon number`;
+  } else {
+    rString = `${num} is not a neon number`;
+  }
+
+  console.log(rString);
+}
+
+neonNumber(9);
+// 9 is a neon number
+neonNumber(4);
+// 4 is not a neon number
+neonNumber(1);
+// 1 is a neon number
+neonNumber(10);
+// 10 is not a neon number
+neonNumber(0);
+// 0 is a neon number
+
+console.log("-----------------------------------");
+console.log("-------------------------------");
