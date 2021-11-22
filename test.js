@@ -763,3 +763,59 @@ pentagonalNumber(956);
 
 console.log("-----------------------------------");
 console.log("-------------------------------");
+
+const ghostInTheShell = [
+  "Motoko Kusanagi",
+  "Batou",
+  "Chief Inspector Daisuke",
+  "Togusa",
+  "Hanka",
+  "Hideo Kuze"
+];
+
+console.log(ghostInTheShell[0]);
+// Motoko Kusanagi
+console.log(ghostInTheShell[1]);
+// Batou
+console.log(ghostInTheShell[2]);
+// Chief Inspector Daisuke
+
+const theMajor = {
+  name: "Motoko Kusanagi",
+  agency: "Section 9",
+  rank: "Major",
+  colleagues: {
+    colleague1: "Batou",
+    colleague2: "Togusa"
+  },
+  adversaries: {
+    adversary1: "Hanka",
+    adversary2: "Hideo Kuze"
+  },
+  city: "Tokyo"
+};
+
+let {
+  name: ghost,
+  agency,
+  rank,
+  colleagues: { colleague1: batou, colleague2: togusa },
+  adversaries: { adversary1: hanka, adversary2: kuze },
+  city: tokyo
+} = theMajor;
+
+console.log(ghost);
+// Motoko Kusanagi
+console.log(agency);
+// Section 9
+console.log(rank);
+// Major
+console.log(batou);
+// Batou
+console.log(togusa);
+// Togusa
+console.log(hanka);
+// Hanka
+console.log(kuze);
+// Hideo Kuze
+console.log(tokyo);
