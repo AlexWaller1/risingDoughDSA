@@ -609,158 +609,6 @@ console.log(sortDESC(dareDevil1));
 
 */
 
-function primeNumber(num) {
-  if (num == 2) console.log(`${num} is a prime number`);
-  if (num < 2) console.log("input must be at least 2");
-  let i = 2;
-  let rString = "";
-  for (; i < num; i++) {
-    if (num % i == 0) {
-      rString = `${num} is not a prime number`;
-      break;
-    } else rString = `${num} is a prime number`;
-  }
-  console.log(rString);
-}
-
-primeNumber(3);
-// 3 is prime number
-primeNumber(4);
-// 4 is not a prime number
-primeNumber(-20);
-// input must be at least 2
-primeNumber(7);
-// 7 is a prime number
-primeNumber(9);
-// 9 is not a prime number
-
-console.log("-----------------------------------");
-console.log("--------------------------------");
-
-function squareNumber(num) {
-  let rString = "";
-  let num2 = num / Math.sqrt(num);
-  let num3 = Math.sqrt(num);
-  if (num2 == num3) {
-    rString = `${num} is a square number`;
-  } else {
-    rString = `${num} is not a square number`;
-  }
-  console.log(rString);
-}
-
-squareNumber(25);
-// 25 is a square number
-squareNumber(24);
-// 24 is not a square number
-squareNumber(36);
-// 36 is a square number
-squareNumber(37);
-// 37 is not a square number
-
-console.log("------------------------------------");
-console.log("-----------------------------------");
-
-function triangularNumber(num) {
-  let i = 0;
-  let count = 1;
-  let sum = 0;
-  let rString = "";
-  for (; sum < num; count++) {
-    sum = sum + count;
-  }
-  if (sum == num) {
-    rString = `${num} is a triangular number`;
-  } else rString = `${num} is not a triangular number`;
-  console.log(rString);
-  console.log(sum);
-}
-
-triangularNumber(3);
-// 3 is a triangular number
-triangularNumber(4);
-// 4 is not a triangular number
-triangularNumber(6);
-// 6 is a triangular number
-triangularNumber(7);
-// 7 is not a triangular number
-triangularNumber(15);
-// 15 is a triangular number
-triangularNumber(9);
-// 9 is not a triangular number
-triangularNumber(10);
-// 10 is a triangular number
-triangularNumber(1);
-// 1 is a triangular number
-
-console.log("---------------------------------");
-console.log("---------------------------------");
-
-// pentagonal number
-
-// 5
-// 5 dots make pentagon border
-// 0 dots inside pentagon
-
-// 12
-// 10 dots make pentagon border
-// 2 dots inside pentagon
-
-// 22
-// 15 dots make pentagon border
-// 7 dots inside pentagon
-
-// 35
-// 20 dots make pentagon border
-// 15 dots inside pentagon
-
-// 1, 5, 12, 22, 35, 51, 70, 92
-
-// increments by 4, 7, 10, 13, 16, 19, 22
-
-let numArray = [];
-
-function pentagonalArray() {
-  let i = 0;
-  let num = 1;
-  let count = 1;
-
-  for (; num <= 1000; num = num + count) {
-    numArray.push(num);
-    count = count + 3;
-  }
-  console.log(numArray);
-}
-
-pentagonalArray();
-
-function pentagonalNumber(num) {
-  let rString = "";
-  if (numArray.includes(num)) {
-    rString = `${num} is a pentagonal number`;
-  } else if (num > 1000) {
-    rString = "out of scope";
-  } else {
-    rString = `${num} is not a pentagonal number`;
-  }
-  console.log(rString);
-}
-
-pentagonalNumber(5);
-// 5 is pentagonal number
-pentagonalNumber(9);
-// 9 is not a pentagonal number
-pentagonalNumber(12);
-// 12 is a pentagonal number
-pentagonalNumber(35);
-// 35 is a pentagonal number
-pentagonalNumber(2021);
-// out of scope
-pentagonalNumber(3044);
-// out of scope
-pentagonalNumber(956);
-// 956 is not a pentagonal number
-
 console.log("-----------------------------------");
 console.log("-------------------------------");
 
@@ -823,3 +671,221 @@ console.log(tokyo);
 
 console.log("-----------------------------------");
 console.log("---------------------------------");
+
+function evenOrOdd(num) {
+  let outPut = num % 2 == 0 ? true : false;
+  console.log(outPut);
+}
+
+evenOrOdd(2);
+// true
+evenOrOdd(39);
+// false
+evenOrOdd(41);
+// false
+evenOrOdd(42);
+// true
+
+console.log("-----------------------------------");
+console.log("-----------------------------------");
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+
+let num4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+console.log(robots[0]);
+// Hank-44
+
+if (robots[0] == "Hank-44") {
+  let i = 0;
+  for (; i < num4.length; i++) {
+    let outPut = num4[i] % 2 == 0 ? true : false;
+    console.log(outPut);
+    /* 
+    
+    false
+    true
+    false
+    true
+    false
+    true
+    false
+    true
+    false
+    true
+    false
+    true
+    false
+    true
+    false
+    true
+    
+    */
+  }
+}
+
+console.log(dareDevil);
+
+console.log(dareDevil[3]);
+// Bullseye
+
+if (dareDevil[3] == "Bullseye") {
+  let i = 0;
+  for (; i < dareDevil.length; i++) {
+    switch (dareDevil[i]) {
+      case "Daredevil":
+        console.log("Matt Murdock");
+        break;
+      case "Kingpin":
+        console.log("Wilson Fisk");
+        break;
+      case "Elektra":
+        console.log("Elektra Natchios");
+        break;
+      case "Bullseye":
+        console.log("Benjamin Poindexter");
+        break;
+      default:
+        console.log("No Secret Identity");
+    }
+  }
+}
+// Matt Murdock
+// Elektra Natchios
+// Wilson Fisk
+// Benjamin Poindexter
+// No Secret Identity
+// No Secret Identity
+
+console.log(dareDevil[2]);
+// Kingpin
+console.log(dareDevil[1]);
+// Elektra
+console.log(dareDevil[3]);
+// Bullseye
+
+console.log(ghostInTheShell);
+console.log(ghostInTheShell[0]);
+// Motoko Kusanagi
+console.log(ghostInTheShell[1]);
+// Batou
+console.log(ghostInTheShell[2]);
+// Chief Inspector Daisuke
+
+console.log("-----------------------------------");
+console.log("-----------------------------------");
+
+let dataTypes = ["25", 25, "34", 37, "41", 55];
+
+function stringOrNum(array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    let outPut = typeof array[i] == "string" ? "string" : "number";
+    console.log(outPut);
+  }
+}
+
+stringOrNum(dataTypes);
+// string
+// number
+// string
+// number
+// string
+// number
+
+console.log(typeof "24" == "string");
+// true
+console.log(typeof 24 == "number");
+// true
+console.log(typeof true);
+// boolean
+console.log(typeof false);
+// false
+console.log(typeof undefined);
+// undefined
+console.log(typeof null);
+// object
+
+console.log(dareDevil[0]);
+// Daredevil
+console.log(dareDevil[1]);
+// Elektra
+console.log(dareDevil[2]);
+// Kingpin
+
+console.log("------------------------------------");
+console.log("----------------------------------");
+
+const siameseDream = {
+  band: "Smashing Pumpkins",
+  producer: "Butch Vig",
+  yearReleased: "1993",
+  numSold: "Platinum",
+  musicGenre: "Alternative Rock",
+  recordLabel: "Virgin Label",
+  trackListing: {
+    track1: "Cherub Rock",
+    track2: "Quiet",
+    track3: "Today",
+    track4: "Hummer",
+    track5: "Rocket",
+    track6: "Disarm",
+    track7: "Soma",
+    track8: "Geek U.S.A.",
+    track9: "Mayonaise",
+    track10: "Spaceboy",
+    track11: "Silver##",
+    track12: "Sweet Sweet",
+    track13: "Luna"
+  }
+};
+
+let {
+  band,
+  producer,
+  yearReleased,
+  numSold: platinum,
+  musicGenre,
+  recordLabel,
+  trackListing: {
+    track1,
+    track2,
+    track3,
+    track4,
+    track5,
+    track6,
+    track7,
+    track8,
+    track9,
+    track10,
+    track11,
+    track12,
+    track13
+  }
+} = siameseDream;
+
+console.log(band);
+// Smashing Pumpkins
+console.log(producer);
+// Butch Vig
+console.log(yearReleased);
+// 1993
+console.log(platinum);
+// Platinum
+console.log(musicGenre);
+// Alternative Rock
+console.log(recordLabel);
+// Virgin Records
+console.log(track1);
+// Cherub Rock
+console.log(track4);
+// Hummer
+console.log(track5);
+// Rocket
+console.log(track9);
+// Mayonaise
+console.log(track10);
+// Spaceboy
+console.log(track12);
+// Sweet Sweet
