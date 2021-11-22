@@ -889,3 +889,149 @@ console.log(track10);
 // Spaceboy
 console.log(track12);
 // Sweet Sweet
+
+const smashingPumpkins = [
+  {
+    name: "Billy Corgan",
+    isLeadSinger: true,
+    instrument: "Guitar",
+    homeState: "Illinois",
+    orginalMember: true
+  },
+  {
+    name: "D'arcy Wretzky",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "Illinois",
+    orginalMember: true
+  },
+  {
+    name: "James Iha",
+    isLeadSinger: false,
+    instrument: "Guitar",
+    homeState: "Illinois",
+    originalMember: true
+  },
+  {
+    name: "Jimmy Chamberlin",
+    isLeadSinger: false,
+    instrument: "Drums",
+    homeState: "Illinois",
+    originalMember: true
+  },
+  {
+    name: "Matt Walker",
+    isLeadSinger: false,
+    instrument: "Drums",
+    homeState: "Illinois",
+    originalMember: false
+  },
+  {
+    name: "Melissa Auf Der Maur",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "Quebec",
+    originalMember: false
+  },
+  {
+    name: "Jonathan Melvoin",
+    isLeadSinger: false,
+    instrument: "Keyboards",
+    homeState: "California",
+    originalMember: false
+  },
+  {
+    name: "Dennis Flemion",
+    isLeadSinger: false,
+    instrument: "Keyboards",
+    homeState: "Wisconsin",
+    originalMember: false
+  },
+  {
+    name: "Jeff Schroeder",
+    isLeadSinger: false,
+    instrument: "Guitar",
+    homeState: "California",
+    originalMember: false
+  },
+  {
+    name: "Ginger Reyes",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "California",
+    originalMember: false
+  },
+  {
+    name: "Lisa Harriton",
+    isLeadSinger: false,
+    instrument: "Keyboards",
+    homeState: "California",
+    originalMember: false
+  },
+  {
+    name: "Nicole Fiorentino",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "Massachusetts",
+    originalMember: false
+  },
+  {
+    name: "Mike Byrne",
+    isLeadSinger: false,
+    instrument: "Drums",
+    homeState: "Oregon",
+    originalMember: false
+  },
+  {
+    name: "Brad Wilk",
+    isLeadSinger: false,
+    instrument: "Drums",
+    homeState: "Illinois",
+    originalMember: false
+  },
+  {
+    name: "Mark Stoermer",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "Nevada",
+    originalMember: false
+  },
+  {
+    name: "Katie Cole",
+    isLeadSinger: false,
+    instrument: "Keyboards",
+    homeState: "Melbourne",
+    originalMember: false
+  },
+  {
+    name: "Jack Bates",
+    isLeadSinger: false,
+    instrument: "Bass",
+    homeState: "Manchester",
+    originalMember: false
+  }
+];
+
+console.log(smashingPumpkins.length);
+// 17
+
+let sortByNameSP = array => array.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+console.log(sortByNameSP(smashingPumpkins));
+
+console.log(smashingPumpkins[2].name);
+// D'arcy Wretzky
+
+if (smashingPumpkins[2].name == "D'arcy Wretzky") {
+  let sp1 = smashingPumpkins
+    .filter(function (sp2) {
+      return sp2.instrument == "Bass";
+    })
+    .map(function (sp3) {
+      return sp3.name;
+    });
+  console.log(sp1);
+  // ["D'arcy Wretzky", 'Ginger Reyes', 'Jack Bates',
+  // 'Mark Stoermer', 'Melissa Auf Der Maur',
+  // 'Nicole Fiorentino']
+}
