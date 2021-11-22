@@ -939,3 +939,58 @@ primeNumber(9);
 
 console.log("----------------------------------");
 console.log("---------------------------------");
+
+/* 
+
+Automorphic number: 
+
+An automorphic number is a number which is present 
+in the last digit(s) of its square. Example: 25 is
+an automorphic number as its square is 625 and 25
+is present as the last digits
+
+*/
+
+function autoMorphicNumber(num) {
+  let rString = "";
+  let num2 = Math.pow(num, 2);
+  let string1 = num.toString();
+  let string2 = num2.toString();
+  let string3 = num2.toString();
+
+  let i = 0;
+  for (; i < string2.length; i++) {
+    string3 = string3.replace(string3.charAt(0), "");
+    if (string3 == string1) {
+      rString = `${num} is an automorphic number`;
+      break;
+    } else {
+      rString = `${num} is not an automorphic number`;
+    }
+  }
+  if (num == 1) rString = `1 is an autmorphic number`;
+
+  console.log(rString);
+}
+
+autoMorphicNumber(25);
+// is an automorphic number
+autoMorphicNumber(24);
+// 24 is not an automorphic number
+autoMorphicNumber(1);
+// 1 is an automorphic number
+autoMorphicNumber(5);
+// 5 is an automorphic number
+autoMorphicNumber(6);
+// 6 is an automorphic number
+autoMorphicNumber(7);
+// 7 is not an automorphic number
+autoMorphicNumber(76);
+// 76 is an automorphic number
+autoMorphicNumber(77);
+// 77 is not an automorphic number
+autoMorphicNumber(376);
+// 376 is an automorphic number
+
+console.log("-------------------------------------");
+console.log("-----------------------------------");
