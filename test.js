@@ -1124,3 +1124,48 @@ isPalindrome("Kayak");
 
 console.log("-----------------------------------------");
 console.log("------------------------------------------");
+
+function isPalindrome2(string) {
+  string = string.toLowerCase();
+  let string2 = string;
+  string2 = string2.split("");
+  string2 = string2.reverse();
+  string2 = string2.join("");
+  if (string2 == string) {
+    return true;
+  } else return false;
+}
+
+console.log(isPalindrome2("kayak"));
+// true
+console.log(isPalindrome2("kayak") == true);
+// true
+console.log("kayak".length);
+// 5
+console.log("".length);
+// 0
+
+console.log("------------------------------------------");
+console.log("-----------------------------------------");
+
+function longestPalindromeSubString(string) {
+  let max = "";
+  let i = 0;
+  for (; i < string.length; i++) {
+    let rString = string.charAt(i);
+    for (let j = i + 1; j < string.length; j++) {
+      rString = rString.concat(string.charAt(j));
+      if (isPalindrome2(rString) == true) {
+        if (rString.length > max.length) {
+          max = rString;
+        }
+      }
+    }
+  }
+  console.log(max);
+}
+
+longestPalindromeSubString("rytughskayaktuyi");
+// kayak
+longestPalindromeSubString("ghfjdracecargjhuyi");
+// racecar
