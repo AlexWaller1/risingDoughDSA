@@ -1169,3 +1169,6 @@ longestPalindromeSubString("rytughskayaktuyi");
 // kayak
 longestPalindromeSubString("ghfjdracecargjhuyi");
 // racecar
+
+console.log("----------------------------------------");
+console.log("----------------------------------------");
