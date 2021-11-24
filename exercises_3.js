@@ -95,3 +95,30 @@ longestPalindromeSubString("ghfjdracecargjhuyi");
 
 console.log("----------------------------------------");
 console.log("----------------------------------------");
+
+let racecar = "racecar";
+racecar = racecar.split("");
+racecar = racecar.sort();
+console.log(racecar);
+
+function isogram(string) {
+  let string2 = string.split("");
+  string2 = string2.sort();
+  let i = 0;
+  for (; i < string2.length; i++) {
+    if (string2[i] == string2[i + 1]) {
+      console.log(`${string} is not an isogram.`);
+      break;
+    } else console.log(`${string} is an isogram.`);
+  }
+}
+
+isogram("racecar");
+// racecar is not an isogram
+isogram("dog");
+// dog is an isogram
+isogram("dachshund");
+// dachshund is not an isogram
+
+console.log("--------------------------------------");
+console.log("-------------------------------------");

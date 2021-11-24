@@ -1172,3 +1172,60 @@ longestPalindromeSubString("ghfjdracecargjhuyi");
 
 console.log("----------------------------------------");
 console.log("----------------------------------------");
+
+let racecar = "racecar";
+racecar = racecar.split("");
+racecar = racecar.sort();
+console.log(racecar);
+
+function isogram(string) {
+  let string2 = string.split("");
+  string2 = string2.sort();
+  let i = 0;
+  for (; i < string2.length; i++) {
+    if (string2[i] == string2[i + 1]) {
+      console.log(`${string} is not an isogram.`);
+      break;
+    } else console.log(`${string} is an isogram.`);
+  }
+}
+
+isogram("racecar");
+// racecar is not an isogram
+isogram("dog");
+// dog is an isogram
+isogram("dachshund");
+// dachshund is not an isogram
+
+console.log("--------------------------------------");
+console.log("-------------------------------------");
+
+console.log(typeof 2.6);
+// number
+console.log(Math.max(9, 2));
+// 9
+console.log(Math.min(9, 2));
+// 2
+console.log(Math.max(4.346, 4.347));
+// 4.347
+console.log(parseInt(2));
+
+console.log("-------------------------------------------");
+console.log("--------------------------------------");
+
+function sqrt(num) {
+  let num2 = Math.sqrt(num);
+  num2 = parseInt(num2);
+  console.log(num2);
+}
+
+sqrt(8);
+// 2
+sqrt(4);
+// 2
+
+console.log("--------------------------------------------");
+console.log("-----------------------------------------");
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
