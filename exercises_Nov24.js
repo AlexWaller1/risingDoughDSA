@@ -243,3 +243,91 @@ findAllFactors(10);
 // [1, 2, 5, 10]
 findAllFactors(100);
 // [1, 2, 4, 5, 10, 20, 25, 50, 100]
+findAllFactors(125);
+// [1, 5, 25, 125]
+
+console.log("--------------------------------------------");
+console.log("-----------------------------------------");
+
+// function should return 1 if num is a prime number
+// function shoould return 0 if num is not a prime number
+
+function isPrimeNumber(num) {
+  if (num == 2) return 1;
+  let i = 2;
+  for (; i < num; i++) {
+    if (num % i == 0) {
+      return 0;
+    } else return 1;
+  }
+}
+
+console.log(isPrimeNumber(7));
+// 1
+console.log(isPrimeNumber(6));
+// 0
+console.log(isPrimeNumber(2));
+// 1
+console.log(isPrimeNumber(17));
+// 1
+console.log(isPrimeNumber(20));
+// 0
+
+console.log("--------------------------------------------");
+console.log("----------------------------------------");
+
+/* 
+
+Write code to create a function that takes in a 
+2 dimensional arrat and searches each 2D element for the
+character "X".
+
+Return the total number of occurrences of the string "X"
+(capitalized) inside of the 2D array.
+
+For example, given the following 2D array:
+
+    var arr = [
+      ["X", "O", "O", "O", "X", "O"],
+      ["O", "X", "O", "O", "O", "O"],
+      ["O", "O", "O", "O", "X", "X"],
+      ["O", "O", "O", "O", "O", "O"]
+    ]
+
+
+    5 should be returned since "X" appears 5 times
+
+*/
+
+let twoD1 = [
+  ["X", "O", "O", "O", "X", "O"],
+  ["O", "X", "O", "O", "O", "O"],
+  ["O", "O", "O", "O", "X", "X"],
+  ["O", "O", "O", "O", "O", "O"]
+];
+
+let twoD2 = [
+  [1, 0, 0, 0, 1, 0],
+  [0, 1, 0, 1, 1, 0],
+  [1, 1, 0, 0, 1, 1],
+  [0, 0, 0, 0, 0, 1]
+];
+
+function twoDeeArray(array, target) {
+  let count = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    let inner = array[i];
+    for (let j = 0; j < inner.length; j++) {
+      if (inner[j] == target) {
+        count++;
+      }
+    }
+  }
+  console.log(count);
+}
+
+twoDeeArray(twoD1, "X");
+// 5
+twoDeeArray(twoD2, 1);
+// 10
