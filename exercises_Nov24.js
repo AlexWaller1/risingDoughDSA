@@ -215,3 +215,31 @@ targetSum(nums10, 100);
 
 console.log("---------------------------------------------");
 console.log("--------------------------------------------");
+
+/* 
+
+Given a number N, find all factors of N
+
+Example:
+
+Input: n = 10
+
+Output = 1 2 5 10
+
+*/
+
+function findAllFactors(num) {
+  let i = 0;
+  let factors = [];
+  for (; i <= num; i++) {
+    if (num % i == 0) {
+      factors.push(i);
+    }
+  }
+  console.log(factors);
+}
+
+findAllFactors(10);
+// [1, 2, 5, 10]
+findAllFactors(100);
+// [1, 2, 4, 5, 10, 20, 25, 50, 100]
