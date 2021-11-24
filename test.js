@@ -1050,3 +1050,77 @@ if (smashingPumpkins[6].name == "James Iha") {
   // ["Billy Corgan", "D'arcy Wretzky",
   //   "James Iha", "Jimmy Chamberlin"]
 }
+
+console.log("----------------------------------");
+console.log("-------------------------------");
+
+console.log(loneWolfSamurai);
+
+const wushuLizard = [
+  {
+    name: "Wushu Lizard",
+    occupation: "Planet Wanderer",
+    homeTown: ""
+  }
+];
+
+console.log(2500000 * 0.15);
+// 375k
+console.log(375000 * 30);
+
+// Venus has 42 million
+// Serena has 94 million
+
+console.log(136000000 * 0.15);
+// 20400000
+
+console.log("-----------------------------------------");
+console.log("------------------------------------------");
+
+function reverseNumber(num) {
+  num = num.toString();
+  num = num.split("");
+  num = num.reverse();
+  num = num.join("");
+  num = parseInt(num);
+  console.log(num);
+}
+
+reverseNumber(34);
+// 43
+reverseNumber(104);
+// 401
+reverseNumber(9075);
+// 5709
+reverseNumber(7645);
+// 5467
+
+console.log("------------------------------------------");
+console.log("-----------------------------------");
+
+function isPalindrome(string) {
+  string = string.toLowerCase();
+  let string2 = string;
+  string2 = string2.split("");
+  string2 = string2.reverse();
+  string2 = string2.join("");
+  if (string2 == string) {
+    console.log(`${string} is a palindrome`);
+  } else {
+    console.log(`${string} is not a palindrome`);
+  }
+}
+
+isPalindrome("kayak");
+// kayak is a palindrome
+isPalindrome("button");
+// button is not a palindrome
+isPalindrome("racecar");
+// racecar is a palindrome
+isPalindrome("controller");
+// controller is not a palindrome
+isPalindrome("Kayak");
+// kayak is a palindrome
+
+console.log("-----------------------------------------");
+console.log("------------------------------------------");
