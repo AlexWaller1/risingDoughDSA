@@ -99,7 +99,8 @@ const hybrids = {
   troutHybrids: {
     troutHybrid1: "Rainbow",
     troutHybrid2: "Brown"
-  }
+  },
+  incubator: "Incubator"
 };
 
 let {
@@ -116,7 +117,8 @@ let {
     treeHybrid4: everett,
     treeHybrid5: jasper
   },
-  troutHybrids: { troutHybrid1: rainbow, troutHybrid2: brown }
+  troutHybrids: { troutHybrid1: rainbow, troutHybrid2: brown },
+  incubator
 } = hybrids;
 
 console.log(stacey);
@@ -127,3 +129,48 @@ console.log(tony);
 // Tony
 console.log(otto);
 // Otto
+console.log(cornelius);
+// Cornelius
+console.log(owen);
+// Owen
+console.log(magnus);
+// Magnus
+console.log(everett);
+// Everett
+console.log(jasper);
+// Jasper
+console.log(rainbow);
+// Rainbow
+console.log(brown);
+// Brown
+console.log(incubator);
+// Incubator
+
+console.log("---------------------------------------------------------------");
+console.log("--------------------------------------------------------------");
+
+/* 
+
+Fibonacci Number
+
+In mathematics, the Fibonacci numbers are the numbers in the following
+integer sequence, and characterized by the fact that every number after the
+first two is the sum of the two preceding ones:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+
+*/
+
+function fibonacciNumber() {
+  let sum = 0;
+  let nums = [0, 1];
+  let i = 1;
+  for (; i < 15; i++) {
+    sum = nums[i] + nums[i - 1];
+    nums.push(sum);
+  }
+  console.log(nums);
+}
+
+fibonacciNumber();
+// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
