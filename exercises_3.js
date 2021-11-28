@@ -181,3 +181,41 @@ largestSubArray(testArray);
 
 console.log("----------------------------------------------------");
 console.log("------------------------------------------------");
+
+/* 
+
+Linear Search
+
+In computer science, linear search or sequential search, is a method for 
+finding a target value within a list. It sequentially checks each element of the
+list for the target value until a match is found or until all of the elements 
+have been searched. Linear search runs in at worst linear time and makes at 
+most n comparisons, where n is the length of the list
+
+*/
+
+let testArray2 = [23, 25, 27, 29, 31, 33, 35, 37];
+
+let testArray3 = [42, 44, 46, 48, 50, 52, 54, 56];
+
+function linearSearch(array, target) {
+  let i = 0;
+  let rString = "";
+  for (; i < array.length; i++) {
+    if (array[i] == target) {
+      rString = `${target} is at index ${i}`;
+      break;
+    } else rString = `${target} is not in this array`;
+  }
+  console.log(rString);
+}
+
+linearSearch(testArray2, 37);
+// 37 is at index 7
+linearSearch(testArray3, 44);
+// 44 is at index 1
+linearSearch(testArray3, 156);
+// 156 is not in this array
+
+console.log("---------------------------------------------------");
+console.log("--------------------------------------------------");
