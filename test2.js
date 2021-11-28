@@ -298,3 +298,43 @@ diffArray(roboClone1, roboClone2);
 
 console.log("--------------------------------------------------");
 console.log("-------------------------------------------------");
+
+let leapYears = [2000, 2004, 2008, 2012, 2016, 2020, 2024];
+
+function leapYear(array) {
+  let rString = "";
+  let i = 0;
+}
+
+console.log(2000 / 400);
+// 5
+console.log(2000 / 4);
+// 500
+console.log(2000 / 100);
+// 20
+
+let result3 = 2;
+
+console.log(result3.length);
+// undefined
+
+let test5 = [1, [2, 3]];
+
+console.log(robots[3]);
+// Eggplant-Head
+
+if (robots[3] == "Eggplant-Head") {
+  let i = 0;
+  for (; i < test5.length; i++) {
+    console.log(test5[i]);
+  }
+}
+
+console.log(typeof robots);
+// object
+console.log(typeof 1);
+// number
+console.log("a".length);
+// 1
+console.log(typeof 1 == "number");
+// true
