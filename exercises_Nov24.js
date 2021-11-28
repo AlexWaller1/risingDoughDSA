@@ -1,7 +1,7 @@
 console.log("Hello Oa");
 /* 
 
-Create a function takes in an array(slot macine outcome) and
+Create a function takes in an array(slot machine outcome) and
 returns true if all elements in the array are identical, and
 false otherwise. The array will contain 4 elements
 
@@ -16,20 +16,18 @@ let slots3 = ["*", "*", "*", "*"];
 let slots4 = ["!", "&", "&", "="];
 
 function slotMachine(array) {
-  let i = 0;
-  let trueOrFalse = "";
+  let i = 1;
+
+  let first = array[0];
   for (; i < array.length; i++) {
-    if (array[i] == array[i + 1] || array[i] == array[i - 1]) {
-      trueOrFalse = true;
-    } else {
-      trueOrFalse = false;
-      break;
+    if (first != array[i]) {
+      return false;
     }
   }
-  console.log(trueOrFalse);
+  return true;
 }
 
-slotMachine(slots1);
+console.log(slotMachine(slots1));
 // true
 slotMachine(slots2);
 // false
@@ -134,9 +132,11 @@ function trueDuplicates(array) {
   array = sortNum(array);
   let rBoolean = "";
   let i = 0;
-
+  // []
   for (; i < array.length; i++) {
     if (array[i] == array[i + 1]) {
+      // [].push(i)
+      // if [] includes(i)
       rBoolean = true;
       break;
     } else rBoolean = false;
@@ -331,3 +331,9 @@ twoDeeArray(twoD1, "X");
 // 5
 twoDeeArray(twoD2, 1);
 // 10
+
+// four rules of O(n)
+// different terms for input, different O(n)
+// drop non-dominant
+// constant doesn't matter, can drop constant
+// always calculate the worst case

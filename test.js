@@ -1229,3 +1229,18 @@ console.log("-----------------------------------------");
 
 console.log(robots);
 // ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+
+console.log(robots[2]);
+// Mellon-Tech
+
+if (robots[2] == "Mellon-Tech") {
+  let i = robots.length - 1;
+  while (i >= 0) {
+    console.log(robots[i]);
+    i--;
+  }
+}
+// Eggplant-Head
+// Mellon-Tech
+// Warren-21
+// Hank-44
