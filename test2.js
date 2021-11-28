@@ -247,3 +247,54 @@ linearSearch(testArray3, 156);
 
 console.log("---------------------------------------------------");
 console.log("--------------------------------------------------");
+
+/* 
+
+Diff Two Arrays
+
+This algorithm is about to compare two arrays and return a new array with 
+any items only found in one of the two given arrays, but not both. In other 
+words, return the symmetric difference of the two arrays.
+
+*/
+
+const roboClone1 = [
+  "Hank-44",
+  "Warren-21",
+  "Mellon-Tech",
+  "Laramie",
+  "Eggplant-Head"
+];
+
+const roboClone2 = [
+  "Hank-44",
+  "Green Egg",
+  "Warren-21",
+  "Mellon-Tech",
+  "Eggplant-Head"
+];
+
+function diffArray(array1, array2) {
+  let i = 0;
+  let elements = [];
+  let j = 0;
+
+  for (; i < array1.length; i++) {
+    if (!array2.includes(array1[i])) {
+      elements.push(array1[i]);
+    }
+  }
+
+  for (; j < array2.length; j++) {
+    if (!array1.includes(array2[j])) {
+      elements.push(array2[j]);
+    }
+  }
+  console.log(elements);
+}
+
+diffArray(roboClone1, roboClone2);
+// ['Laramie', 'Green Egg']
+
+console.log("--------------------------------------------------");
+console.log("-------------------------------------------------");
