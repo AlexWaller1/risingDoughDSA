@@ -73,3 +73,32 @@ function getLength(array) {
 
 getLength(length1);
 // 3
+
+console.log("--------------------------------------------");
+console.log("------------------------------------------------");
+
+function getLength2(array) {
+  let count = 0;
+  let i = 0;
+
+  for (; i < array.length; i++) {
+    if (typeof array[i] == "number") {
+      count++;
+    } else {
+      for (let j = 0; j < array[i].length; j++) {
+        if (typeof array[i][j] == "number") {
+          count++;
+        } else count = count + array[i][j].length;
+      }
+    }
+  }
+  console.log(count);
+}
+
+getLength2(length2);
+// 4
+getLength2(length1);
+// 3
+
+console.log("----------------------------------------------");
+console.log("------------------------------------------");
