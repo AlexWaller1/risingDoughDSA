@@ -59,6 +59,10 @@ let length1 = [1, [2, 3]];
 
 let length2 = [1, [2, [3, 4]]];
 
+let length3 = [1, [2], 1, [2], 1];
+
+let length4 = [1, [2, [3, [4, [5, 6]]]]];
+
 function getLength(array) {
   let count = 0;
   let i = 0;
@@ -99,6 +103,27 @@ getLength2(length2);
 // 4
 getLength2(length1);
 // 3
+getLength2(length3);
+// 5
+getLength2(length4);
+// 4 didn't work with this one
 
 console.log("----------------------------------------------");
 console.log("------------------------------------------");
+
+console.log(length1);
+
+console.log(length2.join([]));
+
+console.log(length1.join([]));
+// 12, 3
+console.log(length4.join([]));
+// 12, 3, 4, 5, 6
+length4 = length4.join([]);
+length4 = length4.split(",");
+console.log(length4);
+length4 = length4.join("");
+console.log(length4);
+// 123456
+console.log(length4.length);
+// 6
