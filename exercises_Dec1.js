@@ -186,3 +186,33 @@ range = [0, 1]
 Output = 1
 
 */
+
+let miss1 = [3, 0, 1];
+
+let miss2 = [0, 1];
+
+let miss3 = [9, 6, 4, 2, 3, 5, 7, 0, 1];
+
+let miss4 = [0];
+
+function missingNum(array) {
+  let missNum = 0;
+  let i = 0;
+
+  for (; i <= array.length; i++) {
+    if (!array.includes(i)) {
+      missNum = i;
+      break;
+    }
+  }
+  console.log(missNum);
+}
+
+missingNum(miss1);
+// 2
+missingNum(miss2);
+// 2
+missingNum(miss3);
+// 8
+missingNum(miss4);
+// 1
