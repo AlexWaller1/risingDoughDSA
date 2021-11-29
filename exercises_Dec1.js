@@ -128,5 +128,61 @@ lessThanNum(nums2);
 lessThanNum(nums3);
 // [0, 0, 0, 0]
 
+// O(n^2)
+
 console.log("---------------------------------------");
 console.log("---------------------------------");
+
+/* 
+
+Given an array nums containing n distinct numbers in the
+range [0, n], return the only number in the range that is
+missing from the array.
+
+Example 1: 
+
+Input: nums = [3, 0, 1];
+
+length = 3
+
+range = [0, 3];
+
+Output: 2
+
+--------------------------------------------------------
+
+Example 2: 
+
+Input: nums = [0, 1]
+
+length = 2
+
+range = [0, 2]
+
+Output: 2
+
+--------------------------------------------------------
+
+Example 3:
+
+Input: nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+
+length = 9
+
+range = [0, 9]
+
+Output = 8
+
+--------------------------------------------------------
+
+Example 4:
+
+Input: nums = [0]
+
+length = 1
+
+range = [0, 1]
+
+Output = 1
+
+*/
