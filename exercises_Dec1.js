@@ -64,66 +64,69 @@ let length3 = [1, [2], 1, [2], 1];
 let length4 = [1, [2, [3, [4, [5, 6]]]]];
 
 function getLength(array) {
-  let count = 0;
-  let i = 0;
-
-  for (; i < array.length; i++) {
-    if (typeof array[i] == "number") {
-      count++;
-    } else count = count + array[i].length;
-  }
-  console.log(count);
+  string = array.join([]);
+  string = string.split(",");
+  string = string.join("");
+  let length = string.length;
+  console.log(length);
 }
 
 getLength(length1);
 // 3
+getLength(length2);
+// 4
+getLength(length3);
+// 5
+getLength(length4);
+// 6
 
-console.log("--------------------------------------------");
-console.log("------------------------------------------------");
+console.log("---------------------------------------");
+console.log("------------------------------------");
 
-function getLength2(array) {
+/* 
+
+Given the array nums, for each nums[i] find out how many
+numbers in the array are smaller than it. That is, for
+each nums[i] you have to count the number of valid j's
+such that j != i and nums[j] < nums[i].
+
+return the answer in an array
+
+Input: nums = [8, 1, 2, 2, 3]
+
+Output: [4, 0, 1, 1, 3]
+
+*/
+
+let nums1 = [8, 1, 2, 2, 3];
+
+let nums2 = [6, 5, 4, 8];
+
+let nums3 = [7, 7, 7, 7];
+
+function lessThanNum(array) {
   let count = 0;
+  let newArray = [];
   let i = 0;
 
   for (; i < array.length; i++) {
-    if (typeof array[i] == "number") {
-      count++;
-    } else {
-      for (let j = 0; j < array[i].length; j++) {
-        if (typeof array[i][j] == "number") {
-          count++;
-        } else count = count + array[i][j].length;
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] < array[i]) {
+        count++;
       }
     }
+    newArray.push(count);
+    count = 0;
   }
-  console.log(count);
+  console.log(newArray);
 }
 
-getLength2(length2);
-// 4
-getLength2(length1);
-// 3
-getLength2(length3);
-// 5
-getLength2(length4);
-// 4 didn't work with this one
+lessThanNum(nums1);
+// [4, 0, 1, 1, 3]
+lessThanNum(nums2);
+// [2, 1, 0, 3]
+lessThanNum(nums3);
+// [0, 0, 0, 0]
 
-console.log("----------------------------------------------");
-console.log("------------------------------------------");
-
-console.log(length1);
-
-console.log(length2.join([]));
-
-console.log(length1.join([]));
-// 12, 3
-console.log(length4.join([]));
-// 12, 3, 4, 5, 6
-length4 = length4.join([]);
-length4 = length4.split(",");
-console.log(length4);
-length4 = length4.join("");
-console.log(length4);
-// 123456
-console.log(length4.length);
-// 6
+console.log("---------------------------------------");
+console.log("---------------------------------");
