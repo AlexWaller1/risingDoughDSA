@@ -270,3 +270,18 @@ diffArray(roboClone1, roboClone2);
 
 console.log("--------------------------------------------------");
 console.log("-------------------------------------------------");
+
+function areaOfCircle(radius) {
+  // Area = Pi * radius^2
+
+  let area = Math.PI * Math.pow(radius, 2);
+  console.log(area);
+}
+
+areaOfCircle(5);
+// 78.54
+areaOfCircle(9);
+// 254.469
+
+console.log("----------------------------------------");
+console.log("--------------------------------------");

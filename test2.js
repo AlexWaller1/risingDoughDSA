@@ -338,3 +338,109 @@ console.log("a".length);
 // 1
 console.log(typeof 1 == "number");
 // true
+console.log(typeof "Dachshund" == "string");
+// true
+console.log(typeof 2 == "boolean");
+// false
+console.log(typeof false == "boolean");
+// true
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head]
+console.log(greenEgg);
+// ['Green Egg']
+const robots12 = [...robots, ...greenEgg];
+
+console.log(robots12);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head',
+// 'Green Egg']
+
+console.log(robots12[4]);
+// Green Egg
+
+if (robots12[4] == "Green Egg") {
+  console.log("Labrador, Kate Bishop, and Hawkeye");
+  // Labrador, Kate Bishop, and Hawkeye
+  console.log("....................................");
+  let i = 0;
+  while (i < robots12.length) {
+    console.log(robots12[i]);
+    i++;
+    // Hank-44
+    // Warren-21
+    // Mellon-Tech
+    // Eggplant-Head
+    // Green Egg
+  }
+}
+
+console.log("==================");
+
+console.log(robots12[2]);
+// Mellon-Tech
+
+console.log("====================");
+
+if (robots12[2] == "Mellon-Tech") {
+  let i = 0;
+
+  do {
+    console.log(robots12[i]);
+    i++;
+  } while (i < robots12.length);
+  // Hank-44
+  // Warren-21
+  // Mellon-Tech
+  // Eggplant-Head
+  // Green Egg
+}
+
+console.log("=================================");
+
+console.log(robots12[3]);
+// Eggplant-Head
+console.log("==========================");
+
+if (robots12[3] == "Eggplant-Head") {
+  let i = robots12.length - 1;
+  do {
+    console.log(robots12[i]);
+    i--;
+  } while (i >= 0);
+}
+// Green Egg
+// Eggplant-Head
+// Mellon-Tech
+// Warren-21
+// Hank-44
+
+console.log("**************************************");
+
+/* 
+
+Floyd's Triangle
+
+1
+2   3
+4   5   6
+7   8   9   10
+11   12   13    14    15
+
+
+*/
+
+function floydsTriangle(num) {}
+
+console.log("-------------------------------------");
+
+function areaOfCircle(radius) {
+  // Area = Pi * radius^2
+
+  let area = Math.PI * Math.pow(radius, 2);
+  console.log(area);
+}
+
+areaOfCircle(5);
+// 78.54
+areaOfCircle(9);
+// 254.469
