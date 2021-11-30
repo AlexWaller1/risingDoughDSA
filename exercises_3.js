@@ -285,3 +285,83 @@ areaOfCircle(9);
 
 console.log("----------------------------------------");
 console.log("--------------------------------------");
+
+// function to find area of a triangle
+
+// (height * base) / 2 == area
+
+function areaOfTriangle(height, base) {
+  let area = (height * base) / 2;
+  console.log(area);
+}
+
+areaOfTriangle(5, 4);
+// 10
+areaOfTriangle(37, 20);
+// 370
+
+console.log("---------------------------------------");
+console.log("---------------------------------------");
+
+let testNums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+if ("Mellon-Tech" == "Mellon-Tech") {
+  let count1 = 0;
+  let count2 = 1;
+  let count3 = 0;
+  let count4 = 1;
+  let i = 0;
+
+  for (; i < testNums.length / 2; i++) {
+    let sliced = testNums.slice(count1, count2);
+    sliced = sliced.join("");
+    console.log(sliced);
+    count3++;
+    count4++;
+    count1 = count1 + count3;
+    count2 = count2 + count4;
+    if (count2 > testNums.length) {
+      break;
+    }
+  }
+}
+// 0
+// 12
+// 345
+// 6789
+
+console.log("----------------------------------------");
+console.log("--------------------------------------");
+
+let testNums2 = [3, 4, 5, 6, 7];
+
+function floydsTriangle(array) {
+  let count1 = 0;
+  let count2 = 1;
+  let count3 = 0;
+  let count4 = 1;
+  let i = 0;
+
+  for (; i < array.length / 2; i++) {
+    let sliced = array.slice(count1, count2);
+    sliced = sliced.join("");
+    console.log(sliced);
+    count3++;
+    count4++;
+    count1 = count1 + count3;
+    count2 = count2 + count4;
+    if (count2 > array.length) {
+      break;
+    }
+  }
+}
+
+floydsTriangle(testNums);
+// 0
+// 12
+// 345
+// 6789
+floydsTriangle(testNums2);
+// 3
+// 45
+// didn't quite work so will need to modify it

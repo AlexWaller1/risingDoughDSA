@@ -415,32 +415,3 @@ if (robots12[3] == "Eggplant-Head") {
 // Hank-44
 
 console.log("**************************************");
-
-/* 
-
-Floyd's Triangle
-
-1
-2   3
-4   5   6
-7   8   9   10
-11   12   13    14    15
-
-
-*/
-
-function floydsTriangle(num) {}
-
-console.log("-------------------------------------");
-
-function areaOfCircle(radius) {
-  // Area = Pi * radius^2
-
-  let area = Math.PI * Math.pow(radius, 2);
-  console.log(area);
-}
-
-areaOfCircle(5);
-// 78.54
-areaOfCircle(9);
-// 254.469
