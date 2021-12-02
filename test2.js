@@ -415,3 +415,25 @@ if (robots12[3] == "Eggplant-Head") {
 // Hank-44
 
 console.log("**************************************");
+
+const crashBandicoot = {
+  name: "Crash Bandicoot",
+  animalSpecies: "Bandicoot",
+  cartColor: "Blue"
+};
+
+const cortexPair = { adversary: "Neo Cortex" };
+
+Object.assign(crashBandicoot, cortexPair);
+
+console.log(crashBandicoot);
+// added cortexPair to crashBanicoot
+
+function addKeyValue(object, key, value) {
+  let newPair = { [key]: value };
+  Object.assign(object, newPair);
+  console.log(object);
+}
+
+addKeyValue(crashBandicoot, "friend", "Spyro");
+// added friend: 'Spyro' to crashBandicoot
