@@ -437,3 +437,69 @@ console.log(JSON.parse(crashJSON));
 console.log(typeof crashJSON);
 // string
 console.log(typeof crashJSON == "string");
+// true
+
+const loneWolfSamurai = [
+  {
+    name: "Lone Wolf Samurai",
+    homeCity: "Yokohama",
+    occupations: {
+      job1: "Walker of the Earth",
+      job2: "Star Wanderer",
+      job3: "Samurai",
+      job4: "Pinball Player"
+    },
+    friends: {
+      kenji: "Kenji",
+      laramie: "Laramie",
+      glynis: "Glynis",
+      zeno: "Zeno",
+      samos: "Samos"
+    },
+    cosmicGuide: "The Wraith",
+    rival: "Wushu Lizard"
+  },
+  {
+    name: "Kenji the Crane",
+    homeCity: "Kyoto",
+    occupations: {
+      job1: "Champion Crane Fighter",
+      job2: "Star Wanderer",
+      job3: "Pinball Player",
+      job4: "Tekken Enthusiast"
+    },
+    friends: {
+      glynis: "Glynis",
+      laramie: "Laramie",
+      zeno: "Zeno",
+      samos: "Samos",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    rival: "Jin Oshinobu"
+  },
+  {
+    name: "Glynis",
+    homeCity: "Calumet Freeze 9",
+    occupations: {
+      job1: "Scrap Collector",
+      job2: "Pinball Player",
+      job3: "Tekken Champion",
+      job4: "Pinball Player"
+    },
+    friends: {
+      glynis: "Laramie",
+      samos: "Samos",
+      zeno: "Zeno",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    rival: null
+  }
+];
+
+console.log(loneWolfSamurai[1].rival);
+// Jin Oshinobu
+console.log(loneWolfSamurai[1].friends.laramie);
+// Laramie
+console.log(loneWolfSamurai[2].rival);
+// null
