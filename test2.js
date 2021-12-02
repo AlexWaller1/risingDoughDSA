@@ -475,6 +475,7 @@ const loneWolfSamurai = [
       samos: "Samos",
       loneWolfSamurai: "Lone Wolf Samurai"
     },
+    cosmicGuide: "The Wraith",
     rival: "Jin Oshinobu"
   },
   {
@@ -483,16 +484,74 @@ const loneWolfSamurai = [
     occupations: {
       job1: "Scrap Collector",
       job2: "Pinball Player",
-      job3: "Tekken Champion",
-      job4: "Pinball Player"
+      job3: "Tekken Champion"
     },
     friends: {
-      glynis: "Laramie",
+      laramie: "Laramie",
       samos: "Samos",
       zeno: "Zeno",
       kenji: "Kenji",
       loneWolfSamurai: "Lone Wolf Samurai"
     },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Laramie",
+    homeCity: "Jasper Casper C",
+    occupations: {
+      job1: "Scrap Collector",
+      job2: "Pinball Champion",
+      job3: "Tekken Enthusiast"
+    },
+    friends: {
+      glynis: "Glynis",
+      zeno: "Zeno",
+      samos: "Samos",
+      loneWolfSamurai: "Lone Wolf Samurai",
+      kenji: "Kenji"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Samos",
+    homeCity: "Crete",
+    occupations: {
+      job1: "Philosopher",
+      job2: "Cosmic Wanderer",
+      job3: "Seeker of Truth",
+      job4: "Tekken Enthusiast",
+      job5: "Piball Player"
+    },
+    friends: {
+      zeno: "Zeno",
+      glynis: "Glynis",
+      laramie: "Laramie",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Zeno",
+    homeCity: "Crete",
+    occupations: {
+      job1: "Philosopher",
+      job2: "Cosmic Wanderer",
+      job3: "Seeker of Truth",
+      job4: "Tekken Enthusiast",
+      job5: "Pinball Player"
+    },
+    friends: {
+      zeno: "Zeno",
+      glynis: "Glynis",
+      laramie: "Laramie",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
     rival: null
   }
 ];
@@ -503,3 +562,11 @@ console.log(loneWolfSamurai[1].friends.laramie);
 // Laramie
 console.log(loneWolfSamurai[2].rival);
 // null
+console.log(loneWolfSamurai[3].name);
+// Laramie
+console.log(loneWolfSamurai[4].name);
+// Samos
+console.log(loneWolfSamurai[2].name);
+// Glynis
+console.log(loneWolfSamurai[2].occupations.job1);
+// Scrap Collector
