@@ -538,3 +538,24 @@ addKeyValue(crashBandicoot, "friend", "Spyro");
 
 console.log("----------------------------------------");
 console.log("--------------------------------------");
+
+// JSON practice
+
+console.log(JSON.stringify(crashBandicoot));
+// {"name":"Crash Banicoot", "animalSpecies":"Bandicoot",
+// "cartColor":"Blue"}
+// in JSON
+
+let crashJSON = JSON.stringify(crashBandicoot);
+
+console.log(JSON.parse(crashJSON));
+// {name: 'Crash Bandicoot", animalSpecies: 'Bandicoot',
+// cartColor: 'Blue'}
+// in JavaScript
+
+console.log(typeof crashJSON);
+// string
+console.log(typeof crashJSON == "string");
+// true
+console.log("-------------------------------------");
+console.log("-----------------------------------");

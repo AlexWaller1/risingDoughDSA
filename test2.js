@@ -422,18 +422,18 @@ const crashBandicoot = {
   cartColor: "Blue"
 };
 
-const cortexPair = { adversary: "Neo Cortex" };
+console.log(JSON.stringify(crashBandicoot));
+// {"name":"Crash Banicoot", "animalSpecies":"Bandicoot",
+// "cartColor":"Blue"}
+// in JSON
 
-Object.assign(crashBandicoot, cortexPair);
+let crashJSON = JSON.stringify(crashBandicoot);
 
-console.log(crashBandicoot);
-// added cortexPair to crashBanicoot
+console.log(JSON.parse(crashJSON));
+// {name: 'Crash Bandicoot", animalSpecies: 'Bandicoot',
+// cartColor: 'Blue'}
+// in JavaScript
 
-function addKeyValue(object, key, value) {
-  let newPair = { [key]: value };
-  Object.assign(object, newPair);
-  console.log(object);
-}
-
-addKeyValue(crashBandicoot, "friend", "Spyro");
-// added friend: 'Spyro' to crashBandicoot
+console.log(typeof crashJSON);
+// string
+console.log(typeof crashJSON == "string");
