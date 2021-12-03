@@ -559,3 +559,25 @@ console.log(typeof crashJSON == "string");
 // true
 console.log("-------------------------------------");
 console.log("-----------------------------------");
+
+function palindromeNumber(num) {
+  let num1 = num;
+  num1 = num1.toString();
+  num1 = num1.split("");
+  num1 = num1.reverse();
+  num1 = num1.join("");
+  let num2 = parseInt(num1);
+  if (num == num2) {
+    console.log(`${num} == ${num2}`);
+  } else console.log(`${num} != ${num2}`);
+}
+
+palindromeNumber(37);
+// 37 != 73
+palindromeNumber(1001);
+// 1001 == 1001
+palindromeNumber(10);
+// 10 != 1
+
+console.log("------------------------------------------------");
+console.log("----------------------------------------------");

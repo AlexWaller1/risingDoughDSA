@@ -207,6 +207,7 @@ function missingNum(array) {
   }
   console.log(missNum);
 }
+// O(n^2)
 
 missingNum(miss1);
 // 2

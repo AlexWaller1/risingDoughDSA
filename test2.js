@@ -570,3 +570,171 @@ console.log(loneWolfSamurai[2].name);
 // Glynis
 console.log(loneWolfSamurai[2].occupations.job1);
 // Scrap Collector
+
+if (loneWolfSamurai[2].name == "Glynis") {
+  let robo1 = loneWolfSamurai
+    .filter(function (robo2) {
+      return robo2.cosmicGuide == "The Wraith";
+    })
+    .map(function (robo3) {
+      return robo3.name;
+    });
+  console.log(robo1);
+  // ['Lone Wolf Samurai', 'Kenji the Crane', 'Glynis',
+  // 'Laramie', 'Samos', 'Zeno']
+}
+
+console.log(loneWolfSamurai[3].name);
+// Laramie
+
+if (loneWolfSamurai[3].name == "Laramie") {
+  let robo1 = loneWolfSamurai
+    .filter(function (robo2) {
+      return robo2.rival == "Wushu Lizard";
+    })
+    .map(function (robo3) {
+      return robo3.name;
+    });
+  console.log(robo1);
+  // ['Lone Wolf Samurai']
+}
+
+let ternary = loneWolfSamurai[3].name == "Laramie" ? true : false;
+
+console.log(ternary);
+// true
+
+ternary = loneWolfSamurai[0].rival == "Wushu Lizard" ? true : false;
+console.log(ternary);
+// true
+
+if (loneWolfSamurai[0].rival == "Wushu Lizard") {
+  let newArray = [];
+  let i = 0;
+  for (; i < loneWolfSamurai.length; i++) {
+    loneWolfSamurai[i].rival == "Wushu Lizard"
+      ? newArray.push(loneWolfSamurai[i].name)
+      : "no";
+  }
+  console.log(newArray);
+  // ['Lone Wolf Samurai']
+}
+
+console.log(loneWolfSamurai[5].name);
+// Zeno
+
+if (loneWolfSamurai[5].name == "Zeno") {
+  let i = 0;
+  for (; i < loneWolfSamurai.length; i++) {
+    switch (loneWolfSamurai[i].rival) {
+      case null:
+        console.log(`${loneWolfSamurai[i].name} has no qualms
+        with anybody!`);
+        // Glynis has no qualms with anybody!
+        // Laramie has no qualms with anybody!
+        // Samos has no qualms with anybody!
+        // Zeno has no qualms with anybody!
+        break;
+      case "Wushu Lizard":
+        console.log(`${loneWolfSamurai[i].name} is rivals
+        with ${loneWolfSamurai[i].rival}!`);
+        // Lone Wolf Samurai is rivals with Wushu Lizard!
+        break;
+    }
+  }
+}
+
+console.log(loneWolfSamurai[1].name);
+// Kenji the Crane
+console.log(loneWolfSamurai[1].rival);
+// Jin Oshinobu
+
+if (loneWolfSamurai[1].rival == "Jin Oshinobu") {
+  let robo1 = loneWolfSamurai.map(function (robo2) {
+    return robo2.cosmicGuide;
+  });
+  console.log(robo1);
+  // ['The Wraith', 'The Wraith', 'The Wraith', 'The Wraith',
+  // 'The Wraith', 'The Wraith']
+}
+
+const wushuLizard = {
+  name: "Wushu Lizard",
+  martialArt: "Wushu",
+  homeCountry: "Guyana",
+  species: "Collared Lizard"
+};
+
+let wushuRival = { rival: "Lone Wolf Samurai" };
+
+Object.assign(wushuLizard, wushuRival);
+
+console.log(wushuLizard);
+// wushuRival key value pair added to wushuLizard object
+
+console.log(wushuLizard.homeCountry);
+// Guyana
+console.log(wushuLizard.species);
+// Collared Lizard
+
+if (wushuLizard.homeCountry == "Guyana") {
+  let i = 0;
+  for (; i < loneWolfSamurai.length; i++) {
+    console.log(loneWolfSamurai[i].name);
+    // Lone Wolf Samurai
+    // Kenji the Crane
+    // Glynis
+    // Laramie
+    // Samos
+    // Zeno
+  }
+}
+
+console.log(Math.floor(2.3));
+// 2
+console.log(parseInt(2.3));
+// 2
+console.log(Math.round(2.3));
+// 2
+console.log(Math.round(2.5));
+// 3
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[3]);
+// Eggplant-Head
+console.log(robots[1]);
+// Warren-21
+console.log(robots[0]);
+// Hank-44
+console.log(greenEgg);
+// ['Green Egg']
+console.log(robots12);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head',
+// 'Green Egg']
+
+console.log(robots12[4]);
+// Green Egg
+
+if (robots12[4] == "Green Egg") {
+  let i = 0;
+  for (; i < robots12.length; i++) {
+    switch (robots12[i]) {
+      case "Hank-44" || "Warren-21":
+        console.log(`Nice curling, ${robots12[i]}!`);
+        // Nice curling, Hank-44!
+        // didn't do anything for Warren-21
+        break;
+      case "Mellon-Tech" || "Eggplant-Head":
+        console.log(`Nice guitar playing, ${robots[i]}!`);
+        // Nice guitar playing, Mellon-Tech!
+        // didn't do anything for Eggplant-Head
+        break;
+      case "Green Egg":
+        console.log(`The ${robots12[i]} makes a great brisket!`);
+        // The Green Egg makes a great brisket
+        break;
+    }
+  }
+}
