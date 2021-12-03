@@ -738,3 +738,40 @@ if (robots12[4] == "Green Egg") {
     }
   }
 }
+
+console.log("12".length);
+// 2
+let testArray22 = [1, 2];
+testArray22.splice(1, 0, 0);
+console.log(testArray22);
+// [1, 0, 2]
+
+// add 0 at midpoint of even number double digit or more
+// input: 12
+// output: 102
+// input: 2154
+// output: 21054
+
+function zeroInMiddle(num) {
+  let numString = num.toString();
+  if (numString.length % 2 != 0) return "must have even number of digits";
+
+  numString = numString.split("");
+  numString.splice(numString.length / 2, 0, 0);
+  numString = numString.join("");
+  let rNum = parseInt(numString);
+  return rNum;
+}
+
+console.log(zeroInMiddle(12));
+// 102
+console.log(zeroInMiddle(1));
+// must have even number of digits
+console.log(zeroInMiddle(2));
+// must have even number of digits
+console.log(zeroInMiddle(314));
+// must have even number of digits
+console.log(zeroInMiddle(2145));
+// 21045
+console.log(zeroInMiddle(234754));
+// 2340754
