@@ -82,3 +82,43 @@ if (C1 == "X" && C2 == "X" && C3 == "X") {
 if (C1 == "O" && C2 == "O" && C3 == "O") {
   console.log("You Win!");
 }
+
+if (A2 == "X" && B2 == "X" && C2 == "X") {
+  // 5
+  console.log("You Win!");
+}
+
+if (A2 == "O" && B2 == "O" && C2 == "O") {
+  console.log("You Win!");
+}
+
+if (A3 == "X" && B3 == "X" && C3 == "X") {
+  // 6
+  console.log("You Win!");
+}
+
+if (A3 == "O" && B3 == "O" && C3 == "O") {
+  console.log("You Win!");
+}
+
+if (A1 == "X" && B2 == "X" && C3 == "X") {
+  // 7
+  console.log("You Win!");
+}
+
+if (A1 == "O" && B2 == "O" && C3 == "O") {
+  console.log("You Win!");
+}
+
+if (A3 == "X" && B2 == "X" && C3 == "X") {
+  // 8
+  console.log("You Win!");
+}
+
+if (A3 == "O" && B2 == "O" && C3 == "O") {
+  console.log("You Win!");
+}
+
+// A1, B2, C3
+
+// A3, B2, C1
