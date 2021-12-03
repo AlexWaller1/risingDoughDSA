@@ -745,3 +745,43 @@ console.log("apple" > "orange");
 // false
 console.log("aaron" < "apple");
 // true
+
+console.log("----------------------------------------------------");
+console.log("-----------------------------------------------");
+
+// start to build tic tac toe game
+// just try to make some progress
+
+/* 
+
+                     |                  |
+          A1         |         A2       |        A3
+                     |                  |
+      ---------------------------------------------------
+                     |                  |
+          B1         |         B2       |        B3
+                     |                  |
+      ---------------------------------------------------
+                     |                  |
+          C1         |          C2      |        C3
+                     |                  |
+
+          Winning Combos Are:
+
+          A1, A2, A3
+
+          B1, B2, B3
+
+          C1, C2, C3
+
+          A1, B1, C1
+
+          A2, B2, C2
+
+          A3, B3, C3
+
+          A1, B2, C3
+
+          A3, B2, C1
+
+*/
