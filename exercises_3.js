@@ -614,3 +614,45 @@ console.log(zeroInMiddle(234754));
 
 console.log("---------------------------------------------------");
 console.log("--------------------------------------------------");
+
+let binary1 = [1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1];
+
+let binary2 = [0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1];
+
+let binary3 = [0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+
+// function to find longest consecutive number of 1s
+
+function binaryCount(array) {
+  let count = 0;
+  let count2 = 0;
+  let max = 0;
+  let max2 = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == 1) {
+      count++;
+      if (count2 > max2) {
+        max2 = count2;
+      }
+      count2 = 0;
+    } else if (array[i] != 1) {
+      count2++;
+      if (count > max) {
+        max = count;
+      }
+      count = 0;
+    }
+  }
+  console.log(`${max} consecutive 1's and ${max2} consecutive 0's`);
+}
+
+binaryCount(binary1);
+// 4 consecutive 1's and 3 consecutive 0's
+binaryCount(binary2);
+// 5 consecutive 1's and 2 consecutive 0's
+binaryCount(binary3);
+// 3 consecutive 1's and 2 consecutive 0's
+
+console.log("----------------------------------------------------");
+console.log("------------------------------------------------");
