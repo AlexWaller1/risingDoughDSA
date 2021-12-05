@@ -749,39 +749,60 @@ console.log("aaron" < "apple");
 console.log("----------------------------------------------------");
 console.log("-----------------------------------------------");
 
-// start to build tic tac toe game
-// just try to make some progress
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[2].includes("Tech"));
+// true
+console.log(Math.random() * 5);
+// random decimal numbers btween 0 and 5
+console.log(robots[Math.floor(Math.random() * robots.length)]);
+// Warren-21
+// Eggplant-Head
+// Warren-21
+// Eggplant-Head
+// Hank-44
+// Hank-44
+// Warren-21
+// Eggplant-Head
+// Hank-44
+// Mellon-Tech
+let ace = 1 || 11;
 
-/* 
+console.log(ace);
+// will only log 11
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
 
-                     |                  |
-          A1         |         A2       |        A3
-                     |                  |
-      ---------------------------------------------------
-                     |                  |
-          B1         |         B2       |        B3
-                     |                  |
-      ---------------------------------------------------
-                     |                  |
-          C1         |          C2      |        C3
-                     |                  |
+let roboJSON = JSON.stringify(robots);
 
-          Winning Combos Are:
+localStorage.clear();
 
-          A1, A2, A3
+console.log(roboJSON);
+// robots array now in JSON instead of JavaScript
+localStorage.setItem("robots-list", roboJSON);
 
-          B1, B2, B3
+console.log(localStorage);
+console.log(localStorage.getItem("robots-list"));
+// robots array in JSON
 
-          C1, C2, C3
+let roboJSON2 = localStorage.getItem("robots-list");
+console.log(roboJSON2);
+// JSON ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"]
 
-          A1, B1, C1
+let roboParse = JSON.parse(roboJSON2);
+console.log(roboParse);
+// JavaScript ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
 
-          A2, B2, C2
-
-          A3, B3, C3
-
-          A1, B2, C3
-
-          A3, B2, C1
-
-*/
+roboParse.splice(1, 1);
+console.log(roboParse);
+// ['Hank-44', 'Mellon-Tech', 'Eggplant-head']
+console.log(localStorage);
+localStorage.clear();
+console.log(localStorage);
+// localStorage is cleared
+let JSON1 = JSON.stringify(roboParse);
+console.log(JSON1);
+// ["Hank-44", "Mellon-Tech", "Eggplant-Head"]
+localStorage.setItem("robots-list", JSON1);
+console.log(localStorage);
+// localStorage now has robots array without Warren-21
