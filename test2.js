@@ -806,3 +806,59 @@ console.log(JSON1);
 localStorage.setItem("robots-list", JSON1);
 console.log(localStorage);
 // localStorage now has robots array without Warren-21
+const cranes = [
+  {
+    name: "Kenji",
+    craneType: "Red Crowned Crane",
+    homeCity: "Kyoto",
+    region: "Kansai",
+    country: "Japan",
+    series: "Lone Wolf Samurai"
+  },
+  {
+    name: "Columbus",
+    craneType: "Sandhill Crane",
+    homeCity: "St. Xavier",
+    state: "Montana",
+    country: "United States of America",
+    series: "Bighorn Crew"
+  }
+];
+
+console.log(cranes[0].name);
+// Kenji
+console.log(cranes[1].name);
+// Columbus
+let cranesJson = JSON.stringify(cranes);
+console.log(cranesJson);
+/* 
+
+[{"name":"Kenji","craneType":"Red Crowned Crane",
+"homeCity":"Kyoto","region":"Kansai","country":"Japan",
+"series":"Lone Wolf Samurai"},{"name":"Columbus",
+"craneType":"Sandhill Crane","homeCity":"St. Xavier",
+"state":"Montana","country":"United States of America",
+"series":"Bighorn Crew"}]
+
+*/
+
+localStorage.setItem("crane-roster", cranesJson);
+console.log(localStorage);
+// both robots-list and crane-roster now in localStorage
+console.log(localStorage.getItem("crane-roster"));
+// just logs "crane-roster" of localStorage to console in JSON
+console.log(localStorage.length);
+// 2
+console.log(localStorage.key(0));
+// robots-list
+console.log(localStorage.key(1));
+// crane-roster
+localStorage.removeItem(1);
+console.log(localStorage);
+console.log(localStorage.length);
+// 2
+localStorage.removeItem("robots-list");
+console.log(localStorage);
+// now just crane-roster is in localStorage
+console.log(localStorage.length);
+// 1
