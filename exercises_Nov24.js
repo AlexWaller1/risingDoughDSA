@@ -340,6 +340,7 @@ twoDeeArray(twoD2, 1);
 console.log("------------------------------------------------");
 console.log("--------------------------------------------");
 
+// o(sqrt(n))
 function findAllFactors2(num) {
   let factors = [];
   let i = 0;
@@ -370,6 +371,7 @@ findAllFactors2(44);
 console.log("--------------------------------------------------");
 console.log("----------------------------------------------");
 
+// O(sqrt(n))
 function primeNumber2(num) {
   if (num == 2) return `${num} is a prime number`;
   if (num < 2) return "out of scope";
