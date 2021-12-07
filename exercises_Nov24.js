@@ -337,3 +337,35 @@ twoDeeArray(twoD2, 1);
 // drop non-dominant
 // constant doesn't matter, can drop constant
 // always calculate the worst case
+console.log("------------------------------------------------");
+console.log("--------------------------------------------");
+
+function findAllFactors2(num) {
+  let factors = [];
+  let i = 0;
+  let result = 0;
+  for (; i <= Math.sqrt(num); i++) {
+    if (num % i == 0) {
+      factors.push(i);
+      result = num / i;
+      if (result != i) {
+        factors.push(result);
+      }
+    }
+  }
+  console.log(factors);
+}
+
+findAllFactors2(36);
+// [1, 36, 2, 18, 3, 12, 4, 9, 6]
+findAllFactors2(25);
+// [1, 25, 5]
+findAllFactors2(24);
+// [1, 24, 2, 12, 3, 8, 4, 6]
+findAllFactors2(37);
+// [1, 37]
+findAllFactors2(44);
+// [1, 44, 2, 22, 4, 11]
+
+console.log("--------------------------------------------------");
+console.log("----------------------------------------------");
