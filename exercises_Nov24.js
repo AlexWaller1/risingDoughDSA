@@ -369,3 +369,39 @@ findAllFactors2(44);
 
 console.log("--------------------------------------------------");
 console.log("----------------------------------------------");
+
+function primeNumber2(num) {
+  if (num == 2) return `${num} is a prime number`;
+  if (num < 2) return "out of scope";
+
+  let i = 2;
+
+  for (; i <= Math.sqrt(num); i++) {
+    if (num % i == 0) {
+      return `${num} is not a prime number`;
+    } else return `${num} is a prime number`;
+  }
+}
+
+console.log(primeNumber2(5));
+// 5 is a prime number
+console.log(primeNumber2(37));
+// 37 is a prime number
+console.log(primeNumber2(36));
+// 36 is not a prime number
+console.log(primeNumber2(4));
+// 4 is not a prime number
+console.log(primeNumber2(101));
+// 101 is a prime number
+console.log(primeNumber2(2));
+// 2 is a prime number
+
+console.log("-------------------------------------------------");
+console.log("--------------------------------------------------");
+
+let factors1 = [1, 44, 2, 22, 4, 11];
+
+let sortNums = array => array.sort((a, b) => a - b);
+
+console.log(sortNums(factors1));
+// [1, 2, 4, 11, 22, 44]
