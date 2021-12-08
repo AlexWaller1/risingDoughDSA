@@ -261,3 +261,39 @@ missingNum2(miss3);
 // 8
 missingNum2(miss4);
 // 1
+
+console.log("-----------------------------------------");
+console.log("---------------------------------------");
+
+// another loop and try to sum the numbers without sorting
+// 1, 3, 4 = 8
+// 1, 2, 3, 4 = 10
+// 10 - 8 = 2
+let miss5 = [1, 3, 4];
+
+function missingNum3(array) {
+  let sum = 0;
+  let sum2 = 0;
+  let i = 0;
+  let j = array[0];
+
+  for (; i <= array.length; i++, j++) {
+    if (typeof array[i] == "number") {
+      sum = sum + array[i];
+    }
+    sum2 = sum2 + j;
+  }
+
+  console.log(sum2 - sum);
+}
+
+missingNum3(miss5);
+// 2
+missingNum3(miss1);
+// 2
+missingNum3(miss2);
+// 2
+missingNum3(miss3);
+// 8
+missingNum3(miss4);
+// 1
