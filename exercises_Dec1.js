@@ -297,3 +297,66 @@ missingNum3(miss3);
 // 8
 missingNum3(miss4);
 // 1
+
+console.log("---------------------------------------");
+console.log("----------------------------------------");
+
+length1 = [1, [2, 3]];
+
+length2 = [1, [2, [3, 4]]];
+
+length3 = [1, [2], 1, [2], 1];
+
+length4 = [1, [2, [3, [4, [5, 6]]]]];
+
+function getLength2(array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (typeof array[i] != "number") {
+      array = array.flat();
+      i = i - 1;
+    }
+  }
+  console.log(array.length);
+}
+
+getLength2(length1);
+// 3
+getLength2(length2);
+// 4
+getLength2(length3);
+// 5
+getLength2(length4);
+// 6
+
+console.log("----------------------------------------------");
+console.log("--------------------------------------------");
+
+length1.splice(1, 1);
+console.log(length1);
+let concat1 = [...length1, ...[2, 3]];
+console.log(concat1);
+
+console.log(Array.isArray(length1));
+// true
+
+let length7 = length4;
+console.log(length7);
+console.log(length4.flat());
+length4 = length4.flat();
+length4 = length4.flat();
+console.log(length4);
+length4 = length4.flat();
+length = length4.flat();
+console.log(length4);
+
+if (1 === 1) {
+  let i = 0;
+  for (; i < length7.length; i++) {
+    if (typeof length7[i] != "number") {
+      length7 = length7.flat();
+      i = i - 1;
+    }
+  }
+  console.log(length7);
+}

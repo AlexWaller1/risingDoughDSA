@@ -862,3 +862,23 @@ console.log(localStorage);
 // now just crane-roster is in localStorage
 console.log(localStorage.length);
 // 1
+
+for (i in robots) {
+  console.log(robots[i]);
+  // Hank-44
+  // Warren-21
+  // Mellon-Tech
+  // Eggplant-Head
+}
+
+console.log(robots[2]);
+// Mellon-Tech
+
+if (robots[2] == "Mellon-Tech") {
+  let test4 = [1, [2, [3, 4]]];
+  let newArray = [];
+  for (i in test4) {
+    if (typeof test4[i] == "number") {
+    }
+  }
+}
