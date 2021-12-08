@@ -15,9 +15,11 @@ let trueFalse3 = [];
 function countTrue(array) {
   let count = 0;
   let i = 0;
+  //
 
   for (; i < array.length; i++) {
-    if (array[i] == true) {
+    if (array[i]) {
+      // true values only
       count++;
     }
   }
@@ -65,11 +67,14 @@ let length4 = [1, [2, [3, [4, [5, 6]]]]];
 
 function getLength(array) {
   string = array.join([]);
+  console.log(string);
   string = string.split(",");
   string = string.join("");
   let length = string.length;
   console.log(length);
 }
+// use for in loop
+// spread operator
 
 getLength(length1);
 // 3
@@ -216,4 +221,43 @@ missingNum(miss2);
 missingNum(miss3);
 // 8
 missingNum(miss4);
+// 1
+
+console.log("------------------------------------------------");
+console.log("---------------------------------------------");
+
+// another loop and try to sum the numbers without sorting
+// 1, 3, 4 = 8
+// 1, 2, 3, 4 = 10
+// 10 - 8 = 2
+
+// try with sort fist
+let sortNum = array => array.sort((a, b) => a - b);
+
+console.log(sortNum(miss3));
+// [0, 1, 2, 3, 4, 5, 6, 7, 9]
+
+function missingNum2(array) {
+  array = sortNum(array);
+  let count = array[0];
+  let missingNum = 0;
+  let i = 0;
+
+  for (; i <= array.length; i++) {
+    if (count != array[i]) {
+      missingNum = count;
+      break;
+    }
+    count++;
+  }
+  console.log(missingNum);
+}
+
+missingNum2(miss1);
+// 2
+missingNum2(miss2);
+// 2
+missingNum2(miss3);
+// 8
+missingNum2(miss4);
 // 1
