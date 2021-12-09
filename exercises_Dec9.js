@@ -164,3 +164,17 @@ const shape2 = {
 
 console.log("--------------------------------------------------");
 console.log("---------------------------------------------");
+
+function sayHi() {
+  console.log(name);
+  console.log(age);
+  var name = "Lydia";
+  let age = 21;
+}
+
+// sayHi();
+// undefined and ReferenceError
+// D
+
+// name might be undefined because it's recognized as a word
+// by JavaScript
