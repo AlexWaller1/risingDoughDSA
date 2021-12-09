@@ -140,3 +140,38 @@ console.log(hasCoolJacket);
 // true
 console.log(hasCoolShoes);
 // true
+console.log("------------------------------------------------");
+console.log("-----------------------------------");
+
+console.log(hammerHead[5]);
+// The Cosmic Trout
+if (hammerHead[5] == "The Cosmic Trout") {
+  let i = 0;
+  while (i < hammerHead.length) {
+    console.log(hammerHead[i]);
+    // Hammerhead
+    // Taylor
+    // Geometry Man
+    // Harvey
+    // Wibaux
+    // The Cosmic Trout
+    i++;
+  }
+}
+console.log("------------------------------------");
+
+console.log(hammerHead[4]);
+// Wibaux
+if (hammerHead[4] == "Wibaux") {
+  let i = hammerHead.length - 1;
+  do {
+    console.log(hammerHead[i]);
+    // The Cosmic Trout
+    // Wibaux
+    // Harvey
+    // Geometry Man
+    // Taylor
+    // Hammerhead
+    i--;
+  } while (i >= 0);
+}
