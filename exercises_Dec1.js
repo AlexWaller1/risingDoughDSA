@@ -360,3 +360,52 @@ if (1 === 1) {
   }
   console.log(length7);
 }
+
+console.log("-----------------------------------------------------");
+console.log("-------------------------------------------------");
+
+/* 
+
+There are chickens and rabbits at nature preserve (chickens have 2 feet, 
+rabbits have 4 feet, no exceptions). Now that you know the total number of
+feet in the cage a, ask howm nay animals are in the cage at least and
+at most.
+
+*/
+
+function chickenAndRabbits(num) {
+  // input must be even for in order to give an adequate output
+  if (num % 2 != 0) return "input must be even";
+  let max = num / 2;
+  let chickens = max;
+  // will always be most since all even numbers are divisible by 2
+  let rabbits = 0;
+  let min = 0;
+
+  if (num % 4 == 0) {
+    min = num / 4;
+  } else if (num % 4 != 0) {
+    // num = 30
+    min = parseInt(num / 4);
+    // rabbits = 7
+    chickens = min * 4;
+    // 28
+    chickens = num - chickens;
+    // 2
+    chickens = chickens / 2;
+    // 1
+    min = min + chickens;
+    // 8
+  }
+  return `max: ${max}, min: ${min}`;
+}
+
+console.log(parseInt(30 / 4));
+// 7 rabbits
+
+console.log(chickenAndRabbits(30));
+// max: 15, min: 8
+console.log(chickenAndRabbits(25));
+// input must be even
+console.log(chickenAndRabbits(50));
+// max: 25, min: 13
