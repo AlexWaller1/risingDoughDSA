@@ -128,6 +128,8 @@ function reverseChars(array) {
 reverseChars(chars1);
 // ['o', 'l', 'l', 'e', 'h']
 
+// didn't see time complexity for reverse method on Big O Cheat Sheet
+
 console.log("-----------------------------------------");
 console.log("-----------------------------------------");
 

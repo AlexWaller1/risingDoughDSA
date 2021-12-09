@@ -871,18 +871,6 @@ for (i in robots) {
   // Eggplant-Head
 }
 
-console.log(robots[2]);
-// Mellon-Tech
-
-if (robots[2] == "Mellon-Tech") {
-  let test4 = [1, [2, [3, 4]]];
-  let newArray = [];
-  for (i in test4) {
-    if (typeof test4[i] == "number") {
-    }
-  }
-}
-
 console.log("-------------------------------------------------");
 console.log("-------------------------------------------");
 
