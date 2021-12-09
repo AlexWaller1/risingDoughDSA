@@ -55,3 +55,88 @@ if (hammerHead[4] == "Wibaux") {
     // The Cosmic Trout
   });
 }
+
+const hammerHeadChar = {
+  name: "Hammerhead",
+  species: "Hammerhead Shark",
+  homePlanet: "Venice Sands 5",
+  occupation: "Pickerel Cola Space Truck Driver",
+  hasPickerelCola: true,
+  friends: {
+    friend1: "Taylor",
+    friend2: "Wibaux",
+    friend3: "Harvey"
+  },
+  cosmicGuide: "The Cosmic Trout"
+};
+
+console.log(hammerHeadChar.name);
+// Hammerhead
+console.log(hammerHeadChar.species);
+// Hammerhead Shark
+console.log(hammerHeadChar.homePlanet);
+// Venice Sands 5
+
+let newPair = { hasCoolJacket: true };
+
+Object.assign(hammerHeadChar, newPair);
+
+console.log(hammerHeadChar);
+// { hasCoolJacket: true } now a key value pair in hammerHeadChar
+
+console.log(Object.keys(hammerHeadChar));
+// ['name', 'species', 'homePlanet', 'ocupation', 'hasPickerelCola'
+//  'friends', 'cosmicGuide', 'hasCoolJacket']
+console.log(Object.values(hammerHeadChar));
+// ['Hammerhead', 'Hammerhead Shark', 'Venice Sands 5',
+//  'Pickerel Cola Space Truck Driver', 'true', {...}, 'The Cosmic Trout'
+// , true]
+
+function keyValuePair(key, value, object) {
+  let keyValue = { [key]: value };
+  Object.assign(object, keyValue);
+  console.log(object);
+}
+
+keyValuePair("hasCoolShoes", true, hammerHeadChar);
+// hasCoolShoes key value pair added to hammerHeadChar
+
+console.log(Object.values(hammerHeadChar)[2]);
+// Venice Sands 5
+console.log(Object.keys(hammerHeadChar)[2]);
+// homePlanet
+
+let {
+  name: hammer_head,
+  species,
+  homePlanet,
+  occupation,
+  hasPickerelCola,
+  friends: { friend1: taylor, friend2: wibaux, friend3: harvey },
+  cosmicGuide,
+  hasCoolJacket,
+  hasCoolShoes
+} = hammerHeadChar;
+
+console.log(hammer_head);
+// Hammerhead
+console.log(species);
+// Hammerhead Shark
+console.log(homePlanet);
+// Venice Sands 5
+console.log(occupation);
+// Pickerel Cola Space Truck Driver
+console.log(hasPickerelCola);
+// true
+console.log(taylor);
+// Taylor
+console.log(wibaux);
+// Wibaux
+console.log(harvey);
+// Harvey
+console.log(cosmicGuide);
+// The Cosmic Trout
+console.log(hasCoolJacket);
+// true
+console.log(hasCoolShoes);
+// true
