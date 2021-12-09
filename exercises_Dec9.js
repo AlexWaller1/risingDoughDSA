@@ -50,6 +50,8 @@ let numString2 = "+-a13";
 
 let numString3 = "b13";
 
+let numString4 = "-9872";
+
 function isNumeric(string) {
   let numChars = [
     ".",
@@ -90,8 +92,38 @@ console.log(isNumeric(numString2));
 // false
 console.log(isNumeric(numString3));
 // false
+console.log(isNumeric(numString4));
+// true
 
 // O(n^2) :(
 
 console.log("---------------------------------------------");
 console.log("------------------------------------------");
+
+/* 
+
+Write a function that reverses a string. The input string is given
+as an array of characters char[].
+
+Do not allocate extra space for another array, you must do this by
+modifying the input array in place with with O(1) extra memory.
+
+You masy assume all the characters consist of printable ascii
+characters consist of printable ascii characters
+
+Example 1:
+
+Input: ["h", "e", "l", "l", "o"]
+Output: ["o", "l", "l", "e", "h"]
+
+*/
+
+let chars1 = ["h", "e", "l", "l", "o"];
+
+function reverseChars(array) {
+  array.reverse();
+  console.log(array);
+}
+
+reverseChars(chars1);
+// ['o', 'l', 'l', 'e', 'h']
