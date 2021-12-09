@@ -127,3 +127,40 @@ function reverseChars(array) {
 
 reverseChars(chars1);
 // ['o', 'l', 'l', 'e', 'h']
+
+console.log("-----------------------------------------");
+console.log("-----------------------------------------");
+
+const shape = {
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * Math.PI * this.radius
+};
+
+console.log(shape.diameter());
+// 20
+console.log(shape.perimeter());
+// NaN
+// perimeter is not a function
+// it is a key that calls an anonymous function
+
+// B: 20 and NaN
+
+console.log(2 * Math.PI * 10);
+// 62.832
+
+const shape2 = {
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+  // this returned perimeter function correctly
+};
+
+console.log("--------------------------------------------------");
+console.log("---------------------------------------------");
