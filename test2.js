@@ -882,3 +882,13 @@ if (robots[2] == "Mellon-Tech") {
     }
   }
 }
+
+console.log("-------------------------------------------------");
+console.log("-------------------------------------------");
+
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[1]);
+// Warren-21
+console.log(robots[0]);
+// Hank-44

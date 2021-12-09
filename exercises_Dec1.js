@@ -409,3 +409,10 @@ console.log(chickenAndRabbits(25));
 // input must be even
 console.log(chickenAndRabbits(50));
 // max: 25, min: 13
+console.log(chickenAndRabbits(60));
+// max: 30, min: 15
+console.log(chickenAndRabbits(70));
+// max: 35, min: 18
+
+console.log(17 * 4);
+// 68
