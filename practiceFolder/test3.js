@@ -175,3 +175,129 @@ if (hammerHead[4] == "Wibaux") {
     i--;
   } while (i >= 0);
 }
+
+console.log(hammerHead[0].charAt(0));
+// H
+console.log("spatula" == true);
+// false
+console.log("spatula" === true);
+// false
+console.log(2 == true);
+// false
+console.log(true == true);
+// true
+console.log(false == false);
+// true
+console.log("spatula" == "string");
+// false
+console.log(typeof "the" == true);
+// false
+
+console.log(hammerHead[4]);
+// Wibaux
+console.log(hammerHeadChar.homePlanet);
+// Venice Sands 5
+console.log(hammerHeadChar.hasPickerelCola);
+// true
+console.log(Object.values(hammerHeadChar)[2]);
+// Venice Sands 5
+console.log(robots[0]);
+// Hank-44
+
+if (robots[0] == "Hank-44") {
+  let i = 0;
+  let array = Object.values(hammerHeadChar);
+  console.log(array.length);
+  // 9
+  for (; i < array.length; i++) {
+    switch (array[i]) {
+      case "Venice Sands 5":
+        console.log(`${array[i]} is the coolest planet`);
+        // Venice Sands 5 is the coolest planet
+        break;
+    }
+  }
+}
+
+const pickerelCola = [
+  {
+    name: "Hammerhead",
+    occupation: "Pickerel Cola Space Truck Driver",
+    homePlanet: "Venice Sands 5",
+    hasPickerelCola: true,
+    id: 1
+  },
+  {
+    name: "Taylor",
+    occupation: "Pickerel Cola Space Truck Driver",
+    homePlanet: "Mariner Mists Y-3",
+    hasPickerelCola: true,
+    id: 2
+  },
+  {
+    name: "Geometry Man",
+    occupation: "Cannot be explained",
+    homePlanet: "Different Spectrum Entirely, from the Geometry-Verse",
+    hasPickerelCola: undefined,
+    id: 3
+  },
+  {
+    name: "Harvey",
+    occupation: ["Hardin-37 Soldier, River Guide"],
+    homePlanet: "Hardin-37",
+    hasPickerelCola: false,
+    id: 4
+  },
+  {
+    name: "Wibaux",
+    occupation: ["Hardin-37 Soldier", "Metallurgist"],
+    homePlanet: "Hardin-37",
+    hasPickerelCola: false,
+    id: 5
+  },
+  {
+    name: "The Cosmic Trout",
+    occupation: "Cosmic Protectors",
+    homePlanet: undefined,
+    id: 6
+  }
+];
+
+console.log(undefined);
+// undefined
+console.log(null);
+// null
+console.log(pickerelCola[0].name);
+// Hammerhead
+console.log(pickerelCola[0].homePlanet);
+// Venice Sands 5
+console.log(pickerelCola[0].homePlanet, pickerelCola[1].homePlanet);
+// Venice Sands 5 Mariner Mists Y-3
+console.log(pickerelCola[1].homePlanet == "Mariner Mists Y-3");
+// true
+console.log(typeof false == "boolean");
+// true
+
+let t2 = [0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0];
+// six zeroes in t2
+
+console.log(t2[0]);
+// 0
+console.log(t2[0] == 0);
+// true
+
+if (t2[0] == 0) {
+  let count = 0;
+  let count2 = 0;
+  let i = 0;
+
+  for (; i < t2.length; i++) {
+    if (t2[i]) {
+      count++;
+    } else count2++;
+  }
+  console.log("true values:", count);
+  // true values: 5
+  console.log("false values:", count2);
+  // false values: 6
+}
