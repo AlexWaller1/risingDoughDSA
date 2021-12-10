@@ -301,3 +301,64 @@ if (t2[0] == 0) {
   console.log("false values:", count2);
   // false values: 6
 }
+
+console.log(t2[1]);
+// 1
+
+if (t2[1] == 1) {
+  let cola1 = pickerelCola
+    .filter(function (cola2) {
+      return cola2.hasPickerelCola == false;
+    })
+    .map(function (cola3) {
+      return cola3.name;
+    });
+  console.log(cola1);
+  // ['Harvey', 'Wibaux']
+}
+
+console.log(t2[2]);
+// 0
+
+if (t2[2] == 0) {
+  let count = 0;
+  let i = 0;
+  for (; i < t2.length; i++) {
+    if (!t2[i]) {
+      count++;
+    }
+  }
+  console.log("falsey values:", count);
+  // falsey values: 6
+}
+
+console.log(t2[5]);
+// 3
+
+if (t2[5] == 3) {
+  console.log(true);
+  // true
+  let cola1 = pickerelCola.map(function (cola2) {
+    return cola2.homePlanet;
+  });
+  console.log(cola1);
+  // ['Venice Sands 5', 'Mariner Mists Y-3', 'Different Spectrum
+  // Entirely, from the Geometry-Verse', 'Hardin-37', 'Hardin-37'
+  // undefined]
+  let cola4 = pickerelCola.map(function (cola5) {
+    return cola5.homePlanet == "Hardin-37";
+  });
+  console.log(cola4);
+  // [false, false, false, true, true, false]
+  // two characters have Hardin-37 as a home planet
+  let i = 0;
+  let count = 0;
+
+  for (; i < cola4.length; i++) {
+    if (cola4[i]) {
+      count++;
+    }
+  }
+  console.log("Characters from Hardin-37:", count);
+  // Characters from Hardin-37: 2
+}
