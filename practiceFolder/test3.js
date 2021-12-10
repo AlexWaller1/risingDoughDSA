@@ -258,7 +258,7 @@ const pickerelCola = [
   {
     name: "The Cosmic Trout",
     occupation: "Cosmic Protectors",
-    homePlanet: undefined,
+    homePlanet: "incomprehensible",
     id: 6
   }
 ];
@@ -463,3 +463,132 @@ console.log(homePlanets);
 // ['Venice Sands 5', 'Mariner Mists Y-3', 'Different Spectrum
 //  Entirely, from the Geometry-Verse', 'Hardin-37', 'Hardin-37'
 // undefined]
+
+let sortPlanets = array =>
+  array.sort((a, b) => (a.homePlanet > b.homePlanet ? 1 : -1));
+
+console.log(sortPlanets(pickerelCola));
+// elements now in order of homePlanet
+// didn't quite works
+
+let sortCity = array =>
+  array.sort((a, b) => (a.homeCity > b.homeCity ? 1 : -1));
+
+const loneWolfSamurai = [
+  {
+    name: "Lone Wolf Samurai",
+    homeCity: "Yokohama",
+    occupations: {
+      job1: "Walker of the Earth",
+      job2: "Star Wanderer",
+      job3: "Samurai",
+      job4: "Pinball Player"
+    },
+    friends: {
+      kenji: "Kenji",
+      laramie: "Laramie",
+      glynis: "Glynis",
+      zeno: "Zeno",
+      samos: "Samos"
+    },
+    cosmicGuide: "The Wraith",
+    rival: "Wushu Lizard"
+  },
+  {
+    name: "Kenji the Crane",
+    homeCity: "Kyoto",
+    occupations: {
+      job1: "Champion Crane Fighter",
+      job2: "Star Wanderer",
+      job3: "Pinball Player",
+      job4: "Tekken Enthusiast"
+    },
+    friends: {
+      glynis: "Glynis",
+      laramie: "Laramie",
+      zeno: "Zeno",
+      samos: "Samos",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
+    rival: "Jin Oshinobu"
+  },
+  {
+    name: "Glynis",
+    homeCity: "Calumet Freeze 9",
+    occupations: {
+      job1: "Scrap Collector",
+      job2: "Pinball Player",
+      job3: "Tekken Champion"
+    },
+    friends: {
+      laramie: "Laramie",
+      samos: "Samos",
+      zeno: "Zeno",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Laramie",
+    homeCity: "Jasper Casper C",
+    occupations: {
+      job1: "Scrap Collector",
+      job2: "Pinball Champion",
+      job3: "Tekken Enthusiast"
+    },
+    friends: {
+      glynis: "Glynis",
+      zeno: "Zeno",
+      samos: "Samos",
+      loneWolfSamurai: "Lone Wolf Samurai",
+      kenji: "Kenji"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Samos",
+    homeCity: "Crete",
+    occupations: {
+      job1: "Philosopher",
+      job2: "Cosmic Wanderer",
+      job3: "Seeker of Truth",
+      job4: "Tekken Enthusiast",
+      job5: "Piball Player"
+    },
+    friends: {
+      zeno: "Zeno",
+      glynis: "Glynis",
+      laramie: "Laramie",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  },
+  {
+    name: "Zeno",
+    homeCity: "Crete",
+    occupations: {
+      job1: "Philosopher",
+      job2: "Cosmic Wanderer",
+      job3: "Seeker of Truth",
+      job4: "Tekken Enthusiast",
+      job5: "Pinball Player"
+    },
+    friends: {
+      zeno: "Zeno",
+      glynis: "Glynis",
+      laramie: "Laramie",
+      kenji: "Kenji",
+      loneWolfSamurai: "Lone Wolf Samurai"
+    },
+    cosmicGuide: "The Wraith",
+    rival: null
+  }
+];
+
+console.log(sortCity(loneWolfSamurai));
