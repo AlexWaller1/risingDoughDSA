@@ -592,3 +592,58 @@ const loneWolfSamurai = [
 ];
 
 console.log(sortCity(loneWolfSamurai));
+
+let sortByName = array => array.sort((a, b) => (b.name > a.name ? 1 : -1));
+
+console.log(sortByName(loneWolfSamurai));
+
+console.log(robots[0]);
+// Eggplant-Head
+console.log(robots[1]);
+// Hank-44
+console.log(robots[2]);
+// Mellon-Tech
+console.log(robots[3]);
+// Warren-21
+
+const incubator1 = {
+  name: "Incubator",
+  occupation: "Interplanetary Geneticist",
+  planet: "Ovid",
+  species: "Ovidian",
+  hybrids: {
+    treeHybrids: ["Cornelius", "Jasper", "Owen", "Magnus", "Everett"],
+    ramHybrids: ["Tony", "Jay", "Otto", "Stacey"],
+    troutHybrids: ["Rainbow", "Brown"]
+  },
+  baseOfOperation: "Randall Park Mall",
+  earthCompany: "Antibi"
+};
+
+console.log(incubator1.occupation);
+// Interplanetary Geneticist
+console.log(incubator1.hybrids.ramHybrids);
+// ['Tony', 'Jay', 'Otto', 'Stacey']
+console.log(incubator1.hybrids.treeHybrids[0]);
+// Cornelius
+console.log(Object.keys(incubator1));
+// ['name', 'occupation', 'planet', 'species', 'hybrids',
+// 'baseOfOperation', 'earthCompany']
+console.log("------------------------------------------");
+console.log("-----------------------------------");
+
+console.log(incubator1.hybrids.troutHybrids.length);
+// 2
+console.log(incubator1.hybrids.treeHybrids.length);
+// 5
+
+if (robots[2] == "Mellon-Tech") {
+  for (i in incubator1.hybrids.treeHybrids) {
+    console.log(incubator1.hybrids.treeHybrids[i]);
+    // Cornelius
+    // Jasper
+    // Owen
+    // Magnus
+    // Everett
+  }
+}
