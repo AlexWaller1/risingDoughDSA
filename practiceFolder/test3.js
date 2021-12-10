@@ -351,6 +351,7 @@ if (t2[5] == 3) {
   console.log(cola4);
   // [false, false, false, true, true, false]
   // two characters have Hardin-37 as a home planet
+
   let i = 0;
   let count = 0;
 
@@ -361,4 +362,104 @@ if (t2[5] == 3) {
   }
   console.log("Characters from Hardin-37:", count);
   // Characters from Hardin-37: 2
+  console.log("---------------------------------");
+
+  pickerelCola.forEach(function (cola7) {
+    console.log(cola7.name);
+    // Hammerhead
+    // Taylor
+    // Geometry Man
+    // Harvey
+    // Wibaux
+    // The Cosmic Trout
+  });
+
+  pickerelCola.forEach(function (cola9) {
+    console.log(cola9.name == "Wibaux");
+    // false
+    // false
+    // false
+    // false
+    // true ___ cola9[4].name == 'Wibaux'
+    // false
+  });
 }
+
+console.log(pickerelCola[1].homePlanet);
+// Mariner Mists Y-3
+console.log(pickerelCola[5].homePlanet);
+// undefined
+console.log(pickerelCola[5].homePlanet == undefined);
+// true
+
+if (pickerelCola[5].homePlanet == undefined) {
+  console.log("hello");
+  // hello
+  let i = pickerelCola.length - 1;
+  for (; i >= 0; i--) {
+    console.log(pickerelCola[i].homePlanet);
+    // undefined
+    // Hardin-37
+    // Hardin-37
+    // Different Spectrum Entirely, from the Geometry-Verse
+    // Mariner Mists Y-3
+    // Venice Sands 5
+  }
+}
+
+let numSquared = num => Math.pow(num, 2);
+
+console.log(numSquared(9));
+// 81
+console.log(numSquared(11));
+// 121
+console.log(numSquared(12));
+// 144
+console.log(numSquared(14));
+// 196
+console.log(numSquared(13));
+// 169
+console.log(numSquared(15));
+// 225
+console.log(numSquared(16));
+// 256
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+console.log(robots.sort());
+// ['Eggplant-Head', 'Hank-44', 'Mellon-Tech', 'Warren-21']
+console.log(robots);
+// ['Eggplant-Head', 'Hank-44', 'Mellon-Tech', 'Warren-21']
+console.log("-----------------------------------------------");
+console.log("--------------------------------------------");
+
+let sortNum = array => array.sort((a, b) => a - b);
+
+let nums1 = [44, 23, 3, 55, 11, 9, 15, 86];
+
+let nums2 = [3, 1, 4, 2];
+
+console.log(sortNum(nums1));
+// [3, 9, 11, 15, 23, 44, 55, 86]
+console.log(sortNum(nums2));
+// [1, 2, 3, 4]
+
+let homePlanets = [];
+
+console.log(pickerelCola[1].homePlanet);
+// Mariner Mists Y-3
+console.log(pickerelCola[1].homePlanet == "Mariner Mists Y-3");
+// true
+if (pickerelCola[1].homePlanet == "Mariner Mists Y-3") {
+  console.log(true);
+  // true
+  let i = 0;
+  for (; i < pickerelCola.length; i++) {
+    homePlanets.push(pickerelCola[i].homePlanet);
+  }
+}
+
+console.log(homePlanets);
+// ['Venice Sands 5', 'Mariner Mists Y-3', 'Different Spectrum
+//  Entirely, from the Geometry-Verse', 'Hardin-37', 'Hardin-37'
+// undefined]
