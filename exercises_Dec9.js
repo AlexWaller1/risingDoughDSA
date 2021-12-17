@@ -56,6 +56,16 @@ let numString5 = "44+23";
 
 let numString6 = "+37";
 
+let numString7 = "3-7";
+
+let numString8 = "44R";
+
+let numString9 = "37+";
+
+let numString10 = "-1028.56";
+
+let numString11 = "+12..34";
+
 function isNumeric(string) {
   let numChars = [
     ".",
@@ -104,6 +114,16 @@ console.log(isNumeric(numString5));
 // false
 console.log(isNumeric(numString6));
 // true
+console.log(isNumeric(numString7));
+// false
+console.log(isNumeric(numString8));
+// false
+console.log(isNumeric(numString9));
+// false
+console.log(isNumeric(numString10));
+// true
+console.log(isNumeric(numString11));
+// false
 
 // O(n^2) :(
 
