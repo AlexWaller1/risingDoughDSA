@@ -647,3 +647,83 @@ if (robots[2] == "Mellon-Tech") {
     // Everett
   }
 }
+console.log("-------------------------------------------");
+console.log("---------------------------------------------");
+
+console.log(incubator1);
+console.log(incubator1.planet);
+// Ovid
+console.log(incubator1.species);
+// Ovidian
+console.log(incubator1.occupation);
+// Interplanetary Geneticist
+console.log(incubator1.hybrids.treeHybrids[0]);
+// Cornelius
+console.log(incubator1.hybrids.ramHybrids[1]);
+// Jay
+
+console.log(robots);
+// ['Eggplant-Head', 'Hank-44', 'Mellon-Tech', 'Warren-21']
+console.log(robots[3]);
+// Warren-21
+
+if (robots[3] == "Warren-21") {
+  let trout = incubator1.hybrids.troutHybrids;
+  for (i in trout) {
+    console.log(trout[i]);
+    // Rainbow
+    // Brown
+  }
+}
+
+console.log(incubator1.hybrids.troutHybrids);
+// ['Rainbow', 'Brown']
+
+const smashingPumpkins = [
+  "D'arcy Wretzky",
+  "James Iha",
+  "Billy Corgan",
+  "Jimmy Chamblerlin"
+];
+
+console.log(smashingPumpkins[0]);
+// D'arcy Wretzky
+console.log(smashingPumpkins[1]);
+// James Iha
+console.log(smashingPumpkins[2]);
+// Billy Corgan
+console.log(smashingPumpkins[3]);
+// Jimmy Chamberlin
+
+console.log(smashingPumpkins[0] == "D'arcy Wretzky");
+// true
+
+if (smashingPumpkins[0] == "D'arcy Wretzky") {
+  let i = smashingPumpkins.length - 1;
+  for (; i >= 0; i--) {
+    console.log(smashingPumpkins[i]);
+    // Jimmy Chamberlin
+    // Billy Corgan
+    // James Iha
+    // D'arcy Wretzky
+  }
+}
+
+console.log(Math.pow(4, 2));
+// 16
+console.log(Math.round(6.7));
+// 7
+console.log(Math.floor(6.7));
+// 6
+console.log(parseInt(6.75));
+// 6
+console.log(Math.sqrt(9));
+// 3
+console.log(Math.sqrt(81));
+// 9
+console.log(121);
+// 121
+console.log(Math.sqrt(121));
+// 12
+console.log(121 % 11);
+// 0

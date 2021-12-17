@@ -52,6 +52,10 @@ let numString3 = "b13";
 
 let numString4 = "-9872";
 
+let numString5 = "44+23";
+
+let numString6 = "+37";
+
 function isNumeric(string) {
   let numChars = [
     ".",
@@ -77,11 +81,13 @@ function isNumeric(string) {
       return false;
     } else if (string[i] == ".") {
       count1++;
-    } else if (string[i] == "+" || string[i] == "-") {
-      count2++;
+    } else if (string[i] == "+" && i != 0) {
+      return false;
+    } else if (string[i] == "-" && i != 0) {
+      return false;
     }
   }
-  if (count1 > 1 || count2 > 1) {
+  if (count1 > 1) {
     return false;
   } else return true;
 }
@@ -93,6 +99,10 @@ console.log(isNumeric(numString2));
 console.log(isNumeric(numString3));
 // false
 console.log(isNumeric(numString4));
+// true
+console.log(isNumeric(numString5));
+// false
+console.log(isNumeric(numString6));
 // true
 
 // O(n^2) :(
@@ -116,6 +126,8 @@ Example 1:
 Input: ["h", "e", "l", "l", "o"]
 Output: ["o", "l", "l", "e", "h"]
 
+// Time Complexity = Speed
+// Space Complexity = Memory
 */
 
 let chars1 = ["h", "e", "l", "l", "o"];
@@ -138,7 +150,9 @@ const shape = {
   diameter() {
     return this.radius * 2;
   },
-  perimeter: () => 2 * Math.PI * this.radius
+  perimeter: () => 2 * Math.PI //* this.radius
+  // scope
+  // outside of object or function this refers to window
 };
 
 console.log(shape.diameter());
@@ -168,10 +182,10 @@ console.log("--------------------------------------------------");
 console.log("---------------------------------------------");
 
 function sayHi() {
+  let age = 21;
   console.log(name);
   console.log(age);
   var name = "Lydia";
-  let age = 21;
 }
 
 // sayHi();
