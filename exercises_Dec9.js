@@ -132,6 +132,8 @@ Output: ["o", "l", "l", "e", "h"]
 
 let chars1 = ["h", "e", "l", "l", "o"];
 
+let chars2 = ["r", "o", "b", "o", "t"];
+
 function reverseChars(array) {
   array.reverse();
   console.log(array);
@@ -141,6 +143,23 @@ reverseChars(chars1);
 // ['o', 'l', 'l', 'e', 'h']
 
 // didn't see time complexity for reverse method on Big O Cheat Sheet
+
+function reverseChars2(array) {
+  let temp = "";
+  let L = 0;
+  let R = array.length - 1;
+  for (; L < R; L++, R--) {
+    temp = array[L];
+    array[L] = array[R];
+    array[R] = temp;
+  }
+  console.log(array);
+}
+
+reverseChars2(chars1);
+
+reverseChars2(chars2);
+// ['t', 'o', 'b', 'o', 'r']
 
 console.log("-----------------------------------------");
 console.log("-----------------------------------------");
@@ -194,3 +213,8 @@ function sayHi() {
 
 // name might be undefined because it's recognized as a word
 // by JavaScript
+
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+
+console.log(robots.indexOf("Hank-44"));
+// 0
