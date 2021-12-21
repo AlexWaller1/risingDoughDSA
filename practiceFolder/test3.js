@@ -868,3 +868,34 @@ console.log(adversary1);
 // Crash Bandicoot
 console.log(adversary2);
 // Spyro
+
+let sortCrash = array => array.sort((a, b) => (a.name > b.name ? 1 : -1));
+// this worked!!!
+console.log(sortCrash(crashTeamRacing));
+
+console.log(nitrousOxide.planet);
+// Gasmoxia
+console.log(nitrousOxide.name);
+// Nitrous Oxide
+
+if (nitrousOxide.name == "Nitrous Oxide") {
+  let i = 0;
+  for (; i < crashTeamRacing.length; i++) {
+    switch (crashTeamRacing[i].name) {
+      case "Crash Bandicoot":
+        console.log(`${crashTeamRacing[i].name} is an enthusiastic Bandicoot!`);
+        // Crash Bandicoot is an enthusiastic Bandicoot!
+        break;
+      case "Nitrous Oxide":
+        console.log(`${crashTeamRacing[i].name} is the ultimate racer!`);
+        // Nitrous Oxide is the ultimate racer!!!
+        break;
+      default:
+        console.log(`${crashTeamRacing[i].name} is a great racer!!!`);
+        // Dingodile is a great racer!!!
+        // Neo Cortex is a great racer!!!
+        // Tiny Tiger is a great racer!!!
+        break;
+    }
+  }
+}
