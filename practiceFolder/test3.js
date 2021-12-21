@@ -811,3 +811,60 @@ if (crashTeamRacing[1].name == "Neo Cortex") {
   console.log(crash1);
   // undefined
 }
+
+if (crashTeamRacing[1].name == "Neo Cortex") {
+  let crash1 = crashTeamRacing
+    .filter(function (crash2) {
+      return crash2.cartColor == "Light Green";
+    })
+    .map(function (crash3) {
+      return crash3.name;
+    });
+  console.log(crash1);
+  // ['Nitrous Oxide']
+}
+
+const nitrousOxide = {
+  name: "Nitrous Oxide",
+  planet: "Gasmoxia",
+  species: "Gasmoxian",
+  track: "Oxide Station",
+  cartColor: "Light Green",
+  allies: {
+    ally1: "Neo Cortex",
+    ally2: "Dingodile"
+  },
+  adversaries: {
+    adversary1: "Crash Bandicoot",
+    adversary2: "Spyro"
+  }
+};
+
+let {
+  name: oxideName,
+  planet,
+  species: gasmoxian,
+  track,
+  cartColor,
+  allies: { ally1, ally2 },
+  adversaries: { adversary1, adversary2 }
+} = nitrousOxide;
+
+console.log(oxideName);
+// Nitrous Oxide
+console.log(planet);
+// Gasmoxia
+console.log(gasmoxian);
+// Gasmoxian
+console.log(track);
+// Oxide Station
+console.log(cartColor);
+// Light Green
+console.log(ally1);
+// Neo Cortex
+console.log(ally2);
+// Dingodile
+console.log(adversary1);
+// Crash Bandicoot
+console.log(adversary2);
+// Spyro
