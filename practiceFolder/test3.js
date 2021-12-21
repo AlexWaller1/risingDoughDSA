@@ -727,3 +727,87 @@ console.log(Math.sqrt(121));
 // 12
 console.log(121 % 11);
 // 0
+
+console.log(robots);
+// ['Eggplant-Head', 'Hank-44', 'Mellon-Tech', 'Warren-21'];
+
+let unSortedNums = [4, 2, 5, 1, 33, 22, 21, 26];
+
+let sortNums = array => array.sort((a, b) => a - b);
+
+console.log(sortNums(unSortedNums));
+// [1, 2, 3, 4, 5, 21, 22, 26, 33]
+
+const crashTeamRacing = [
+  {
+    name: "Crash Bandicoot",
+    species: "Bandicoot",
+    cartColor: "Blue",
+    track: "Crash Cove"
+  },
+  {
+    name: "Neo Cortex",
+    species: "Evolved Human",
+    cartColor: "Red",
+    track: "Cortex Castle"
+  },
+  {
+    name: "Nitrous Oxide",
+    species: "Gasmoxian",
+    cartColor: "Light Green",
+    track: "Oxide Station"
+  },
+  {
+    name: "Dingodile",
+    species: "Dingo Crocodile Hybrid",
+    cartColor: "Yellow",
+    track: "Dingo Highway"
+  },
+  {
+    name: "Tiny Tiger",
+    species: "Tiger",
+    cartColor: "Dark Green",
+    track: "Tiny Arena"
+  }
+];
+
+console.log(crashTeamRacing[0].name);
+// Crash Bandicoot
+console.log(crashTeamRacing[2].name);
+// Nitrous Oxide
+
+if (crashTeamRacing[2].name == "Nitrous Oxide") {
+  let crash1 = crashTeamRacing.map(function (crash2) {
+    return crash2.name;
+  });
+  console.log(crash1);
+  // ['Crash Bandicoot', 'Neo Cortex', 'Nitrous Oxide', 'Dingodile',
+  //  'Tiny Tiger']
+}
+
+console.log(crashTeamRacing[3].name);
+// Dingodile
+console.log("--------------------------------------");
+
+if (crashTeamRacing[3].name == "Dingodile") {
+  crashTeamRacing.forEach(function (crash2) {
+    console.log(crash2.name);
+    // Crash Bandicoot
+    // Neo Cortex
+    // Nitrous Oxide
+    // Dingodile
+    // Tiny Tiger
+  });
+}
+console.log("---------------------------------------------");
+
+console.log(crashTeamRacing[1].name);
+// Neo Cortex
+
+if (crashTeamRacing[1].name == "Neo Cortex") {
+  let crash1 = crashTeamRacing.forEach(function (crash2) {
+    return crash2.name;
+  });
+  console.log(crash1);
+  // undefined
+}
