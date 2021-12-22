@@ -899,3 +899,17 @@ if (nitrousOxide.name == "Nitrous Oxide") {
     }
   }
 }
+
+console.log(nitrousOxide);
+
+newPair = { firstAppearance: "Crash Team Racing" };
+
+Object.assign(nitrousOxide, newPair);
+console.log(nitrousOxide);
+// newPair now a key-value pair of nitrousOxide object
+
+console.log(Object.keys(nitrousOxide));
+// ['name', 'planet', 'species', 'track', 'cartColor', 'allies',
+//  'adversaries', 'firstAppearance']
+console.log(Object.values(nitrousOxide));
+// array of all the values

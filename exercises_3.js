@@ -376,7 +376,7 @@ let numbers2 = [2, 4, 6, 8, 10, 12, 14, 16];
 
 let numbers3 = [37];
 
-let testArray = [];
+testArray = [];
 
 function maxMin(numsArray = testArray) {
   if (numsArray.length == 0) console.log("Array is Empty.");
@@ -656,3 +656,127 @@ binaryCount(binary3);
 
 console.log("----------------------------------------------------");
 console.log("------------------------------------------------");
+
+// randomly shuffle array elements
+
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+console.log(robots[2]);
+// Mellon-Tech
+console.log("------------------------------------------------");
+
+const letters = ["a", "b", "c", "d", "e"];
+
+function shuffleArray(array) {
+  let i = 0;
+
+  let temp = 0;
+
+  for (; i < array.length; i++) {
+    let j = Math.floor(Math.random() * array.length);
+    console.log("j", j);
+    // first iteration
+    // j = 0
+    // second iteration
+    // j = 0
+    // third iteration
+    // j = 0
+
+    temp = array[i];
+    console.log("temp", temp);
+    // temp = "a"
+    // temp = "b"
+    // temp = "c"
+
+    array[i] = array[j];
+    console.log("array[i]", array[i]);
+    // array[0] = array[0]
+    // array[i] = "a"
+    // array[1] = array[0]
+    // array[i] = "a", at index 1, "b" changed to "a"
+    // array[2] = array[0]
+    // array[i] = "b", at index 2, "c" changed to "b"
+
+    array[j] = temp;
+    console.log("array[j]", array[j]);
+    // j = 0
+    // array[0] = "a"
+    // array[0] = "b", at index 0, "a" changed to "b"
+    // j = 0
+    // array[0] = "c", at index 0, "b" changed to "c"
+
+    // after first iteration nothing changes in array
+    // after second iteration, array is ['b', 'a', 'c', 'd', 'e']
+    // after third iteration, array is ['c', 'a', 'b', 'd', 'e']
+
+    console.log(array);
+    console.log("----------------------------------------------");
+  }
+  console.log(array);
+}
+
+shuffleArray(letters);
+
+console.log("---------------------------------------------");
+console.log("-----------------------------------------------");
+console.log("-------------------------------------------------");
+console.log("-----------------------------------------------");
+
+let nums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+console.log(nums2[0]);
+// 1
+
+if (nums2[0] == 1) {
+  let i = 0;
+  for (; i < nums2.length; i++) {
+    console.log(nums2[i]);
+    // 1
+    // 2
+    // 3
+    // 4
+    // 5
+    // 6
+    // 7
+    // 8
+    // 9
+    // 10
+    // 11
+    // 12
+    // 13
+    // 14
+    // 15
+  }
+}
+
+console.log("----------------------------------------------");
+console.log("------------------------------------------");
+
+let nums = [1, 2, 3, 4];
+
+function shuffleArray2(array) {
+  let temp = 0;
+  let j = 0;
+  let i = 0;
+
+  for (; i < array.length; i++) {
+    j = Math.floor(Math.random() * array.length);
+
+    temp = array[i];
+
+    array[i] = array[j];
+
+    array[j] = temp;
+  }
+  console.log(array);
+}
+
+shuffleArray2(nums);
+// [3, 1, 2, 4]
+// [1, 2, 3, 4]
+// [2, 1, 3, 4]
+// [4, 1, 2, 3]
+// [1, 2, 3, 4]
+// [4, 2, 1, 3]
+// [3, 4, 1, 2]
+// [3, 1, 4, 2]
+// [2, 3, 4, 1]
