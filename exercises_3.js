@@ -780,3 +780,12 @@ shuffleArray2(nums);
 // [3, 4, 1, 2]
 // [3, 1, 4, 2]
 // [2, 3, 4, 1]
+
+let hearts = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "King", "Queen", "Ace"];
+
+let spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "King", "Queen", "Ace"];
+
+let heartsAndSpades = [...hearts, ...spades];
+// combines both arrays into one array, nothing is nested
+
+console.log(heartsAndSpades);
