@@ -789,3 +789,5 @@ let heartsAndSpades = [...hearts, ...spades];
 // combines both arrays into one array, nothing is nested
 
 console.log(heartsAndSpades);
+
+console.log(shuffleArray2(heartsAndSpades));
