@@ -1224,3 +1224,133 @@ console.log(findIndex("Timber-Tron", pizzaWarriors));
 // 7
 console.log(findIndex("Brooke Nevins", pizzaWarriors));
 // 0
+console.log(findIndex("Croix James", pizzaWarriors));
+// 1
+let pizzaNums2 = [1, 2, 1, 3, 1];
+console.log(pizzaNums2.length);
+// 5
+let clones = ["Ben Reilly", "Ben Reilly", "Ben Reilly"];
+
+function findLastIndex(element, array) {
+  let indexes = [];
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == element) {
+      indexes.push(i);
+    }
+  }
+  return indexes[indexes.length - 1];
+}
+
+console.log(findLastIndex(1, pizzaNums2));
+// 4
+console.log(findLastIndex("Ben Reilly", clones));
+// 2
+
+console.log("j" == "J");
+// false
+console.log("j" == "j");
+// true
+const spiderMan2099 = "Spider-Man 2099";
+
+console.log(spiderMan2099);
+// Spider-Man 2099
+console.log(spiderMan2099.toUpperCase());
+// SPIDER-MAN 2099
+console.log(spiderMan2099);
+// Spider-Man 2099
+console.log(spiderMan2099.toLowerCase());
+// spider-man 2099
+console.log(spiderMan2099);
+// Spider-Man 2099
+
+const spiderVerse = [
+  {
+    alias: "Spider-Man",
+    name: "Peter Parker",
+    id: 1
+  },
+  {
+    alias: "Scarlet Spider",
+    name: "Ben Reilly",
+    id: 2
+  },
+  {
+    alias: "Spider-Gwen",
+    name: "Gwen Stacy",
+    id: 3
+  },
+  {
+    alias: "Spider-Man",
+    name: "Miles Morales",
+    id: 4
+  },
+  {
+    alias: "Spider-Ham",
+    name: "Peter Porker",
+    id: 5
+  },
+  {
+    alias: "Spider-Man Noir",
+    name: "Peter Parker",
+    id: 6
+  },
+  {
+    alias: "Scarlet Spider",
+    name: "Kaine Parker",
+    id: 7
+  },
+  {
+    alias: "Spider-Woman",
+    name: "Jessica Drew",
+    id: 8
+  },
+  {
+    alias: "Superior Spider-Man",
+    name: "Otto Octavius",
+    id: 9
+  },
+  {
+    alias: "Arana",
+    name: "Anya Corazon",
+    id: 10
+  },
+  {
+    alias: "SP//dr:",
+    name: "Peni Parker",
+    id: 11
+  },
+  {
+    alias: "Spider-Man 2099",
+    name: "Miguel O'Hara",
+    id: 12
+  }
+];
+
+console.log(spiderVerse[1].alias);
+// Scarlet Spider
+console.log(spiderVerse[11].alias);
+// Spiderman-2099
+console.log(spiderVerse[1].name);
+// Ben Reilly
+console.log(spiderVerse[11].name);
+// Miguel O'Hara
+
+if (spiderVerse[1].alias == "Scarlet Spider") {
+  let spider1 = spiderVerse
+    .filter(s2 => s2.alias == "Scarlet Spider")
+    .map(s3 => s3.name);
+  console.log(spider1);
+  // ['Ben Reilly', 'Kaine Parker']
+}
+
+console.log(spiderVerse[10].alias);
+// SP//dr:
+
+if (spiderVerse[10].alias == "SP//dr:") {
+  let spider1 = spiderVerse
+    .filter(s2 => s2.name == "Peni Parker")
+    .map(s3 => s3.alias);
+  console.log(spider1);
+  // ['SP//dr:']
+}
