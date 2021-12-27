@@ -1040,22 +1040,108 @@ function randomPizza(array) {
   console.log(array);
 }
 
-randomPizza(pizzaWarriors);
+// randomPizza(pizzaWarriors);
 
 console.log("--------------------------------");
 
-function randomPizza2(array) {
-  let random = 0;
-  let temp = 0;
-  let i = 0;
-  for (; i < array.length; i++) {
-    random = array[Math.floor(Math.random() * array.length)];
-    temp = array[i];
-    array[i] = random;
-    random = temp;
-    // doesn't work as there is no reassignment the other way around
+// function randomPizza2(array) {
+//   let random = 0;
+//   let temp = 0;
+//   let i = 0;
+//   for (; i < array.length; i++) {
+//     random = array[Math.floor(Math.random() * array.length)];
+//     temp = array[i];
+//     array[i] = random;
+//     random = temp;
+//     // doesn't work as there is no reassignment the other way around
+//   }
+//   console.log(array);
+// }
+
+// randomPizza2(pizzaWarriors);
+
+console.log(pizzaWarriors[5]);
+// Brooke Nevins
+console.log(pizzaWarriors.indexOf("Croix James"));
+// 4
+
+console.log(pizzaWarriors);
+
+console.log(pizzaWarriors[5]);
+// Croix James
+console.log(pizzaWarriors[0]);
+// Rising Dough
+console.log(pizzaWarriors[1]);
+// Brooke Nevins
+console.log("--------------------------------------");
+console.log("-------------------------------");
+
+if (pizzaWarriors[1] == "Brooke Nevins") {
+  let i = pizzaWarriors.length - 1;
+  while (i >= 0) {
+    console.log(pizzaWarriors[i]);
+    // Dex Garrity
+    // Laila Blanco
+    // Croix James
+    // Stoles Mitchell
+    // Sal Campana
+    // Timber-Tron
+    // Brooke Nevins
+    // Rising Dough
+    i--;
   }
-  console.log(array);
+}
+console.log("-------------------------");
+console.log(pizzaWarriors[2]);
+// Timber-Tron
+console.log("---------------------------------");
+
+if (pizzaWarriors[2] == "Timber-Tron") {
+  let i = 0;
+  do {
+    console.log(pizzaWarriors[i]);
+    // Rising Dough
+    // Brooke Nevins
+    // Timber-Tron
+    // Sal Campana
+    // Stokes Mitchell
+    // Croix James
+    // Laila Blanco
+    // Dex Garrity
+    i++;
+  } while (i < pizzaWarriors.length);
 }
 
-randomPizza2(pizzaWarriors);
+console.log("--------------------------------");
+console.log("--------------------------------");
+
+if (pizzaWarriors[2] == "Timber-Tron") {
+  let i = 0;
+  for (; i < pizzaWarriors.length; i++) {
+    switch (pizzaWarriors[i]) {
+      case "Rising Dough":
+        console.log(`${pizzaWarriors[i]} has a great Pizza Jacket`);
+        break;
+      case "Dex Garrity":
+        console.log(`${pizzaWarriors[i]} can build anything`);
+        break;
+      case "Croix James":
+        console.log(`${pizzaWarriors[i]} is the CEO of Pickerel Cola`);
+        break;
+      case "Sal Campana":
+        console.log(`${pizzaWarriors[i]} is an awesome Pizza Chef`);
+        break;
+      default:
+        console.log(`${pizzaWarriors[i]} is a character in Pizza Warriors`);
+        break;
+    }
+  }
+  // Rising Dough has a great Pizza Jacket
+  // Brooke Nevins is a character in Pizza Warriors
+  // Timber-Tron is a character in Pizza Warriors
+  // Sal Campana is an awesome Pizza Chef
+  // Stokes Mitchell is a character in Pizza Warriors
+  // Croix James is the CEO of Pickerel Cola
+  // Laila Blanco is a character in Pizza Warriors
+  // Dex Garrity can build anything
+}
