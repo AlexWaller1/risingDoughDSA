@@ -791,3 +791,235 @@ let heartsAndSpades = [...hearts, ...spades];
 console.log(heartsAndSpades);
 
 console.log(shuffleArray2(heartsAndSpades));
+
+let decimalString = "7.5";
+
+let numString = "9";
+
+console.log(parseInt(decimalString));
+// 7
+console.log(parseFloat(decimalString));
+// 7.5
+console.log(parseFloat(numString));
+// 9
+
+let aceOfClubs = "Ace of Clubs";
+
+console.log(aceOfClubs.includes("Ace"));
+// true
+console.log(aceOfClubs.includes("Ace") == true);
+// true
+console.log(aceOfClubs.includes("Ace") === true);
+// true
+console.log("Mellon-Tech" === "string");
+// false
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head]
+console.log(typeof robots == "object");
+// true
+console.log(typeof robots === "object");
+// true
+console.log(3 == "3");
+// true
+console.log(3 === "3");
+// false
+
+const theMatrix = ["Neo", "Trinity", "Morpheus", "Agent Smith"];
+
+console.log(theMatrix[0]);
+// Neo
+console.log("---------------------------------");
+if (theMatrix[0] == "Neo") {
+  let i = 0;
+  while (i < theMatrix.length) {
+    console.log(theMatrix[i]);
+    // Neo
+    // Trinity
+    // Morpheus
+    // Agent Smith
+    i++;
+  }
+}
+
+if (theMatrix[2] == "Morpheus") {
+  let i = theMatrix.length - 1;
+  do {
+    console.log(theMatrix[i]);
+    // Agent Smith
+    // Morpheus
+    // Trinity
+    // Neo
+    i--;
+  } while (i >= 0);
+}
+console.log("--------------------------------------");
+
+console.log(theMatrix[Math.floor(Math.random() * theMatrix.length)]);
+// Agent Smith
+// Neo
+// Trinity
+// Morpheus
+// Agent Smith
+// Agent Smith
+// Agent Smith
+console.log("-------------------------------------------------");
+
+function matrixShuffle(array) {
+  let random = "";
+  let temp = "";
+  let i = 0;
+
+  for (; i < array.length; i++) {
+    random = Math.floor(Math.random() * array.length);
+    console.log(random);
+    // 1st iteration
+    // random = 3
+    // 2nd iteration
+    // random = 2
+    temp = array[i];
+    // 1st iteration
+    // temp = array[0];
+    // temp = "Neo";
+    // 2nd iteration
+    // temp = array[1];
+    // temp = "Trinity";
+    array[i] = array[random];
+    // 1st iteration
+    // array[0] = array[3];
+    // array[0] = "Agent Smith";
+    // 2nd iteration
+    // array[1] =
+    array[random] = temp;
+    // 1st iteration
+    // array[3] = array[0];
+    // array[3] = "Neo";
+  }
+  console.log(array);
+}
+
+matrixShuffle(theMatrix);
+
+const pizzaWarriors = [
+  "Rising Dough",
+  "Brooke Nevins",
+  "Timber-Tron",
+  "Sal Campana",
+  "Stokes Mitchell",
+  "Croix James",
+  "Laila Blanco",
+  "Dex Garrity"
+];
+
+console.log(pizzaWarriors[0]);
+// Rising Dough
+console.log(pizzaWarriors[1]);
+// Brooke Nevins
+console.log(pizzaWarriors[2]);
+// Timber-Tron
+console.log(pizzaWarriors[pizzaWarriors.length - 1]);
+// Dex Garrity
+console.log(pizzaWarriors.indexOf("Dex Garrity"));
+// 7
+console.log(pizzaWarriors[7]);
+// Dex Garrity
+console.log("-------------------------------------------------");
+
+if (pizzaWarriors[7] == "Dex Garrity") {
+  let i = 0;
+  for (; i < pizzaWarriors.length; i++) {
+    console.log(pizzaWarriors[i]);
+    // Rising Dough
+    // Brooke Nevins
+    // Timber-Tron
+    // Sal Campana
+    // Stokes Mitchell
+    // Croix James
+    // Laila Blanco
+    // Dex Garrity
+  }
+}
+
+console.log(pizzaWarriors[0] == "Rising Dough");
+// true
+console.log(typeof pizzaWarriors == "object");
+// true
+console.log(typeof pizzaWarriors[0] == "string");
+// true
+console.log(typeof pizzaWarriors[1] == "number");
+// false
+console.log(typeof 4 == "number");
+// true
+
+console.log([pizzaWarriors[5]]);
+// ['Croix James']
+console.log(pizzaWarriors[5]);
+// Croix James
+let pizzaNums = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+if (pizzaWarriors[5] == "Croix James") {
+  let pizza1 = pizzaNums.filter(n => n > 15);
+  console.log(pizza1);
+  // [18, 21, 24, 27, 30]
+  let pizza2 = pizzaNums.filter(n => n > 15 && n < 27);
+  console.log(pizza2);
+  // [18, 21, 24]
+}
+
+console.log(pizzaWarriors[Math.floor(Math.random() * pizzaWarriors.length)]);
+// Rising Dough
+// Laila Blanco
+// Stokes Mitchell
+// Dex Garrity
+console.log(pizzaWarriors.indexOf("Brooke Nevins"));
+// 1
+console.log(pizzaWarriors.indexOf("Timber-Tron"));
+// 2
+console.log(pizzaWarriors.indexOf("Sal Campana"));
+// 3
+
+const risingDough = {
+  name: "Rising Dough",
+  species: "Robot: Window-Cleanse 10.5",
+  vehicle: "Hover Bike",
+  favoriteFood: "Pizza",
+  favoriteDrink: "Pickerel Cola",
+  friends: {
+    friend1: pizzaWarriors[1],
+    friend2: pizzaWarriors[2],
+    friend3: pizzaWarriors[3]
+  }
+};
+
+console.log(risingDough.name);
+// Rising Dough
+console.log(risingDough.species);
+// Robot: Window Cleanse 10.5
+console.log(risingDough.friends.friend1);
+// Brooke Nevins
+
+let {
+  name: pizzaBot,
+  species: windowCleanse,
+  vehicle: hoverBike,
+  favoriteFood,
+  favoriteDrink,
+  friends: { friend1: brookeNevins, friend2: timberTron, friend3: salCampana }
+} = risingDough;
+
+console.log("-----------------------------------");
+console.log(pizzaBot);
+// Rising Dough
+console.log(windowCleanse);
+// Robot: Window-Cleanse 10.5
+console.log(hoverBike);
+// Hover Bike
+console.log(favoriteFood);
+// Pizza
+console.log(favoriteDrink);
+// Pickerel Cola
+console.log(brookeNevins);
+// Brooke Nevins
+console.log(timberTron);
+// Timber-Tron
+console.log(salCampana);
+// Sal Campana
