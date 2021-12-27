@@ -1194,3 +1194,33 @@ let sortPizza2 = array => array.sort((a, b) => (a > b ? 1 : -1));
 console.log(sortPizza2(pizzaWarriors));
 // ['Brooke Nevins', 'Croix James', 'Dex Garrity', 'Laila Blanco',
 //  'Rising Dough', 'Sal Campana', 'Stokes Mitchell' 'Timber-Tron']
+console.log(pizzaWarriors.indexOf("Timber-Tron"));
+// 7
+
+if (pizzaWarriors[7] == "Timber-Tron") {
+  console.log("Rising Dough");
+
+  let pizza1 = pizzaWarriors2.map(function (pizza2) {
+    return pizza2.name;
+  });
+  console.log(pizza1);
+
+  let pizza3 = sortPizza2(pizza1);
+
+  console.log(pizza3);
+  // returns ordered array
+}
+
+function findIndex(element, array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == element) {
+      return i;
+    }
+  }
+}
+
+console.log(findIndex("Timber-Tron", pizzaWarriors));
+// 7
+console.log(findIndex("Brooke Nevins", pizzaWarriors));
+// 0
