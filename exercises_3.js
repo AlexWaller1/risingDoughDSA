@@ -1023,3 +1023,39 @@ console.log(timberTron);
 // Timber-Tron
 console.log(salCampana);
 // Sal Campana
+
+console.log(pizzaWarriors[5]);
+// Croix James
+
+function randomPizza(array) {
+  let j = 0;
+  let temp = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    j = Math.floor(Math.random() * array.length);
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  console.log(array);
+}
+
+randomPizza(pizzaWarriors);
+
+console.log("--------------------------------");
+
+function randomPizza2(array) {
+  let random = 0;
+  let temp = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    random = array[Math.floor(Math.random() * array.length)];
+    temp = array[i];
+    array[i] = random;
+    random = temp;
+    // doesn't work as there is no reassignment the other way around
+  }
+  console.log(array);
+}
+
+randomPizza2(pizzaWarriors);
