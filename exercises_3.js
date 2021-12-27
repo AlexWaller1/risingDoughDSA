@@ -1354,3 +1354,24 @@ if (spiderVerse[10].alias == "SP//dr:") {
   console.log(spider1);
   // ['SP//dr:']
 }
+
+if (spiderVerse[10].alias == "SP//dr:") {
+  let spider1 = spiderVerse.map(s2 => s2.alias);
+  console.log(spider1);
+  /* 
+  
+  ['Spider-Man', 'Scarlet Spider', 'Spider-Gwen', 'Spider-Man', 
+  'Spider-Ham', 'Spider-Man Noir', 'Scarlet Spider', 'Spider-Woman', 
+  ior Spider-Man', 'Arana', 'SP//dr:', 'Spider-Man 2099']
+  
+  */
+  let spider2 = sortPizza(spider1);
+  console.log(spider2);
+  /* 
+  
+  ['Spider-Man 2099', 'SP//dr:', 'Arana', 'Superior Spider-Man', 
+  'Spider-Woman', 'Scarlet Spider', 'Spider-Man Noir', 'Spider-Ham', 
+  'Spider-Man', 'Spider-Gwen', 'Scarlet Spider', 'Spider-Man']
+  
+  */
+}
