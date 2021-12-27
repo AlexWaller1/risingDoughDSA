@@ -1145,3 +1145,52 @@ if (pizzaWarriors[2] == "Timber-Tron") {
   // Laila Blanco is a character in Pizza Warriors
   // Dex Garrity can build anything
 }
+
+const pizzaWarriors2 = [
+  {
+    name: "Rising Dough",
+    species: "Robot: Window Cleanse 10.5"
+  },
+  {
+    name: "Brooke Nevins",
+    species: "Human"
+  },
+  {
+    name: "Timber-Tron",
+    species: "Robot: Timber_Io 34"
+  },
+  {
+    name: "Sal Campana",
+    species: "Human"
+  },
+  {
+    name: "Stokes Mitchell",
+    species: "Human"
+  },
+  {
+    name: "Croix James",
+    species: "Pickerel"
+  },
+  {
+    name: "Laila Blanco",
+    species: "Human"
+  },
+  {
+    name: "Dex Garrity",
+    species: "Robot: Robo-Welder 4000"
+  }
+];
+
+let sortPizza = array => array.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+console.log(sortPizza(pizzaWarriors2));
+
+console.log(pizzaWarriors[2]);
+// Timber-Tron
+
+let sortPizza2 = array => array.sort((a, b) => (a > b ? 1 : -1));
+// array of objects now sorted by name property
+
+console.log(sortPizza2(pizzaWarriors));
+// ['Brooke Nevins', 'Croix James', 'Dex Garrity', 'Laila Blanco',
+//  'Rising Dough', 'Sal Campana', 'Stokes Mitchell' 'Timber-Tron']
