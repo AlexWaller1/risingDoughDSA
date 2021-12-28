@@ -1674,3 +1674,34 @@ longestCommonSuffix(sion);
 // ension
 longestCommonSuffix(station);
 // station
+
+console.log(22 % 4);
+// 2
+console.log(22 / 4);
+// 5.5
+console.log(Math.floor(22 / 4));
+// 5
+
+function ottersAndHerons(num) {
+  if (num % 2 != 0) return "number must be divisible by 2";
+  let min = 0;
+  let max = 0;
+  max = num / 2;
+  let byFour = Math.floor(num / 4);
+  let remainder = num % 4;
+  let extra = remainder / 2;
+  min = byFour + extra;
+  return `max: ${max}, min: ${min}`;
+}
+
+// 22, max should be 11, min should be 6
+console.log(ottersAndHerons(22));
+// max: 11, min: 6
+
+// 24, max should be 12, min should be 6
+console.log(ottersAndHerons(24));
+// max: 12, min: 6
+
+// 30, max should be 15, min should be 8
+console.log(ottersAndHerons(30));
+// max: 15, min: 8
