@@ -1564,3 +1564,113 @@ if (pizzaWarriors2[10].name == "Timber-Tron") {
   console.log(pizza1);
   // ['Beezer', 'Bodhi', 'Chipper']
 }
+
+const rogueTrooper = "Rogue Trooper";
+
+let s = "s";
+
+console.log(rogueTrooper.concat(s));
+// Rogue Troopers
+console.log(rogueTrooper.replace(rogueTrooper.charAt(0), ""));
+// ogue Trooper
+console.log(rogueTrooper);
+// Rogue Trooper
+console.log(rogueTrooper.replace("Rogue", ""));
+// Trooper
+console.log(rogueTrooper.replace(" ", ""));
+// Rogue Trooper
+console.log(rogueTrooper.substr(0, 5));
+// Rogue
+console.log(rogueTrooper == "Rogue Trooper");
+// true
+
+if (rogueTrooper == "Rogue Trooper") {
+  let rogues = [
+    "Rogue Trooper",
+    "Rogue Dachshund",
+    "Rogue Soda Can",
+    "Rogue Pizza"
+  ];
+  let i = 0;
+  for (; i < rogues.length; i++) {
+    rogues[i] = rogues[i].replace(rogues[i].substr(0, 6), "");
+    console.log(rogues[i]);
+    // Trooper
+    // Dachshund
+    // Soda Can
+    // Pizza
+  }
+}
+
+const timberTron2 = ["Timber-Tron", "Timber_Io", "Timber-Mech-2000"];
+
+const pizzaMenu = ["Pizza Place", "Pizza Oven", "Pizza Slicer"];
+
+const x = ["Xfinity", "X-Men", "XFL"];
+
+let timber = "Timber";
+
+console.log(timberTron2[0].indexOf(timber));
+// 0
+
+function longestCommonPrefix(array) {
+  let prefix = array[0];
+  let returnString = "";
+  let i = 1;
+  for (; i < array.length; i++) {
+    if (i > 1) {
+      prefix = returnString;
+    }
+    while (prefix.indexOf(array[i]) != 0) {
+      array[i] = array[i].substr(0, array[i].length - 1);
+      returnString = array[i];
+    }
+  }
+  if (returnString.length == 0) console.log("No Common Prefix");
+  else console.log(returnString);
+}
+
+longestCommonPrefix(timberTron2);
+// Timber
+longestCommonPrefix(pizzaMenu);
+// Pizza
+longestCommonPrefix(x);
+// X
+longestCommonPrefix(pizzaWarriors);
+// No Common Prefix
+
+let sion = ["tension", "pension", "hypertension"];
+let station = ["playstation", "pizza station", "fire station"];
+
+function longestCommonSuffix(array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    array[i] = array[i].split("");
+    array[i] = array[i].reverse();
+    array[i] = array[i].join("");
+  }
+  let suffix = array[0];
+  let returnString = "";
+  let j = 1;
+  for (; j < array.length; j++) {
+    if (j > 1) {
+      suffix = returnString;
+    }
+    while (suffix.indexOf(array[j]) != 0) {
+      array[j] = array[j].substr(0, array[j].length - 1);
+      returnString = array[j];
+    }
+  }
+  if (returnString.length == 0) console.log("No Common Suffix");
+  else {
+    returnString = returnString.split("");
+    returnString = returnString.reverse();
+    returnString = returnString.join("");
+    console.log(returnString);
+  }
+}
+
+longestCommonSuffix(sion);
+// ension
+longestCommonSuffix(station);
+// station
