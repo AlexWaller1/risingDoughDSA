@@ -1375,3 +1375,192 @@ if (spiderVerse[10].alias == "SP//dr:") {
   
   */
 }
+
+function inOrder(array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] > array[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let teeNumbers1 = [1, 2, 3, 4, 5];
+
+let teeNumbers2 = [3, 1, 4, 2, 5];
+
+let teeNumbers3 = [22, 11, 21, 37, 24, 44, 65, 39];
+
+let teeLetters1 = ["c", "e", "a", "d", "b"];
+
+console.log(inOrder(teeNumbers1));
+// true
+console.log(inOrder(teeNumbers2));
+// false
+console.log(inOrder(teeNumbers1) == true);
+// true
+console.log(teeNumbers1[5]);
+// undefined
+
+function sortArray(array) {
+  let temp = 0;
+  let i = 0;
+  let j = 1;
+
+  for (; i < array.length; i++, j++) {
+    // if (array[j] == undefined) {
+    //   i = 0;
+    //   j = 1;
+    // }
+
+    if (array[j] > array[i]) {
+      temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+
+    if (inOrder(array) == true) {
+      break;
+    }
+  }
+  console.log(array);
+}
+
+sortArray(teeNumbers2);
+// [1, 2, 3, 4, 5]
+sortArray(teeNumbers3);
+
+console.log("--------------------------------------");
+console.log("------------------------------");
+
+console.log(pizzaWarriors);
+// ['Brooke Nevins', 'Croix James', 'Dex Garrity', 'Laila Blanco',
+//  'Rising Dough', 'Sal Campana', 'Stokes Mitchell', 'Timber-Tron]
+console.log([pizzaWarriors[1]]);
+// ['Croix James']
+console.log(pizzaWarriors[1]);
+// Croix James
+console.log(pizzaWarriors.length);
+// 8
+pizzaWarriors.push("Beezer");
+pizzaWarriors.push("Chipper");
+pizzaWarriors.push("Bodhi");
+
+console.log(pizzaWarriors);
+
+let sortPizza5 = array => array.sort((a, b) => (a > b ? 1 : -1));
+
+console.log(sortPizza5(pizzaWarriors));
+
+console.log(pizzaWarriors[1]);
+// Bodhi
+console.log(pizzaWarriors[0]);
+// Beezer
+console.log(pizzaWarriors[3]);
+// Chipper
+console.log(pizzaWarriors2);
+
+const bodhiKeyValue = { name: "Bodhi", species: "Dachshund" };
+
+const chipperKeyValue = { name: "Chipper", species: "Dachshund" };
+
+const beezerKeyValue = { name: "Beezer", species: "Dachshund" };
+
+pizzaWarriors2.push(bodhiKeyValue);
+pizzaWarriors2.push(chipperKeyValue);
+pizzaWarriors2.push(beezerKeyValue);
+
+console.log(pizzaWarriors2);
+
+let sortPizza6 = array => array.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+console.log(sortPizza6(pizzaWarriors2));
+
+console.log(pizzaWarriors2[0].name);
+// Beezer
+console.log(pizzaWarriors2[1].name);
+// Bodhi
+console.log(pizzaWarriors2[3].name);
+// Chipper
+
+if (pizzaWarriors2[1].name == "Bodhi") {
+  let test1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let i = 0;
+  for (; i < test1.length; i++) {
+    test1[i] % 3 == 0
+      ? console.log(test1[i])
+      : console.log("Not Divisible By 3");
+    // Not Divisible By 3
+    // Not Divisible By 3
+    // 3
+    // Not Divisible By 3
+    // Not Divisible By 3
+    // 6
+    // Not Divisible By 3
+    // Not Divisible By 3
+    // 9
+  }
+}
+
+if (pizzaWarriors2[0].name == "Beezer") {
+  let trueFalse = [true, false, true, true, false, true];
+  let i = 0;
+  for (; i < trueFalse.length; i++) {
+    if (trueFalse[i]) {
+      console.log(trueFalse[i]);
+      // true
+      // true
+      // true
+      // true
+    }
+  }
+}
+
+console.log(pizzaWarriors2[3].name);
+// Chipper
+console.log(pizzaWarriors2[3].name == "Chipper");
+// true
+
+if (pizzaWarriors2[3].name == "Chipper") {
+  let binaryCode = [0, 0, 1, 0, 0, 0, 1, 0];
+  let i = 0;
+  for (; i < binaryCode.length; i++) {
+    if (binaryCode[i]) {
+      console.log(binaryCode[i]);
+      // 1
+      // 1
+
+      // 0 is a falsey value so does not evaluate to true
+    }
+  }
+}
+
+console.log(pizzaWarriors2[1].species == "Dachshund");
+// true
+console.log(pizzaWarriors2[3].species);
+// Dachshund
+
+if (pizzaWarriors2[1].species == "Dachshund") {
+  let binaryCode = [0, 1, 1, 0, 1, 1];
+  let i = 0;
+  for (; i < binaryCode.length; i++) {
+    if (!binaryCode[i]) {
+      console.log(binaryCode[i]);
+      // 0
+      // 0
+    }
+  }
+}
+
+console.log(pizzaWarriors.indexOf("Timber-Tron"));
+// 10
+console.log(pizzaWarriors2[10].name);
+// Timber-Tron
+if (pizzaWarriors2[10].name == "Timber-Tron") {
+  let pizza1 = pizzaWarriors2
+    .filter(a2 => a2.species == "Dachshund")
+    .map(a3 => a3.name);
+  console.log(pizza1);
+  // ['Beezer', 'Bodhi', 'Chipper']
+}
