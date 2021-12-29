@@ -1705,3 +1705,206 @@ console.log(ottersAndHerons(24));
 // 30, max should be 15, min should be 8
 console.log(ottersAndHerons(30));
 // max: 15, min: 8
+
+// 32, max should be 16, min should be 8
+console.log(ottersAndHerons(32));
+// max: 16, min: 8
+
+// 33, should return "number must be divisible by 2"
+console.log(ottersAndHerons(33));
+// number must be divisible by 2
+
+console.log(ottersAndHerons(9));
+// number must be divisible by 2
+
+const mellonTech = "Mellon-Tech";
+console.log(mellonTech);
+// Mellon-Tech
+
+function splitString(string) {
+  let i = 0;
+  let array = [];
+  for (; i < string.length; i++) {
+    let char = string.charAt(i);
+    array.push(char);
+  }
+  return array;
+}
+
+console.log(splitString("robot"));
+// ['r', 'o', 'b', 'o', 't']
+console.log(splitString(mellonTech));
+// ['M', 'e', 'l', 'l', 'o', 'n', '-', 'T', 'e', 'c', 'h']
+const mellonTech2 = splitString(mellonTech);
+console.log(mellonTech2);
+// ['M', 'e', 'l', 'l', 'o', 'n', '-', 'T', 'e', 'c', 'h']
+
+function reverseArray(array) {
+  let temp = 0;
+  let i = 0;
+  let j = array.length - 1;
+  for (; i < j; i++, j--) {
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
+console.log(reverseArray(mellonTech2));
+// ['h', 'c', 'e', 'T', '-', 'n', 'o', 'l', 'l', 'e', 'M']
+console.log(mellonTech2);
+// ['h', 'c', 'e', 'T', '-', 'n', 'o', 'l', 'l', 'e', 'M']
+
+function joinArray(array) {
+  let i = 0;
+  let newString = "";
+  for (; i < array.length; i++) {
+    newString = newString.concat(array[i]);
+  }
+  return newString;
+}
+
+console.log(joinArray(mellonTech2));
+// hceT-nolleM
+
+function homeMadePalindrome(string) {
+  let string2 = string;
+  string2 = string2.toLowerCase();
+  string = string.toLowerCase();
+  let split = splitString(string);
+  reverseArray(split);
+  let join = joinArray(split);
+  if (join == string2) {
+    return `${string2} is a palindrome`;
+  } else return `${string2} is not a palindrome`;
+}
+
+console.log(homeMadePalindrome("JT"));
+// jt is not a palindrome
+console.log(homeMadePalindrome("Racecar"));
+// racecar is a palindrome
+console.log(homeMadePalindrome("kayak"));
+// kayak is a palindrome
+console.log(homeMadePalindrome("webbex"));
+// webbex is not a palindrome
+
+const deliLine = [
+  {
+    name: "Sidney Lumet",
+    orderNumber: 1
+  },
+  {
+    name: "Martin Scorsese",
+    orderNumber: 2
+  },
+  {
+    name: "Woody Allen",
+    orderNumber: 3
+  },
+  {
+    name: "Arthur Penn",
+    orderNumber: 4
+  },
+  {
+    name: "William Friedkin",
+    orderNumber: 5
+  },
+  {
+    name: "Irwin Winkler",
+    orderNumber: 6
+  },
+  {
+    name: "Spike Lee",
+    orderNumber: 7
+  },
+  {
+    name: "Nora Ephron",
+    orderNumber: 8
+  },
+  {
+    name: "David Chase",
+    orderNumber: 9
+  },
+  {
+    name: "Michael Roskam",
+    orderNumber: 10
+  },
+  {
+    name: "Joshua Safdie",
+    orderNumber: 11
+  },
+  {
+    name: "Benny Safdie",
+    orderNumber: 12
+  },
+  {
+    name: "J.C. Chandor",
+    orderNumber: 13
+  },
+  {
+    name: "Noah Baumbach",
+    orderNumber: 14
+  }
+];
+
+// takeANumber --- adds customer to line. Returns customer's name
+// and place in line.
+
+// nowServing --- announces who they're serving, Returns customer's
+// name they're serving then removing customer from line
+
+// currentLine --- reads people in line. Returns a list of numbered
+// names of all customers in line
+
+let testPair = { name: "Bodhi", orderNumber: 1 };
+
+console.log(testPair);
+// { name: 'Bodhi', orderNumber: 1}
+console.log(testPair.name);
+// Bodhi
+console.log(testPair.orderNumber);
+// 1
+
+const deliLine2 = [];
+
+function takeANumber(name) {
+  let count = 1;
+  let newPair = { name: name, orderNumber: count };
+  if (deliLine2.length >= 1) {
+    newPair.orderNumber = deliLine2[deliLine2.length - 1].orderNumber + 1;
+    deliLine2.push(newPair);
+  } else deliLine2.push(newPair);
+  return deliLine2;
+}
+
+console.log(takeANumber("Sidney Lumet"));
+// name: 'Sidney Lumet', orderNumber: 1
+console.log(takeANumber("Martin Scorsese"));
+// name: 'Martin Scorsese', orderNumber: 2
+console.log(takeANumber("Woody Allen"));
+// name: 'Woody Allen', orderNumber: 3
+console.log(takeANumber("Arthur Penn"));
+// name: 'Arthur Penn, orderNumber: 4
+console.log(takeANumber("William Friedkin"));
+// name: 'William Friedkin', orderNumber: 5
+console.log(takeANumber("Irwin Winkler"));
+// name: 'Irwin Winkler', orderNumber: 6
+console.log(takeANumber("Spike Lee"));
+// name: 'Spike Lee', orderNumber: 7
+console.log(takeANumber("Nora Ephron"));
+// name: 'Nora Ephron', orderNumber: 8
+console.log(takeANumber("David Chase"));
+// name: 'David Chase', orderNumber: 9
+console.log(takeANumber("Michael Roskam"));
+// name: 'Michael Roskam', orderNumber: 10
+console.log(takeANumber("Joshua Safdie"));
+// name: 'Joshua Safdie', orderNumber: 11
+console.log(takeANumber("Benny Safdie"));
+// name: 'Benny Safdie', orderNumber: 12
+console.log(takeANumber("J.C. Chandor"));
+// name: 'J.C. Chandor', orderNumber: 13
+console.log(takeANumber("Noah Baumbach"));
+// name: 'Noah Baumbach', orderNumber: 14
+console.log(deliLine2.length);
+// 14
