@@ -1908,3 +1908,77 @@ console.log(takeANumber("Noah Baumbach"));
 // name: 'Noah Baumbach', orderNumber: 14
 console.log(deliLine2.length);
 // 14
+
+function nowServing(array) {
+  if (array.length == 0) console.log("nobody left in line");
+  else {
+    let rString = `Now Serving, ${array[0].name}!`;
+    array.splice(0, 1);
+    console.log(rString);
+    console.log("-------------------------");
+    let i = 0;
+    for (; i < array.length; i++) {
+      console.log(`${array[i].name} : ${array[i].orderNumber}`);
+    }
+    console.log("--------------------------------");
+  }
+}
+
+nowServing(deliLine2);
+// Now Serving, Sidney Lumet!
+nowServing(deliLine2);
+// Now Serving, Martin Scorsese!
+nowServing(deliLine2);
+// Now Serving, Woody Allen!
+nowServing(deliLine2);
+// Now Serving, Arthur Penn!
+nowServing(deliLine2);
+// Now Serving, William Friedkin!
+nowServing(deliLine2);
+// Now Serving, Irwin Winkler!
+nowServing(deliLine2);
+// Now Serving, Spike Lee!
+nowServing(deliLine2);
+// Now Serving, Nora Ephron!
+nowServing(deliLine2);
+// Now Serving, David Chase!
+nowServing(deliLine2);
+// Now Serving, Michael Roskam!
+nowServing(deliLine2);
+// Now Serving, Joshua Safdie!
+nowServing(deliLine2);
+// Now Serving, Benny Safdie!
+nowServing(deliLine2);
+// Now Serving, J.C. Chandor!
+nowServing(deliLine2);
+// Now Serving, Noah Baumbach!
+nowServing(deliLine2);
+// nobody left in line
+
+console.log(takeANumber("Norman Mailer"));
+// name: 'Norman Mailer', orderNumber: 1
+console.log(takeANumber("John Updike"));
+// name: 'John Updike', orderNumber: 2
+console.log(takeANumber("Jay McInerney"));
+// name: 'Jay McInerney', orderNumber: 3
+console.log(takeANumber("John Cheever"));
+// name: 'John Cheever', orderNumber: 4
+console.log(takeANumber("Truman Capote"));
+// name: 'Truman Capote', orderNumber: 5
+console.log(takeANumber("Philip Roth"));
+// name: 'Philip Roth', orderNumber: 6
+
+nowServing(deliLine2);
+// Now Serving, Norman Mailer!
+nowServing(deliLine2);
+// Now Serving, John Updike!
+nowServing(deliLine2);
+// Now Serving, Jay McInerney!
+nowServing(deliLine2);
+// Now Serving, John Cheever!
+nowServing(deliLine2);
+// Now Serving, Truman Capote!
+nowServing(deliLine2);
+// Now Serving, Philip Roth!
+nowServing(deliLine2);
+// nobody left in line
