@@ -1371,6 +1371,7 @@ const coolFilms = [
 
 let movies1 = coolFilms.map(m1 => m1.name);
 console.log(movies1);
+let honorableMentions = [];
 
 function removeListItem(array, string) {
   if (!movies1.includes(string)) return "movie not found";
@@ -1380,6 +1381,7 @@ function removeListItem(array, string) {
   for (; i < array.length; i++) {
     if (array[i].name == string) {
       listNum = array[i].id;
+      honorableMentions.push(array[i].name);
       array.splice(i, 1);
       movies1.splice(i, 1);
     }
@@ -1416,3 +1418,36 @@ console.log(coolFilms.length);
 // 15
 console.log(movies1.length);
 // 15
+console.log(removeListItem(coolFilms, "Nightmare Alley"));
+// Nightmare Alley removeds
+console.log(coolFilms.length);
+// 14
+console.log(movies1.length);
+// 14
+console.log(removeListItem(coolFilms, "Snake Eyes"));
+// Snake Eyes removed
+console.log(coolFilms.length);
+// 13
+console.log(movies1.length);
+// 13
+console.log(removeListItem(coolFilms, "C'mon C'mon"));
+// C'mon C'mon removed
+console.log(coolFilms.length);
+// 12
+console.log(movies1.length);
+// 12
+console.log(removeListItem(coolFilms, "House of Gucci"));
+// House of Gucci removed
+console.log(coolFilms.length);
+// 11
+console.log(movies1.length);
+// 11
+console.log(removeListItem(coolFilms, "The Many Saints of Newark"));
+// The Many Saints of Newark removed
+console.log(coolFilms.length);
+// 10
+console.log(movies1.length);
+// 10
+console.log(removeListItem(coolFilms, "The Town"));
+// movie not found
+console.log(honorableMentions.length);
