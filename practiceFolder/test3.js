@@ -913,3 +913,506 @@ console.log(Object.keys(nitrousOxide));
 //  'adversaries', 'firstAppearance']
 console.log(Object.values(nitrousOxide));
 // array of all the values
+
+const movies2021 = [
+  {
+    name: "White Tiger",
+    director: "Ramin Bahrani",
+    candidate: true
+  },
+  {
+    name: "The Little Things",
+    director: "John Lee Hancock",
+    candidate: true
+  },
+  {
+    name: "Nomadland",
+    director: "Chloe Zhao",
+    candidate: false
+  },
+  {
+    name: "Judas and the Black Messiah",
+    director: "Shaka King",
+    candidate: false
+  },
+  {
+    name: "The Mauritanian",
+    director: "Kevin MacDonald",
+    candidate: false
+  },
+  {
+    name: "French Exit",
+    director: "Azazel Jacobs",
+    candidate: false
+  },
+  {
+    name: "Land",
+    director: "Robin Wright",
+    candidate: false
+  },
+  {
+    name: "Silk Road",
+    director: "Tiller Russel",
+    candidate: false
+  },
+  {
+    name: "Tom & Jerry",
+    director: "Tim Story",
+    candidate: true
+  },
+  {
+    name: "Cherry",
+    director: "Joe and Anthony Russo",
+    candidate: true
+  },
+  {
+    name: "Crisis",
+    director: "Nicholas Jarecki",
+    candidate: true
+  },
+  {
+    name: "Moxie",
+    director: "Amy Poehler",
+    candidate: false
+  },
+  {
+    name: "Boogie",
+    director: "Eddie Huang",
+    candidate: false
+  },
+  {
+    name: "Zack Snyder's Justice League",
+    director: "Zack Snyder",
+    candidate: true
+  },
+  {
+    name: "City of Lies",
+    director: "Brad Furman",
+    candidate: true
+  },
+  {
+    name: "Godzilla vs. Kong",
+    director: "Adam Wingard",
+    candidate: false
+  },
+  {
+    name: "Concrete Cowboy",
+    director: "Ricky Staub",
+    candidate: false
+  },
+  {
+    name: "Voyagers",
+    director: "Neil Burger",
+    candidate: false
+  },
+  {
+    name: "Mortal Kombat",
+    director: "Simon McQuoid",
+    candidate: false
+  },
+  {
+    name: "Together Together",
+    director: "Nikole Beckwith",
+    candidate: false
+  },
+  {
+    name: "Wrath of Man",
+    director: "Guy Ritchie",
+    candidate: true
+  },
+  {
+    name: "Army of the Dead",
+    director: "Zack Snyder",
+    candidate: true
+  },
+  {
+    name: "Those Who Wish Me Dead",
+    director: "Taylor Sheridan",
+    candidate: false
+  },
+  {
+    name: "The Woman in the Window",
+    director: "Joe Wright",
+    candidate: false
+  },
+  {
+    name: "F9",
+    director: "Justin Lin",
+    candidate: false
+  },
+  {
+    name: "Black Window",
+    director: "Cate Shortland",
+    candidate: true
+  },
+  {
+    name: "Snake Eyes",
+    director: " Robert Schwentke",
+    candidate: true
+  },
+  {
+    name: "Old",
+    director: "M. Night Shyamalan",
+    candidate: false
+  },
+  {
+    name: "Midnight in the Switchgrass",
+    director: "Randall Emmett",
+    candidate: false
+  },
+  {
+    name: "Stillwater",
+    director: "Thomas McCarthy",
+    candidate: false
+  },
+  {
+    name: "The Green Knight",
+    director: "David Lowery",
+    candidate: true
+  },
+  {
+    name: "Suicide Squad",
+    director: "James Gunn",
+    candidate: false
+  },
+  {
+    name: "Reminiscence",
+    director: "Lisa Joy",
+    candidate: false
+  },
+  {
+    name: "The Protege",
+    director: "Martin Campbell",
+    candidate: false
+  },
+  {
+    name: "The Night House",
+    director: "David Bruckner",
+    candidate: false
+  },
+  {
+    name: "Shang Chi and the Legend of the Ten Rings",
+    director: "Deston Daniel Cretton",
+    candidate: false
+  },
+  {
+    name: "Worth",
+    director: "Sara Colangelo",
+    candidate: true
+  },
+  {
+    name: "Kate",
+    director: "Cedric Nicolas-Troyan",
+    candidate: true
+  },
+  {
+    name: "Queenpins",
+    director: "Aron Gaudet and Gita Pullapilly",
+    candidate: true
+  },
+  {
+    name: "The Card Counter",
+    director: "Paul Schrader",
+    candidate: true
+  },
+  {
+    name: "Small Engine Repair",
+    director: "John Pollono",
+    candidate: false
+  },
+  {
+    name: "Cry Macho",
+    director: "Clint Eastwood",
+    candidate: false
+  },
+  {
+    name: "Best Sellers",
+    director: "Lina Roessler",
+    candidate: true
+  },
+  {
+    name: "The Guilty",
+    director: "Antoine Fuqua",
+    candidate: false
+  },
+  {
+    name: "Venom: Let There Be Carnage",
+    director: "Andy Serkis",
+    candidate: false
+  },
+  {
+    name: "The Many Saints of Newark",
+    director: "Alan Taylor",
+    candidate: true
+  },
+  {
+    name: "No Time to Die",
+    director: "Cary Joji Fukunaga",
+    candidate: false
+  },
+  {
+    name: "The Last Duel",
+    director: "Ridley Scott",
+    candidate: true
+  },
+  {
+    name: "Antlers",
+    director: "Scott Cooper",
+    candidate: true
+  },
+  {
+    name: "Spencer",
+    director: "Pablo Larrain",
+    candidate: false
+  },
+  {
+    name: "Power of the Dog",
+    director: "Jane Campion",
+    candidate: false
+  },
+  {
+    name: "Bruised",
+    director: "Halle Berry",
+    candidate: true
+  },
+  {
+    name: "King Richard",
+    director: "Reinaldo Marcus Green",
+    candidate: false
+  },
+  {
+    name: "C'mon C'mon",
+    director: "Mike Mills",
+    candidate: true
+  },
+  {
+    name: "House of Gucci",
+    director: "Ridley Scott",
+    candidate: true
+  },
+  {
+    name: "The Humans",
+    director: "Stephen Karam",
+    candidate: false
+  },
+  {
+    name: "Mixtape",
+    director: "Valerie Weiss",
+    candidate: true
+  },
+  {
+    name: "Don't Look Up",
+    director: "Adam McKay",
+    candidate: false
+  },
+  {
+    name: "Being the Ricardos",
+    director: "Aaron Sorkin",
+    candidate: false
+  },
+  {
+    name: "Nightmare Alley",
+    director: "Guillermo Del Toro",
+    candidate: true
+  },
+  {
+    name: "The Matrix Resurrections",
+    director: "Lana Wachowski",
+    candidate: true
+  }
+];
+
+console.log(movies2021.length);
+// 61
+
+console.log(robots);
+
+console.log(robots[0]);
+// Eggplant-Head
+console.log(robots[0] == "Eggplant-Head");
+// true
+let favorites = [];
+if (robots[0] == "Eggplant-Head") {
+  let i = 0;
+  for (; i < movies2021.length; i++) {
+    if (movies2021[i].candidate) {
+      favorites.push(movies2021[i]);
+    }
+  }
+  console.log(favorites);
+}
+
+console.log(favorites.length);
+// 26
+
+/* 
+
+
+Next Round: 
+
+1. The Little Things
+
+2. Cherry
+
+3. Crisis
+
+4. Zack Snyder's Justice League
+
+5. City of Lies
+
+6. Army of the Dead
+
+7. Snake Eyes
+
+8. The Green Knight
+
+9. Kate
+
+10. The Card Counter
+
+11. The Many Saints of Newark
+
+12. The Last Duel
+
+13. Antlers
+
+14. Last Night in Soho
+
+15. Bruised
+
+16. House of Gucci
+
+17. The Matrix Resurrections
+
+18. Nightmare Alley
+
+
+
+*/
+
+const coolFilms = [
+  {
+    name: "The Little Things",
+    id: 1
+  },
+  {
+    name: "Cherry",
+    id: 2
+  },
+  {
+    name: "Crisis",
+    id: 3
+  },
+  {
+    name: "Zack Snyder's Justice League",
+    id: 4
+  },
+  {
+    name: "City of Lies",
+    id: 5
+  },
+  {
+    name: "Army of the Dead",
+    id: 6
+  },
+  {
+    name: "Snake Eyes",
+    id: 7
+  },
+  {
+    name: "The Green Knight",
+    id: 8
+  },
+  {
+    name: "Kate",
+    id: 9
+  },
+  {
+    name: "The Card Counter",
+    id: 10
+  },
+  {
+    name: "The Many Saints of Newark",
+    id: 11
+  },
+  {
+    name: "The Last Duel",
+    id: 12
+  },
+  {
+    name: "Antlers",
+    id: 13
+  },
+  {
+    name: "Last Night in Soho",
+    id: 14
+  },
+  {
+    name: "Bruised",
+    id: 15
+  },
+  {
+    name: "House of Gucci",
+    id: 16
+  },
+  {
+    name: "The Matrix Resurrections",
+    id: 17
+  },
+  {
+    name: "Nightmare Alley",
+    id: 18
+  },
+  {
+    name: "C'mon C'mon",
+    id: 19
+  }
+];
+
+let movies1 = coolFilms.map(m1 => m1.name);
+console.log(movies1);
+
+function removeListItem(array, string) {
+  if (!movies1.includes(string)) return "movie not found";
+  let listNum = 0;
+  let i = 0;
+  let j = 0;
+  for (; i < array.length; i++) {
+    if (array[i].name == string) {
+      listNum = array[i].id;
+      array.splice(i, 1);
+      movies1.splice(i, 1);
+    }
+  }
+  for (; j < array.length; j++) {
+    if (array[j].id > listNum) {
+      array[j].id = array[j].id - 1;
+    }
+  }
+  return array;
+}
+
+console.log(removeListItem(coolFilms, "Antlers"));
+// Antlers removed
+console.log(coolFilms.length);
+// 18
+console.log(movies1.length);
+// 18
+console.log(removeListItem(coolFilms, "Crisis"));
+// Crisis removed
+console.log(coolFilms.length);
+// 17
+console.log(movies1.length);
+// 17
+console.log(removeListItem(coolFilms, "City of Lies"));
+// City of Lies removed
+console.log(coolFilms.length);
+// 16
+console.log(movies1.length);
+// 16
+console.log(removeListItem(coolFilms, "The Green Knight"));
+// The Green Knight removed
+console.log(coolFilms.length);
+// 15
+console.log(movies1.length);
+// 15

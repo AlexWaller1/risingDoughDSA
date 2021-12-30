@@ -1614,6 +1614,7 @@ console.log(timberTron2[0].indexOf(timber));
 // 0
 
 function longestCommonPrefix(array) {
+  array;
   let prefix = array[0];
   let returnString = "";
   let i = 1;
@@ -1982,3 +1983,86 @@ nowServing(deliLine2);
 // Now Serving, Philip Roth!
 nowServing(deliLine2);
 // nobody left in line
+
+console.log(mellonTech);
+// Mellon-Tech
+console.log(pizzaWarriors.indexOf("Rising Dough"));
+// -1
+console.log(pizzaWarriors);
+// not sure what happened there
+
+console.log(timberTron2);
+
+const rockyBullwinkle = ["Rocky", "Bullwinkle"];
+
+function arrayClone(array) {
+  array2 = array;
+  return array2;
+}
+
+console.log(arrayClone(rockyBullwinkle));
+// ['Rocky', 'Bullwinkle']
+console.log(rockyBullwinkle[0]);
+// Rocky
+console.log(rockyBullwinkle[1]);
+// Bullwinkle
+
+let newPizzaWarriors = [];
+
+if (rockyBullwinkle[1] == "Bullwinkle") {
+  let pizza1 = pizzaWarriors2.map(t2 => t2.name);
+  console.log(pizza1);
+  newPizzaWarriors = pizza1;
+}
+
+console.log(newPizzaWarriors);
+
+const timberTron3 = ["Timber-Tron", "Timber_Io", "Timber:R9//"];
+
+console.log(timberTron3[0].indexOf("Timber"));
+
+let water2 = ["water station", "water bottle", "water jug"];
+
+function newPrefix(array) {
+  array2 = array;
+  let prefix = array2[0];
+  let rString = "";
+  let i = 1;
+  for (; i < array2.length; i++) {
+    if (i > 1) {
+      prefix = rString;
+    }
+    while (prefix.indexOf(array2[i]) != 0) {
+      array2[i] = array2[i].substr(0, array2.length - 1);
+      rString = array2[i];
+    }
+  }
+  return prefix;
+}
+
+console.log(newPrefix(timberTron3));
+console.log(newPrefix(water2));
+
+let water = ["water station", "water bottle", "water jug"];
+
+function longestCommonPrefix3(array) {
+  let prefix = array[0];
+  let returnString = "";
+  let i = 1;
+  for (; i < array.length; i++) {
+    if (i > 1) {
+      prefix = returnString;
+    }
+    while (prefix.indexOf(array[i]) != 0) {
+      array[i] = array[i].substr(0, array[i].length - 1);
+      returnString = array[i];
+    }
+  }
+  if (returnString.length == 0) console.log("No Common Prefix");
+  else console.log(returnString);
+}
+
+longestCommonPrefix3(timberTron3);
+longestCommonPrefix3(water);
+// water
+console.log(water);
