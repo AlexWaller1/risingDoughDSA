@@ -1451,3 +1451,269 @@ console.log(movies1.length);
 console.log(removeListItem(coolFilms, "The Town"));
 // movie not found
 console.log(honorableMentions.length);
+// 9
+console.log(honorableMentions);
+console.log("-----------------------------------------");
+console.log("----------------------------------------");
+console.log("---------------------------------------");
+console.log(coolFilms);
+
+console.log("-------------------------------------------");
+
+let sortId = array => array.sort((a, b) => (a.id > b.id ? 1 : -1));
+
+// function shiftElement(array, string, num) {
+//   // edge cases
+//   if (num > 10 || num < 1) return "number must be between 1 and 10";
+//   if (!movies1.includes(string)) return "film not found";
+//   //...........................................................
+//   let film1 = array.map(m1 => m1.name);
+//   // array of just the names
+
+//   let index = film1.indexOf(string);
+
+//   array[index].id = num;
+//   // setting array element its new id
+
+//   let i = 0;
+//   for (; i < array.length; i++) {
+//     if (i < index && array[i].name != string) {
+//       array[i].id = array[i].id + 1;
+//     }
+//     if (num > i && array[i].name != string) {
+//       array[i].id = array[i].id - 1;
+//     }
+//   }
+//   array = sortId(array);
+//   return array;
+// }
+
+// console.log(shiftElement(coolFilms, "Cherry", 7));
+
+/* 
+
+1. A
+2. B
+3. C
+4. D
+5. E
+
+Move A to 4
+
+num is 4, index is 0
+num > index
+
+every element whose index is less than num needs to move down
+one spot, so their id needs to be subtracted by 1
+
+
+1. A
+2. B
+3. C
+4. D
+5. E
+
+Move D to 1
+
+So we would have...
+
+num is 1, index is 3
+
+1. D
+1. A
+2. B
+3. C
+4.
+5. E
+
+if i is less than index and the element name does not equal the input string
+
+increase the id by 1
+
+========================================================================
+
+
+let test24 [
+    {
+        name: A,
+        id: 1
+    },
+    {
+        name: B,
+        id: 2
+    },
+    {
+        name: C,
+        id: 3
+    },
+    {
+        name: D,
+        id: 4
+    }
+    
+]
+
+- let's say we wanted to D to have the id of 1
+
+- A, B, C's ids will all have to icrement by 1
+
+- Nothing needs to be done to E
+
+- A's current index is 3, and the id will be 1
+
+- start point for i needs to be the index of where the current holder
+  of the id is
+
+- the current holder of 1 is at index 0
+
+-   i = id - 1
+
+
+
+
+
+
+
+*/
+
+console.log("---------------------------------------------");
+
+const test15 = [0, 1, 2, 3, 4, 5];
+
+let spliceNum = (array, num) => array.splice(num, 1);
+
+console.log(spliceNum(test15, 0));
+
+console.log(test15);
+// [1, 2, 3, 4, 5]
+console.log(spliceNum(test15, 0));
+
+console.log(test15);
+// [2, 3, 4, 5]
+
+const test16 = [1, 2, 3, 4, 5];
+
+console.log(spliceNum(test16, 0));
+
+console.log("--------------------------------------------");
+console.log("--------------------------------------");
+
+function shiftElement2(array, string, num) {
+  let names = array.map(n1 => n1.name);
+  let index = names.indexOf(string);
+  // original id for "C" was 3
+  array[index].id = num;
+  // new id for "C" is 1
+
+  // elements between test24[0] and test24[2] need to change
+  // element test24[3] does not need to change
+
+  let i = num - 1;
+  // index for where id is being replaced
+  if (index > num) {
+    for (; i <= index; i++) {
+      if (array[i].name != string) {
+        array[i].id = array[i].id + 1;
+      }
+    }
+  }
+  if (num > index) {
+    i = index;
+    for (; i < num; i++) {
+      if (array[i].name != string) {
+        array[i].id = array[i].id - 1;
+      }
+    }
+  }
+  if (index == num) {
+    array[index - 1].id = array[index - 1].id + 1;
+  }
+  array = sortId(array);
+  console.log(array);
+}
+
+let test24 = [
+  {
+    name: "A",
+    id: 1
+  },
+  {
+    name: "B",
+    id: 2
+  },
+  {
+    name: "C",
+    id: 3
+  },
+  {
+    name: "D",
+    id: 4
+  }
+];
+
+shiftElement2(test24, "C", 1);
+// i = 0
+// index = 2
+// index > i
+// worked
+shiftElement2(test24, "B", 1);
+// i = 0
+// index = 2
+// index > i
+// worked
+shiftElement2(test24, "C", 4);
+// worked
+shiftElement2(test24, "A", 3);
+// worked
+shiftElement2(test24, "A", 1);
+// worked
+console.log(coolFilms);
+
+shiftElement2(coolFilms, "Kate", 1);
+// worked
+shiftElement2(coolFilms, "Army of the Dead", 10);
+// worked
+shiftElement2(coolFilms, "Zack Snyder's Justice League", 2);
+// worked
+shiftElement2(coolFilms, "Cherry", 3);
+// worked
+shiftElement2(coolFilms, "Bruised", 9);
+// worked
+
+console.log(test24);
+
+/* 
+
+current array is [
+    {
+        name: "B",
+        id: 1
+    },
+    {
+        name: "C",
+        id: 2
+    },
+    {
+        name: "A",
+        id: 3
+    },
+    {
+        name: "D",
+        id: 4
+    }
+
+]
+
+let's day we want to change the id of "C" from 2 to 4
+
+"A" and "D"'s ids will need to subtract by 1
+
+"B" is out of scope and doesn't need to be included
+
+"C"'s index is 1 and the target id is 4
+
+we'll iterate from the "C" index to the index of the id
+
+the other elements iterated over will subtract their id by 1
+
+*/
