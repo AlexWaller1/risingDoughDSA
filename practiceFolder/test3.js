@@ -1679,8 +1679,14 @@ shiftElement2(coolFilms, "Cherry", 3);
 // worked
 shiftElement2(coolFilms, "Bruised", 9);
 // worked
+shiftElement2(coolFilms, "The Matrix Resurrections", 7);
+// worked
 
 console.log(test24);
+
+honorableMentions.push("The White Tiger");
+
+console.log(honorableMentions);
 
 /* 
 
@@ -1717,3 +1723,305 @@ we'll iterate from the "C" index to the index of the id
 the other elements iterated over will subtract their id by 1
 
 */
+
+const jonnJonzz = {
+  name: "J'onn J'onzz",
+  alias: "Martian Manhunter",
+  species: "Martian",
+  homePlanet: "Mars",
+  team: "The Justice League",
+  abilities: {
+    ability1: "Telepathy",
+    ability2: "Transparency",
+    ability3: "Shapeshifter",
+    ability4: "Flight"
+  }
+};
+
+console.log(jonnJonzz.name);
+// J'onn J'onzz
+console.log(jonnJonzz.alias);
+// Martian Manhunter
+console.log(jonnJonzz.species);
+// Martian
+console.log(jonnJonzz.homePlanet);
+// Mars
+console.log(jonnJonzz.team);
+// The Justice League
+console.log(jonnJonzz.abilities.ability1);
+// Telepathy
+console.log(jonnJonzz.abilities.ability2);
+// Transparency
+console.log(jonnJonzz.abilities.ability3);
+// Shapeshifter
+console.log(jonnJonzz.abilities.ability4);
+// Flight
+
+let {
+  name: jonnJonzzName,
+  alias: martianManhunter,
+  species: martian,
+  homePlanet: mars,
+  team: jL,
+  abilities: { ability1, ability2, ability3, ability4 }
+} = jonnJonzz;
+
+console.log(jonnJonzzName);
+// J'onn J'onzz
+console.log(martianManhunter);
+// Martian Manhunter
+console.log(martian);
+// Martian
+console.log(mars);
+// Mars
+console.log(jL);
+// The Justice League
+console.log(ability1);
+// Telepathy
+console.log(ability2);
+// Transparency
+console.log(ability3);
+// Shapeshifter
+console.log(ability4);
+// Flight
+
+const greenLanternCorps = [
+  {
+    name: "John Stewart",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Salaak",
+    homePlanet: "Slyggia",
+    base: "Oa",
+    sector: "Space Sector 1418"
+  },
+  {
+    name: "Hal Jordan",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Isamot Kol",
+    homePlanet: "Thanagar",
+    base: "Oa",
+    sector: "Space Sector 2682"
+  },
+  {
+    name: "Chaselon",
+    homePlanet: "Barrio III",
+    base: "Oa",
+    sector: "Space Sector 1416"
+  },
+  {
+    name: "G'Nort Esplanade G'neeshmacher",
+    homePlanet: "G'Newt",
+    base: "Oa",
+    sector: "Space Sector 2112"
+  },
+  {
+    name: "Jessica Cruz",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: " Space Sector 2814"
+  },
+  {
+    name: "Kilowog",
+    homePlanet: "Bolovax",
+    base: "Oa",
+    sector: "Space Sector 0674"
+  },
+  {
+    name: "Tomar-Re",
+    homePlanet: "Xudar",
+    base: "Oa",
+    sector: "Space Sector 2813"
+  },
+  {
+    name: "Abin Sur",
+    homePlanet: "Ungara",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Kyle Rayner",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Guy Gardner",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Simon Baz",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Mogo",
+    homePlanet: "Mogo",
+    base: "Oa",
+    sector: "Space Sector 2261"
+  },
+  {
+    name: "Vath Sarn",
+    homePlanet: "Rann",
+    base: "Oa",
+    sector: "Space Sector 2682"
+  },
+  {
+    name: "Xax",
+    homePlanet: "Xaos",
+    base: "Oa",
+    sector: "Space Sector 3500"
+  },
+  {
+    name: "Jade",
+    homePlanet: "Earth",
+    base: "Oa",
+    sector: "Space Sector 2814"
+  },
+  {
+    name: "Boodika",
+    homePlanet: "Bellatrix",
+    base: "Oa",
+    sector: "Space Sector 1414"
+  },
+  {
+    name: "Green Man",
+    homePlanet: "Uxor",
+    base: "Oa",
+    sector: "Space Sector 3009"
+  },
+  {
+    name: "Kraken",
+    homePlanet: "Apokolips",
+    base: "Oa",
+    sector: "Space Sector 0038"
+  },
+  {
+    name: "Varix",
+    homePlanet: "Naktos",
+    base: "Oa",
+    sector: "Space Sector 0069"
+  }
+];
+
+console.log(greenLanternCorps.length);
+// 21
+
+console.log(greenLanternCorps);
+
+console.log(greenLanternCorps[3].name == "Isamot Kol");
+// true
+console.log(greenLanternCorps[3].name);
+// Isamot Kol
+console.log("---------------------------------");
+console.log("-------------------------------");
+
+if (greenLanternCorps[3].name == "Isamot Kol") {
+  let i = 0;
+  for (; i < greenLanternCorps.length; i++) {
+    if (greenLanternCorps[i].homePlanet != "Earth") {
+      console.log(greenLanternCorps[i].name);
+      // Salaak
+      // Isamot Kol
+      // Chaselon
+      // G'Nort Esplanade G'neeshmacher
+      // Kilowog
+      // Tomar-Re
+      // Abin Sur
+      // Mogo
+      // Vath Sarn
+      // Xax
+      // Boodika
+      // Green Man
+      // Kraken
+      // Varix
+    }
+  }
+  console.log("-------------------------------------");
+  console.log("-----------------------------------");
+  let j = greenLanternCorps.length - 1;
+  while (j >= 0) {
+    if (greenLanternCorps[j].homePlanet == "Earth") {
+      console.log(greenLanternCorps[j].name);
+      // Jade
+      // Simon Baz
+      // Guy Gardner
+      // Kyle Rayner
+      // Jessica Cruz
+      // Hal Jordan
+      // John Stewart
+    }
+    j--;
+  }
+}
+
+console.log("-----------------------------------------");
+console.log("---------------------------------------");
+
+const croixJames = "Croix James";
+console.log(croixJames);
+// Croix James
+console.log(croixJames == "Croix James");
+// true
+const risingDough = "Rising Dough";
+
+const rogueTrooper = "Rogue Trooper";
+
+const bandicoot = "Bandicoot";
+
+function switchTwoWords(string) {
+  if (!string.includes(" ")) {
+    console.log("string must have a space");
+  }
+  let concatString = "";
+  let i = 0;
+  for (; i < string.length; i++) {
+    if (string.charAt(i) == " ") {
+      break;
+    } else {
+      concatString = concatString.concat(string.charAt(i));
+
+      // string = string.replace(string.charAt(i), "");
+    }
+  }
+  string = string.replace(concatString, "");
+  string = string.replace(string.charAt(0), "");
+  let rString = `${string} ${concatString}`;
+  console.log(rString);
+}
+
+switchTwoWords(croixJames);
+// James Croix
+switchTwoWords(risingDough);
+// Dough Rising
+switchTwoWords(rogueTrooper);
+// Trooper Rogue
+switchTwoWords(bandicoot);
+
+console.log(risingDough);
+// Rsing Dough
+console.log(risingDough == "Rising Dough");
+// true
+if (risingDough == "Rising Dough") {
+  let lanterns1 = greenLanternCorps
+    .filter(g2 => g2.homePlanet != "Earth")
+    .map(g3 => g3.name);
+  console.log(lanterns1);
+  /* 
+  
+  ['Salaak', 'Isamot Kol', 'Chaselon', "G'Nort Esplanade 
+  G'neeshmacher", 'Tomar-Re', 'Abin-Sur', 'Mogo', 'Vath Sarn',
+  'Xax', 'Boodika', 'Green Man', 'Kraken', 'Varix']
+  
+  */
+}
