@@ -2024,4 +2024,94 @@ if (risingDough == "Rising Dough") {
   'Xax', 'Boodika', 'Green Man', 'Kraken', 'Varix']
   
   */
+  let lanterns2 = greenLanternCorps
+    .filter(g4 => g4.homePlanet == "Earth")
+    .map(g5 => g5.name);
+  console.log(lanterns2);
+  /* 
+  
+  ['John Stewart', 'Hal Jordan', 'Jessica Cruz', 'Kyle Rayner',
+   'Guy Gardner', 'Simon Baz', 'Jade']
+  
+  */
 }
+
+console.log(Object.keys(jonnJonzz));
+// ['name', 'alias', 'species', 'homePlanet', 'team', 'abilities']
+console.log(Object.values(jonnJonzz));
+//
+console.log(Object.values(jonnJonzz)[0]);
+// J'onn J'onzz
+console.log(Object.values(jonnJonzz)[1]);
+// Martian Manhunter
+console.log(Object.values(jonnJonzz)[2]);
+// Martian
+console.log(Object.values(jonnJonzz)[3]);
+// Mars
+console.log(Object.values(jonnJonzz)[4]);
+// The Justice League
+console.log(Object.values(jonnJonzz)[0] == "J'onn J'onzz");
+// true
+if (Object.values(jonnJonzz)[0] == "J'onn J'onzz") {
+  let gLantern1 = greenLanternCorps
+    .filter(g1 => g1.homePlanet == "Earth")
+    .map(g2 => g2.name);
+
+  gLantern1.forEach(function (glantern2) {
+    console.log(glantern2);
+    // John Stewart
+    // Hal Jordan
+    // Jessica Cruz
+    // Kyle Rayner
+    // Guy Gardner
+    // Simon Baz
+    // Jade
+  });
+}
+
+console.log(risingDough);
+// Rising Dough
+console.log(typeof risingDough == "string");
+// true
+if (typeof risingDough == "string") {
+  greenLanternCorps.forEach(g1 => console.log(g1.name));
+  // John Stewart
+  // Salaak
+  // Hal Jordan
+  // Isamot Kol
+  // Chaselon
+  // G'Nort Esplanade G'neeshmacher
+  // Jessica Cruz
+  // Kilowog
+  // Tomar-Re
+  // Abin Sur
+  // Kyle Rayner
+  // Guy Gardner
+  // Simon Baz
+  // Mogo
+  // Vath Sarn
+  // Xax
+  // Jade
+  // Boodika
+  // Green Man
+  // Kraken
+  // Varix
+  let lantern1 = greenLanternCorps
+    .filter(g1 => g1.name == "Tomar-Re")
+    .map(g2 => g2.name);
+  console.log(lantern1);
+  // ['Tomar-Re']
+}
+
+const captainAtom = "Captain Atom";
+console.log(captainAtom);
+// Captain Atom
+console.log(captainAtom.length);
+// 12
+console.log(captainAtom.substr(8, 11));
+// Atom
+console.log(captainAtom.includes("Captain"));
+// true
+console.log(captainAtom.includes("captain"));
+// false
+console.log(typeof (typeof captainAtom == "boolean") == "boolean");
