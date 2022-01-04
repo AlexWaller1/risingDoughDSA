@@ -31,3 +31,15 @@
 1. Core Modules
 2. Local Modules
 3. Third Party Modules
+
+# Which database is more popularly used with Node.js?
+
+- mongoDB
+
+# What is the command used to import external libraries?
+
+- command "require" is used in Node JS for importing external librairies
+
+# What are the two types of API functions in Node.js?
+
+- You can find two types of API functions in Node.js, namely Synchronous, blocking functions, and Asynchronous, non-blocking functions
