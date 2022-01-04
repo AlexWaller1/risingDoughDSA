@@ -200,3 +200,56 @@ console.log(squareRootRounder3(nums5));
 // [4, 36, 49, 64, 81, 100, 121]
 console.log(squareRootRounder3(nums6));
 // [144, 121, 16, 25, 64, 81, 36, 25]
+console.log("-----------------------------------------------");
+console.log("--------------------------------------------");
+
+console.log(2.5 % 2);
+// .5
+console.log(6.3 % 6);
+// .2999999999
+console.log(parseFloat(".55"));
+// 0.55
+console.log("-------------------------------------------");
+
+function roundNum(num) {
+  num = num.toString();
+  let decimalIndex = 0;
+  let decimalNum = ".";
+  let i = 0;
+  let j = 0;
+  for (; i < num.length; i++) {
+    if (num.charAt(i) == ".") {
+      decimalIndex = i;
+    }
+  }
+  for (; j < num.length; j++) {
+    if (j > decimalIndex) {
+      decimalNum = decimalNum.concat(num.charAt(j));
+    }
+  }
+  decimalNum = parseFloat(decimalNum);
+
+  num = parseFloat(num);
+  let wholeNum = num - decimalNum;
+  let remainder = 0;
+  let rNum = 0;
+  if (decimalNum > 0.5) {
+    let newDecimal = 1 - decimalNum;
+    rNum = num + newDecimal;
+  }
+  if (decimalNum < 0.5) {
+    rNum = num - decimalNum;
+  }
+  return rNum;
+}
+
+console.log(roundNum(4.55));
+// 5
+console.log(roundNum(4.44));
+// 4
+console.log(roundNum(9.89));
+// 10
+console.log(roundNum(4.5697));
+// 5
+console.log("-------------------------------------");
+console.log("--------------------------------");

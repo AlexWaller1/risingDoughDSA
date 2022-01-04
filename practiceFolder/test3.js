@@ -2277,3 +2277,10 @@ if (pizzaWarriors[11].name == "Brayden Saskatoon") {
     }
   }
 }
+
+console.log(parseInt("2.4"));
+// 2
+console.log(parseFloat("2.4"));
+// 2.4
+console.log(2.5 % 2);
+// 0.5
