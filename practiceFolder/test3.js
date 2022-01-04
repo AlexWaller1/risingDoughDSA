@@ -2166,3 +2166,114 @@ switchTwoWords(neoCortex);
 const masterChief = "Master Chief";
 switchTwoWords(masterChief);
 // Chief Master
+
+const pizzaWarriors = [
+  {
+    name: "Rising Dough",
+    species: "Robot: Window Cleanse 10.5"
+  },
+  {
+    name: "Brooke Nevins",
+    species: "Human"
+  },
+  {
+    name: "Bodhi",
+    species: "Dachshund"
+  },
+  {
+    name: "Timber-Tron",
+    species: "Robot: Timber_Io 34"
+  },
+  {
+    name: "Sal Campana",
+    species: "Human"
+  },
+  {
+    name: "Chipper",
+    species: "Dachshund"
+  },
+  {
+    name: "Stokes Mitchell",
+    species: "Human"
+  },
+  {
+    name: "Croix James",
+    species: "Pickerel"
+  },
+  {
+    name: "Laila Blanco",
+    species: "Human"
+  },
+  {
+    name: "Beezer",
+    species: "Dachshund"
+  },
+  {
+    name: "Dex Garrity",
+    species: "Robot: Robo-Welder 4000"
+  },
+  {
+    name: "Brayden Saskatoon",
+    species: "Black Bear"
+  }
+];
+
+console.log(pizzaWarriors.length);
+// 12
+console.log(pizzaWarriors[11].name);
+// Brayden Saskatoon
+console.log(pizzaWarriors[11].species);
+// Black Bear
+console.log(pizzaWarriors[11].name == "Brayden Saskatoon");
+// true
+
+if (pizzaWarriors[11].name == "Brayden Saskatoon") {
+  let i = 0;
+  for (; i < pizzaWarriors.length; i++) {
+    switch (pizzaWarriors[i].name) {
+      case "Brayden Saskatoon":
+        console.log(`${pizzaWarriors[i].name} is a fun dude!`);
+        // Brayden Saskatoon is a fun dude!
+        break;
+      case "Beezer":
+        console.log(`${pizzaWarriors[i].name} loves to run
+              in the country!`);
+        // Beezer loves to run in the country!
+        break;
+      case "Bodhi":
+        console.log(`${pizzaWarriors[i].name} loves to chase
+              squirrels!`);
+        // Bodhi loves to chase squirrels!
+        break;
+      case "Chipper":
+        console.log(`${pizzaWarriors[i].name} can be really
+              stubborn but is a great hunter!`);
+        // Chipper can be really stubborn but is a great hunter!
+        break;
+      case "Rising Dough":
+        console.log(`${pizzaWarriors[i].name} is a pizza loving
+              robot!`);
+        // Rising Dough is a pizza loving robot!
+        break;
+      case "Croix James":
+        console.log(`${pizzaWarriors[i].name} is the CEO of
+              Pickerel Cola!`);
+        // Croix James is the CEO of Pickerel Cola!
+        break;
+      case "Dex Garrity":
+        console.log(`${pizzaWarriors[i].name} can build or fix
+              anything!`);
+        // Dex Garrity can build or fix anything!
+        break;
+      default:
+        console.log(`${pizzaWarriors[i].name} is a character in
+              Pizza Warriors!`);
+        // Brooke Nevins is a character in Pizza Warriors
+        // Timber-Tron is a character in Pizza Warriors
+        // Sal Campana is a character in Pizza Warriors
+        // Stokes Mitchell is a character in Pizza Warriors
+        // Laila Blanco is a character in Pizza Warriors
+        break;
+    }
+  }
+}
