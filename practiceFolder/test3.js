@@ -2115,3 +2115,54 @@ console.log(captainAtom.includes("Captain"));
 console.log(captainAtom.includes("captain"));
 // false
 console.log(typeof (typeof captainAtom == "boolean") == "boolean");
+// true
+console.log(captainAtom.indexOf("Atom"));
+// 8
+console.log(captainAtom.indexOf("tom"));
+// 9
+let nine = 9;
+console.log(nine);
+// 9
+console.log(nine.toString());
+// 9 but as a string instead of number
+console.log(459 % 10);
+// 9
+console.log(parseInt("5"));
+// 5 as a number data type
+
+function reverseNum(num) {
+  num = num.toString();
+  let remainder = 0;
+  let rNum = "";
+  let i = num.length - 1;
+  for (; i >= 0; i--) {
+    rNum = rNum.concat(num.charAt(i));
+  }
+  rNum = parseInt(rNum);
+  return rNum;
+}
+
+console.log(reverseNum(984));
+// 489
+console.log(reverseNum(456));
+// 654
+console.log(reverseNum(650));
+// 56
+console.log(36 % Math.sqrt(36) == 0);
+// true
+console.log(39 % Math.sqrt(39) == 0);
+// false
+console.log(39 % Math.sqrt(39));
+// 1.53
+console.log(Math.sqrt(39));
+// 6.24
+console.log(Math.sqrt(28));
+// 5.29
+console.log(risingDough);
+// Rising Dough
+const neoCortex = "Neo Cortex";
+switchTwoWords(neoCortex);
+// Cortex Neo
+const masterChief = "Master Chief";
+switchTwoWords(masterChief);
+// Chief Master

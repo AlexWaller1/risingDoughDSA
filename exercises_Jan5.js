@@ -1,0 +1,146 @@
+// Exercises for Jan 5th
+console.log("Hello Oa");
+/* 
+
+Create the function that takes an array with objects and 
+returns the sum of people's budgets
+
+*/
+
+const gtFilms = [
+  {
+    title: "Shape of Water",
+    budget: 20
+  },
+  {
+    title: "Nightmare Alley",
+    budget: 60
+  },
+  {
+    title: "Hellboy",
+    budget: 65
+  },
+  {
+    title: "Pan's Labyrinth",
+    budget: 19
+  },
+  {
+    title: "Pacific Rim",
+    budget: 200
+  },
+  {
+    title: "Crimson Peak",
+    budget: 55
+  }
+];
+console.log(20 + 60 + 65 + 19 + 200 + 55);
+// total budget is 419
+
+const apFilms = [
+  {
+    title: "Election",
+    budget: 25
+  },
+  {
+    title: "About Schmidt",
+    budget: 30
+  },
+  {
+    title: "Sideways",
+    budget: 16
+  },
+  {
+    title: "The Descendants",
+    budget: 20
+  }
+];
+console.log(25 + 30 + 16 + 20);
+// total budget is 91
+
+const noBudget = [
+  {
+    name: "Up in the Air",
+    year: 2009
+  },
+  {
+    name: "Young Adult",
+    year: 2011
+  },
+  {
+    name: "Juno",
+    year: 2007
+  },
+  {
+    name: "Tully",
+    year: 2018
+  },
+  {
+    name: "The Front Runner",
+    year: 2018
+  }
+];
+
+function totalBudget(array) {
+  if (!Object.keys(array[0]).includes("budget"))
+    return "object must have budget key";
+  let budgetSum = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    budgetSum = budgetSum + array[i].budget;
+  }
+  return `total budget is ${budgetSum} million`;
+}
+
+console.log(totalBudget(gtFilms));
+// total budget is 419 million
+console.log(totalBudget(apFilms));
+// total budget is 91 million
+console.log(totalBudget(noBudget));
+// object must have budget key
+console.log(Object.keys(gtFilms[0]));
+// ['title', 'budget']
+console.log("----------------------------------");
+console.log("---------------------------------");
+console.log(Math.max(37, 36));
+// 37
+console.log(Math.min(34, 35));
+// 34
+console.log(Math.pow(3, 2));
+// 9
+console.log(Math.round(9.65));
+// 10
+console.log(Math.floor(9.65));
+// 9
+console.log(67 % Math.sqrt(64));
+// 3
+// 67 - 3 = 64
+console.log(27 % Math.sqrt(27));
+// 1.02
+console.log(51 % Math.sqrt(51));
+// 1.01
+console.log(7 % Math.sqrt(7));
+// 1.70
+console.log(8 % Math.sqrt(8));
+// 2.34
+
+let nums = [4, 7, 9, 12, 16, 21, 25, 29, 36, 42, 49, 56];
+let nums2 = [43, 123, 149, 34, 12, 98];
+
+function squareRootRounder(array) {
+  let remainder = 0;
+  let i = 0;
+  for (; i < array.length; i++) {
+    while (array[i] % Math.sqrt(array[i]) != 0) {
+      array[i] = array[i] - 1;
+    }
+  }
+  return array;
+}
+
+console.log(squareRootRounder(nums));
+// [4, 4, 9, 9, 16, 16, 25, 25, 36, 36, 49, 49]
+console.log(squareRootRounder(nums2));
+// [36, 121, 144, 25, 9, 81]
+const risingDough = "Rising Dough";
+console.log(risingDough.charAt(risingDough.length - 1));
+// h
