@@ -181,3 +181,22 @@ console.log(squareRootRounder2(nums3));
 // [4, 16, 36, 49, 81, 121, 144, 100, 81]
 console.log(squareRootRounder2(nums4));
 // [1, 9, 64, 36, 49, 36, 81, 100, 100, 49]
+console.log(43 / Math.sqrt(43));
+
+function squareRootRounder3(array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    array[i] = array[i] / Math.sqrt(array[i]);
+    array[i] = Math.round(array[i]);
+    array[i] = Math.pow(array[i], 2);
+  }
+  return array;
+}
+
+let nums5 = [5, 40, 43, 60, 83, 101, 119];
+let nums6 = [143, 130, 20, 23, 65, 79, 37, 21];
+
+console.log(squareRootRounder3(nums5));
+// [4, 36, 49, 64, 81, 100, 121]
+console.log(squareRootRounder3(nums6));
+// [144, 121, 16, 25, 64, 81, 36, 25]
