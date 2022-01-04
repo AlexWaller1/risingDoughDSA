@@ -144,3 +144,40 @@ console.log(squareRootRounder(nums2));
 const risingDough = "Rising Dough";
 console.log(risingDough.charAt(risingDough.length - 1));
 // h
+console.log(nums);
+// [4, 4, 9, 9, 16, 16, 25, 25, 36, 36, 49, 49]
+console.log(nums2);
+// [36, 121, 144, 25, 9, 81]
+
+let nums3 = [5, 20, 31, 56, 85, 120, 139, 95, 79];
+let nums4 = [2, 7, 61, 41, 50, 37, 89, 99, 98, 43];
+
+function squareRootRounder2(array) {
+  let i = 0;
+  let j = 0;
+  let newNum = 0;
+  let newNum2 = 0;
+  for (; i < array.length; i++) {
+    newNum = array[i];
+    newNum2 = array[i];
+    while (
+      newNum % Math.sqrt(newNum) != 0 &&
+      newNum2 % Math.sqrt(newNum2) != 0
+    ) {
+      newNum = newNum + 1;
+      newNum2 = newNum2 - 1;
+    }
+    if (newNum % Math.sqrt(newNum) == 0) {
+      array[i] = newNum;
+    }
+    if (newNum2 % Math.sqrt(newNum2) == 0) {
+      array[i] = newNum2;
+    }
+  }
+  return array;
+}
+
+console.log(squareRootRounder2(nums3));
+// [4, 16, 36, 49, 81, 121, 144, 100, 81]
+console.log(squareRootRounder2(nums4));
+// [1, 9, 64, 36, 49, 36, 81, 100, 100, 49]
