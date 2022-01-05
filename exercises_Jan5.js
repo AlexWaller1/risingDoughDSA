@@ -253,3 +253,93 @@ console.log(roundNum(4.5697));
 // 5
 console.log("-------------------------------------");
 console.log("--------------------------------");
+
+console.log(typeof 2.5 == "number");
+// true
+console.log(typeof 0.6 == "number");
+// true
+console.log(parseFloat("ab"));
+// NaN
+console.log(isNaN(245));
+// false
+console.log(isNaN("rt5"));
+// true
+let numTest = 594;
+console.log(isNaN(numTest));
+// false
+console.log(isNaN("4"));
+// false
+console.log("-----------------------------------");
+console.log("---------------------------------");
+
+function arrayAndStringLength(param) {
+  let length = 0;
+  let i = 0;
+  let j = 0;
+
+  for (; i < param.length; i++) {
+    length = length + 1;
+  }
+  return length;
+}
+
+console.log(arrayAndStringLength("hello"));
+// 5
+let rTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let rTest2 = [30, 31, 32, 33, 34, 35, 36, 37, 38];
+let rTest3 = [401, 402];
+console.log(arrayAndStringLength(rTest));
+// 10
+console.log(rTest[10]);
+// undefined
+
+function arrayLength2(param) {
+  let i = 0;
+  let length = 0;
+  let reader = "";
+  while (reader != undefined) {
+    reader = param[i];
+    length = length + 1;
+    i++;
+  }
+  return length - 1;
+}
+
+console.log(arrayLength2(rTest));
+// 10
+console.log(arrayLength2(rTest2));
+// 9
+console.log(arrayLength2(rTest3));
+// 2
+
+console.log("-----------------------------------");
+console.log("----------------------------------");
+
+let rt5 = "rt5";
+console.log(rt5.charAt(2));
+// 5
+let batMan = "Batman";
+let twoFace = "Two Face";
+function stringLength(string) {
+  let reader = "a";
+  let count = 0;
+  let i = 0;
+  while (reader) {
+    reader = string.charAt(i);
+    count = count + 1;
+    i++;
+  }
+  return count - 1;
+}
+
+console.log(stringLength(rt5));
+// 3
+console.log(stringLength(batMan));
+// 6
+console.log(stringLength(twoFace));
+// 8
+console.log(twoFace.length);
+// 8
+
+console.log("--------------------------------");
+console.log("-------------------------------");
