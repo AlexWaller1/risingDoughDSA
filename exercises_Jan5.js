@@ -320,6 +320,8 @@ console.log(rt5.charAt(2));
 // 5
 let batMan = "Batman";
 let twoFace = "Two Face";
+let theRedHood = "The Red Hood";
+
 function stringLength(string) {
   let reader = "a";
   let count = 0;
@@ -340,6 +342,86 @@ console.log(stringLength(twoFace));
 // 8
 console.log(twoFace.length);
 // 8
+console.log(stringLength(theRedHood));
+// 12
+console.log(theRedHood.length);
+// 12
 
 console.log("--------------------------------");
 console.log("-------------------------------");
+
+console.log(typeof rTest);
+// object
+console.log(undefined);
+// undefined
+let undefinedArray = [undefined, undefined, undefined];
+console.log(undefinedArray.length);
+// 3
+
+console.log(undefinedArray[0] == undefined);
+// true
+console.log(undefinedArray[2]);
+// undefined
+console.log(undefinedArray[3]);
+// undefined
+console.log(undefinedArray[4]);
+// undefined
+console.log(undefinedArray[5]);
+// undefined
+
+if (undefinedArray[0] == undefined) {
+  let i = 0;
+  let length = 0;
+  for (; i < undefinedArray.length; i++) {
+    if (undefinedArray[i]) {
+      length = length + 1;
+    }
+  }
+  console.log(length);
+  // length will be 0 because undefined is a falsey value
+}
+
+let fiveNum = [1, 2, 3, 4, 5];
+console.log(fiveNum[fiveNum.length]);
+// undefined
+let nullArray = [null, null, null, null];
+console.log(nullArray);
+// [null, null, null, null]
+console.log(nullArray.length);
+// 4
+console.log(nullArray[0]);
+// null
+console.log(nullArray[0] == null);
+// true
+if (nullArray[0] == null) {
+  let i = 0;
+  let length = 0;
+  for (; i < nullArray.length; i++) {
+    if (nullArray[i]) {
+      length++;
+    }
+  }
+  console.log(length);
+}
+// 0
+// length will be 0 because null is a falsey value
+
+function allMultiples(num) {
+  let newArray = [];
+  let i = 0;
+  let squareRoot = num / Math.sqrt(num);
+  console.log(squareRoot);
+  for (; i <= squareRoot; i++) {
+    if (num % i == 0 && i != squareRoot) {
+      newArray.push(i);
+      let fellowMultiple = num / i;
+      newArray.push(fellowMultiple);
+    }
+    if (num % i == 0 && i == squareRoot) {
+      newArray.push(i);
+    }
+  }
+  console.log(newArray);
+}
+
+allMultiples(36);
