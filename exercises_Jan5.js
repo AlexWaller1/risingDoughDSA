@@ -640,11 +640,8 @@ function replaceChar(string, index, newChar) {
   let temp = "";
   stringArr = splitString(string);
 
-  for (; i < stringArr.length; i++) {
-    if (i == index) {
-      stringArr[i] = newChar;
-    }
-  }
+  stringArr[index] = newChar;
+
   let string2 = joinString(stringArr);
   return string2;
 }
@@ -663,3 +660,50 @@ console.log(tomarRe2);
 // Tomar--Re
 console.log("-------------------------------------");
 console.log("-------------------------------------------");
+
+// concat
+
+const chaselon = ["c", "h", "a", "s", "e", "l", "o", "n"];
+
+let chaselonSub = `${chaselon[0]}${chaselon[1]}`;
+console.log(chaselonSub);
+// ch
+console.log(tomarRe2);
+// Tomar--Re
+let tomarTu = "Tomar-Tu";
+console.log(tomarTu);
+// Tomar-Tu
+console.log(tomarRe2.concat(tomarTu));
+// Tomar--ReTomar-Tu
+console.log(tomarRe2);
+// Tomar--Re
+console.log(tomarTu);
+// Tomar-Tu
+const jonnJonzz = "J'onn J'onzz";
+console.log(jonnJonzz);
+// J'onn J'onzz
+
+function concatString(string1, string2) {
+  return `${string1}${string2}`;
+}
+
+console.log(concatString(tomarRe2, tomarTu));
+// Tomar--ReTomarTu
+console.log(tomarTu);
+// Tomar-Tu
+
+function subString(num1, num2, string) {
+  let rString = "";
+
+  for (; num1 <= num2; num1++) {
+    rString = concatString(rString, string.charAt(num1));
+  }
+  return rString;
+}
+
+console.log(subString(0, 4, tomarTu));
+// Tomar
+console.log(subString(0, 4, tomarRe2));
+// Tomar
+console.log(subString(6, 11, jonnJonzz));
+// J'onzz
