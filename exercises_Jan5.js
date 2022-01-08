@@ -425,3 +425,148 @@ function allMultiples(num) {
 }
 
 allMultiples(36);
+// [1, 36, 2, 18, 3, 12, 4, 9, 6]
+allMultiples(44);
+// [1, 44, 2, 22, 4, 11]
+allMultiples(49);
+// [1, 49, 7]
+allMultiples(100);
+// [1, 100, 2, 50, 4, 25, 5, 20, 10];
+allMultiples(121);
+// [1, 121, 11]
+allMultiples(144);
+// [1, 144, 2, 72, 3, 48, 4, 36, 6, 24, 8, 18, 9, 16, 12]
+
+function isPalindrome(string) {
+  string = string.toLowerCase();
+  let first = 0;
+  let last = string.length - 1;
+  let rString = `${string} is a palindrome`;
+  let i = 0;
+  for (; first < last; first++, last--) {
+    console.log(first);
+    console.log(last);
+    console.log("--------------------------");
+    if (string.charAt(first) != string.charAt(last)) {
+      rString = `${string} is not a palindrome`;
+    }
+  }
+  console.log(rString);
+}
+
+isPalindrome("Boba");
+// boba is not a palindrome
+isPalindrome("racecar");
+// racecar is a palindrome
+isPalindrome("webbex");
+// webbex is not a palindrome
+isPalindrome("xebbex");
+// xebex is a palindrome
+console.log("------------------------------------------------");
+console.log("---------------------------------------------------");
+
+let upperCase = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z"
+];
+
+console.log(upperCase.length);
+// 26
+
+let lowerCase = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+];
+
+console.log(lowerCase.length);
+// 26
+const robots = ["Hank-44", "Warren-21", "Mellon-Tech", "Eggplant-Head"];
+
+function findIndex(array, element) {
+  let i = 0;
+  let rNum = -1;
+  for (; i < array.length; i++) {
+    if (array[i] == element) {
+      rNum = i;
+    }
+  }
+  return rNum;
+}
+
+console.log(findIndex(robots, "Hank-44"));
+// 0
+console.log(findIndex(robots, "Warren-21"));
+// 1
+console.log(findIndex(robots, "Mellon-Tech"));
+// 2
+console.log(findIndex(robots, "Eggplant-Head"));
+// 3
+console.log(findIndex(robots, "Cornelius"));
+// -1
+
+console.log(typeof robots[0].charAt(0) == "string");
+// true
+
+function lowerCaseClone(string) {
+  let i = 0;
+  for (; i < string.length; i++) {
+    if (upperCase.includes(string.charAt(i))) {
+      let index = findIndex(upperCase, string.charAt(i));
+      string = string.replace(string.charAt(i), lowerCase[index]);
+    }
+  }
+  return string;
+}
+
+console.log(lowerCaseClone("Pickerel"));
+// pickerel
+console.log(lowerCaseClone("TIMBER-TRON"));
+// timber-tron
