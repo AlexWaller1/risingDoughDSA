@@ -570,3 +570,21 @@ console.log(lowerCaseClone("Pickerel"));
 // pickerel
 console.log(lowerCaseClone("TIMBER-TRON"));
 // timber-tron
+console.log(lowerCaseClone("Lake Cushetunk"));
+// lake cushetunk
+
+function upperCaseClone(string) {
+  let i = 0;
+  for (; i < string.length; i++) {
+    if (lowerCase.includes(string.charAt(i))) {
+      let index = findIndex(lowerCase, string.charAt(i));
+      string = string.replace(string.charAt(i), upperCase[index]);
+    }
+  }
+  return string;
+}
+
+console.log(upperCaseClone("pickerel"));
+// PICKEREL
+console.log(upperCaseClone("Bodhi"));
+// BODHI
