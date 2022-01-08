@@ -588,3 +588,78 @@ console.log(upperCaseClone("pickerel"));
 // PICKEREL
 console.log(upperCaseClone("Bodhi"));
 // BODHI
+console.log(upperCaseClone("Chipper"));
+// CHIPPER
+console.log(upperCaseClone("Beezer"));
+// BEEZER
+
+console.log("-----------------------------------------------------");
+console.log("----------------------------------------------------");
+
+let helloOa = ["H", "e", "l", "l", "o", " ", "O", "a"];
+let helloOa2 = "Hello Oa";
+
+let tomarRe = ["T", "o", "m", "a", "r", "-", "R", "e"];
+let tomarRe2 = "Tomar-Re";
+
+function splitString(string) {
+  let charArray = [];
+  let i = 0;
+  for (; i < string.length; i++) {
+    charArray.push(string.charAt(i));
+  }
+  return charArray;
+}
+
+console.log(splitString("Blue Jay"));
+// ['B', 'l', 'u', 'e', ' ', 'J', 'a', 'y']
+console.log("Blue Jay".split(""));
+
+console.log("---------------------------------------");
+console.log("-------------------------------------");
+
+function joinString(array) {
+  let rString = "";
+  let i = 0;
+  for (; i < array.length; i++) {
+    rString = rString.concat(array[i]);
+  }
+  return rString;
+}
+
+console.log(joinString(helloOa));
+// Hello Oa
+console.log(joinString(tomarRe));
+// Tomar-Re
+
+console.log("----------------------------------------");
+console.log("------------------------------------------");
+
+function replaceChar(string, index, newChar) {
+  let i = 0;
+  let temp = "";
+  stringArr = splitString(string);
+
+  for (; i < stringArr.length; i++) {
+    if (i == index) {
+      stringArr[i] = newChar;
+    }
+  }
+  let string2 = joinString(stringArr);
+  return string2;
+}
+
+console.log(replaceChar(helloOa2, 5, "-"));
+// Hello-Oa
+console.log(helloOa2);
+// Hello Oa
+helloOa2 = replaceChar(helloOa2, 5, "-");
+console.log(helloOa2);
+// Hello-Oa
+console.log(tomarRe2);
+// Tomar-Re
+tomarRe2 = replaceChar(tomarRe2, 5, "--");
+console.log(tomarRe2);
+// Tomar--Re
+console.log("-------------------------------------");
+console.log("-------------------------------------------");
