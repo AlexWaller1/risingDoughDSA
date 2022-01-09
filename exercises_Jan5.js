@@ -707,3 +707,53 @@ console.log(subString(0, 4, tomarRe2));
 // Tomar
 console.log(subString(6, 11, jonnJonzz));
 // J'onzz
+console.log("----------------------------------------");
+console.log("------------------------------------------");
+
+console.log(Math.pow(6, 0));
+// 1
+console.log(Math.pow(6, 1));
+// 6
+console.log(Math.pow(6, 2));
+// 36
+console.log(Math.pow(6, 3));
+// 216
+console.log(Math.pow(7, 0));
+// 1
+console.log(Math.pow(7, 1));
+// 7
+console.log(Math.pow(7, 2));
+// 49
+console.log(Math.pow(7, 3));
+// 343
+console.log("-------------------------");
+
+function mathDotPow(num1, num2) {
+  let num3 = num1;
+  if (num2 == 0) return 1;
+  if (num2 == 1) return num1;
+  let i = 2;
+  for (; i <= num2; i++) {
+    num1 = num1 * num3;
+  }
+  return num1;
+}
+
+console.log(mathDotPow(6, 0));
+// 1
+console.log(mathDotPow(6, 1));
+// 6
+console.log(mathDotPow(6, 2));
+// 36
+console.log(mathDotPow(6, 3));
+// 216
+console.log(mathDotPow(7, 0));
+// 1
+console.log(mathDotPow(7, 1));
+// 7
+console.log(mathDotPow(7, 2));
+// 49
+console.log(mathDotPow(7, 3));
+// 343
+console.log("---------------------------------------");
+console.log("----------------------------------------");
