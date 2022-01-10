@@ -757,3 +757,173 @@ console.log(mathDotPow(7, 3));
 // 343
 console.log("---------------------------------------");
 console.log("----------------------------------------");
+
+console.log(4 * 4 * 9);
+// 144
+
+console.log(Math.max(24, 24.5));
+// 24.5
+console.log(Math.max(24, 24));
+// 24
+
+function mathDotMax(num1, num2) {
+  if (typeof num1 != "number" || typeof num2 != "number") return NaN;
+
+  if (num1 > num2) {
+    return num1;
+  }
+  if (num2 > num1) {
+    return num2;
+  }
+  if (num2 == num1) {
+    return "no max value";
+  }
+}
+
+console.log(mathDotMax(24, 24.5));
+// 24.5
+console.log(mathDotMax(24, 24));
+// no max value
+console.log(Math.max("2", "b"));
+// NaN
+console.log(mathDotMax(23, "a"));
+// NaN
+console.log(Math.max("2", "b"));
+// NaN
+
+console.log("------------------------------------");
+console.log("-----------------------------------");
+
+function isNotANumber(input) {
+  if (typeof input != "number") {
+    return true;
+  }
+  return false;
+}
+
+console.log(isNotANumber("a"));
+// true
+console.log(isNotANumber(9));
+// false
+console.log(isNotANumber("9"));
+// true
+console.log(isNaN("a"));
+// true
+console.log(isNaN(9));
+// false
+console.log(isNaN("9"));
+// false
+console.log(isNaN("5"));
+// false
+
+console.log("--------------------------------");
+console.log("------------------------------");
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+
+function contains(element, array) {
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (array[i] == element) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(contains("Mellon-Tech", robots));
+// true
+console.log(contains("Bender", robots));
+// false
+
+console.log("---------------------------------");
+console.log("---------------------------------");
+
+let nums24 = [24, 25, 26, 27];
+
+function deleteElement(index, array) {
+  if (index > array.length - 1) return "array does not contain this index";
+  let array2 = [];
+  let i = 0;
+  for (; i < array.length; i++) {
+    if (i != index) {
+      array2.push(array[i]);
+    }
+  }
+  array = array2;
+  return array;
+}
+
+console.log(deleteElement(1, nums24));
+// [24, 26, 27]
+console.log(nums24);
+// [24, 25, 26, 27]
+nums24 = deleteElement(1, nums24);
+console.log(nums24);
+// [24, 26, 27]
+console.log(nums24);
+// [24, 26, 27]
+
+console.log("-----------------------------------------");
+console.log("---------------------------------------");
+
+const wonderBoys = [
+  {
+    name: "Grady Tripp",
+    occupation: "Professor"
+  },
+  {
+    name: "Poe",
+    occupation: "Dog"
+  },
+  {
+    name: "James Leer",
+    occupation: "Student"
+  },
+  {
+    name: "Terry Crabtree",
+    occupation: "Editor"
+  },
+  {
+    name: "Hanna Green",
+    occupation: "Student"
+  },
+  {
+    name: "Sarah Gaskell",
+    occupation: "Chancellor"
+  },
+  {
+    name: "Q",
+    occupation: "Best-Selling Author"
+  },
+  {
+    name: "Walter Gaskell",
+    occupation: "Dean"
+  },
+  {
+    name: "Steve Traxler",
+    occupation: "Janitor"
+  },
+  {
+    name: "Oola",
+    occupation: "Waitress"
+  },
+  {
+    name: "Vernon",
+    occupation: "Unknown"
+  }
+];
+
+console.log(wonderBoys[0].name);
+// Grady Tripp
+console.log(wonderBoys[1].name);
+// Poe
+console.log(wonderBoys[2].name);
+// James Leer
+
+let { name: gradyTripp, occupation: writingProfessor } = wonderBoys[0];
+
+console.log(gradyTripp);
+// Grady Tripp
+console.log(writingProfessor);
