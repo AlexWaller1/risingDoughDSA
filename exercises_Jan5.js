@@ -927,3 +927,140 @@ let { name: gradyTripp, occupation: writingProfessor } = wonderBoys[0];
 console.log(gradyTripp);
 // Grady Tripp
 console.log(writingProfessor);
+// Professor
+console.log(gradyTripp == "Grady Tripp");
+// true
+if (gradyTripp == "Grady Tripp") {
+  let wonder1 = wonderBoys
+    .filter(w1 => w1.occupation == "Student")
+    .map(w2 => w2.name);
+  console.log(wonder1);
+  // ['James Leer', 'Hanna Green']
+}
+
+console.log(typeof wonderBoys[0].name == "string");
+// true
+if (5 == "5") {
+  console.log("Word Fest");
+  // Word Fest
+  let i = 0;
+  for (; i < wonderBoys.length; i++) {
+    console.log(wonderBoys[i].name);
+    // Grady Tripp
+    // Poe
+    // James Leer
+    // Tery Crabtree
+    // Hanna Green
+    // Sara Gaskell
+    // Q
+    // Walter Gaskell
+    // Steve Traxler
+    // Oola
+    // Vernon
+  }
+}
+
+console.log("---------------------------------");
+console.log("---------------------------------");
+
+function initials(string) {
+  let first = string.charAt(0);
+  let second = "";
+  let rString = "";
+  let i = 0;
+
+  for (; i < string.length; i++) {
+    if (string.charAt(i) == " ") {
+      second = string.charAt(i + 1);
+    }
+  }
+  if (second == "") {
+    rString = `${first}.`;
+  } else rString = `${first}.${second}.`;
+  return rString;
+}
+console.log(wonderBoys.length);
+// 11
+
+console.log(initials(wonderBoys[0].name));
+// G.T.
+console.log(initials(wonderBoys[1].name));
+// P.
+console.log(initials(wonderBoys[2].name));
+// J.L.
+console.log(initials(wonderBoys[3].name));
+// T.C.
+console.log(initials(wonderBoys[4].name));
+// H.G.
+console.log(initials(wonderBoys[6].name));
+// Q.
+console.log(initials(wonderBoys[9].name));
+// O.
+console.log(initials(wonderBoys[10].name));
+// V.
+console.log("-------------------------------");
+console.log("--------------------------------");
+
+console.log(parseInt(".55"));
+// NaN
+
+function roundNum2(num) {
+  let num2 = num;
+  num = num.toString();
+  let wholeNum = "";
+  let i = 0;
+  for (; num.charAt(i) != "."; i++) {
+    wholeNum = wholeNum.concat(num.charAt(i));
+  }
+  wholeNum = parseInt(wholeNum);
+  let remainder = num2 - wholeNum;
+  if (remainder >= 0.5) {
+    return wholeNum + 1;
+  } else return wholeNum;
+}
+
+console.log(roundNum2(12.5));
+// 13
+console.log(roundNum2(9.75));
+// 10
+console.log(roundNum2(4.4));
+// 4
+console.log(roundNum2(4.5));
+// 5
+console.log(Math.floor(0.4));
+// 0
+console.log(Math.round(0.4));
+// 0
+console.log(Math.round(0.5));
+// 1
+console.log("-------------------------");
+console.log("--------------------------");
+
+console.log(robots);
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+console.log(robots.slice(0, 2));
+// ['Hank-44', 'Warren-21']
+console.log(robots.slice(0, 3));
+// ['Hank-44', 'Warren-21', 'Mellon-Tech']
+console.log(robots.slice(0, 4));
+// ['Hank-44', 'Warren-21', 'Mellon-Tech', 'Eggplant-Head']
+
+function arraySlice(array, index1, index2) {
+  let rArray = [];
+  let i = index1;
+  for (; i < index2; i++) {
+    rArray.push(array[i]);
+  }
+  return rArray;
+}
+let nums47 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(arraySlice(robots, 0, 2));
+// ['Hank-44', 'Warren-21']
+console.log(arraySlice(nums47, 0, 5));
+// [0, 1, 2, 3, 4]
+console.log("--------------------------------");
+console.log("-------------------------------");
+
+console.log(robots[1]);
+// Warren-21
