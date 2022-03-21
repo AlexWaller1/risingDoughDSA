@@ -35,25 +35,55 @@ console.log("--------------------------------------");
 
 class HashTable {
   constructor() {
-    this.values = [];
+    this.container = [];
     this.keys = [];
     this.size = 0;
   }
 
-  set(key, value) {
-    this.keys.push(key);
-    this.values.push(value);
+  _hash(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+    }
+    return hash;
+  }
 
-    key = this.values.indexOf(value);
-    // tried this first
+  set(key, value) {
+    // array[hash] = value
+    // array[]
+    let address = this._hash(key);
+    this.container[address] = [key, value];
     this.size++;
   }
 
   get(key) {
-    let index1 = this.keys.indexOf(key);
-    return this.values[index1];
+    let address = this._hash(key);
+    return this.container[address];
+  }
+
+  has(key) {
+    let i = 0;
+    for (; i < this.keys.length; i++) {
+      if (this.keys[i] == key) {
+        return true;
+      }
+    }
+    return false;
   }
 }
+
+/* 
+
+_hash(key) {
+    let hash = 0;
+    for (let i =0; i < key.length; i++){
+        hash = (hash + key.charCodeAt(i) * i) % this.data.length
+    }
+    return hash;
+  }
+
+
+*/
 
 console.log("-------------------------------------------");
 console.log("---------------------------------------");
@@ -114,3 +144,12 @@ console.log(shoppingCart.size);
 // 3
 console.log(shoppingCart.get("apples") * shoppingCart.get("oranges"));
 // 100
+console.log(shoppingCart.has("apples"));
+// true
+console.log(shoppingCart.has("oranges"));
+// true
+console.log(shoppingCart.has("grapes"));
+// true
+console.log(shoppingCart.has("carrots"));
+// false
+console.log(shoppingCart);
